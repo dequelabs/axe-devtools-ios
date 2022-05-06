@@ -1,0 +1,4 @@
+framework module axeDevToolsUIKit {
+  header "axeDevToolsUIKit-Swift.h"
+  requires objc
+}
