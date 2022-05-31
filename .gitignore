@@ -49,7 +49,6 @@ playground.xcworkspace
 .swiftpm
 
 .build/
-*.xcframework
 
 */.DS_Store
 .DS_Store
