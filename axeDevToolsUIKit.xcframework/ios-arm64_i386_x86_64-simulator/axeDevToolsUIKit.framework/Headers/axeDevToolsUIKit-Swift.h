@@ -829,7 +829,9 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 @property (nonatomic, strong) AxeConf * _Nonnull configuration;
 /// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
 /// We may request this to be turned on if an obscure bug is found.
-@property (nonatomic) BOOL debugStatements;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
++ (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
++ (void)setDebugStatements:(BOOL)value;
 /// This is a direct reference to the Floating Action Button.
 /// Use this property to customize the Floating Action Button.
 @property (nonatomic, readonly, strong) FloatingActionButton * _Nullable fab;
@@ -903,6 +905,15 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 /// returns:
 /// initialized AxeDevTools object.
 + (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
+/// warning:
+/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
+/// \param ip The IP Address of the computer hosting axe DevTools Dashboard app. If using a device, they must be on the same network.
+///
+///
+/// returns:
+/// initialized AxeDevTools object.
++ (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -2375,7 +2386,9 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 @property (nonatomic, strong) AxeConf * _Nonnull configuration;
 /// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
 /// We may request this to be turned on if an obscure bug is found.
-@property (nonatomic) BOOL debugStatements;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
++ (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
++ (void)setDebugStatements:(BOOL)value;
 /// This is a direct reference to the Floating Action Button.
 /// Use this property to customize the Floating Action Button.
 @property (nonatomic, readonly, strong) FloatingActionButton * _Nullable fab;
@@ -2449,6 +2462,15 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 /// returns:
 /// initialized AxeDevTools object.
 + (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
+/// warning:
+/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
+/// \param ip The IP Address of the computer hosting axe DevTools Dashboard app. If using a device, they must be on the same network.
+///
+///
+/// returns:
+/// initialized AxeDevTools object.
++ (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -3921,7 +3943,9 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 @property (nonatomic, strong) AxeConf * _Nonnull configuration;
 /// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
 /// We may request this to be turned on if an obscure bug is found.
-@property (nonatomic) BOOL debugStatements;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
++ (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
++ (void)setDebugStatements:(BOOL)value;
 /// This is a direct reference to the Floating Action Button.
 /// Use this property to customize the Floating Action Button.
 @property (nonatomic, readonly, strong) FloatingActionButton * _Nullable fab;
@@ -3995,6 +4019,15 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeDevTools")
 /// returns:
 /// initialized AxeDevTools object.
 + (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
+/// warning:
+/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
+/// \param ip The IP Address of the computer hosting axe DevTools Dashboard app. If using a device, they must be on the same network.
+///
+///
+/// returns:
+/// initialized AxeDevTools object.
++ (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///

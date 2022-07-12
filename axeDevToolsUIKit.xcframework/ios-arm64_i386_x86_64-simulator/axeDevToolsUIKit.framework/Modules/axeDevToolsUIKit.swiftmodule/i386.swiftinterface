@@ -728,7 +728,7 @@ extension String {
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
   @objc final public var configuration: axeDevToolsUIKit.AxeConf
-  @objc final public var debugStatements: Swift.Bool {
+  @objc public static var debugStatements: Swift.Bool {
     @objc get
     @objc set
   }
@@ -739,6 +739,7 @@ extension String {
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
   @objc public static func login(withAccessToken accessToken: axeDevToolsUIKit.AccessToken, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
   @objc public static func setLocalConnection() throws -> axeDevToolsUIKit.AxeDevTools
+  @objc public static func setLocalConnection(ip: Swift.String) throws -> axeDevToolsUIKit.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey) throws -> axeDevToolsUIKit.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsUIKit.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsUIKit.AxeDevToolsResultKey
