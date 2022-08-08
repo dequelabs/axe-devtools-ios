@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
 import CoreGraphics
 import Foundation
@@ -55,8 +55,8 @@ import UIKit
   @discardableResult
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AttestResultKey) -> Swift.Bool
   final public func getPolicy() -> Foundation.Data?
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc public enum AxeRole : Swift.Int {
   case textElement
@@ -64,13 +64,13 @@ import UIKit
   case image
   case genericElement
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsXCUI.AxeRole]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.AxeRole] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.AxeRole]
-  public static var allCases: [axeDevToolsXCUI.AxeRole] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -88,8 +88,8 @@ import UIKit
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc public enum AxeStatus : Swift.Int {
   case INAPPLICABLE = 0
@@ -98,13 +98,13 @@ import UIKit
   case FAIL = 3
   case IGNORED = 4
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsXCUI.AxeStatus]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.AxeStatus] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.AxeStatus]
-  public static var allCases: [axeDevToolsXCUI.AxeStatus] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -225,7 +225,9 @@ import UIKit
 @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let summary: Swift.String
   @objc final public let standard: axeDevToolsXCUI.AxeStandard
-  @objc final public let impact: axeDevToolsXCUI.AxeImpact
+  @objc public var impact: axeDevToolsXCUI.AxeImpact {
+    get
+  }
   public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard, summary: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
@@ -246,10 +248,10 @@ import UIKit
   }
   @objc public init?(fabTitle: Swift.String)
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeRule", message: "This class has been renamed and will be removed November 2022. Please use `AxeRule` instead.")
 open class AttestRule : Swift.Hashable {
@@ -289,10 +291,10 @@ open class AttestRule : Swift.Hashable {
   }
   @objc public init?(fabTitle: Swift.String)
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc final public class AxeConf : ObjectiveC.NSObject, Swift.Codable {
   final public var customRules: Swift.Set<axeDevToolsXCUI.AxeRule> {
@@ -328,8 +330,8 @@ open class AttestRule : Swift.Hashable {
   case Continue
   case Stop
   case SkipDescendants
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -361,8 +363,8 @@ extension String {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeRect : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let left: Swift.Float
@@ -386,6 +388,22 @@ extension String {
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public init()
   @objc deinit
+}
+@objc public enum AxeOrientation : Swift.UInt, Swift.Codable {
+  case all = 0
+  case portrait = 1
+  case landscape = 2
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public init?(rawValue: Swift.UInt)
+  public typealias AllCases = [axeDevToolsXCUI.AxeOrientation]
+  public typealias RawValue = Swift.UInt
+  public static var allCases: [axeDevToolsXCUI.AxeOrientation] {
+    get
+  }
+  public var rawValue: Swift.UInt {
+    get
+  }
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeDevTools", message: "This class will be removed November 2022. Please use `AxeDevTools` instead.")
 @objc final public class Attest : ObjectiveC.NSObject {
@@ -425,8 +443,8 @@ extension String {
   @available(*, deprecated, message: "This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.")
   @discardableResult
   @objc final public func butNot(rules: [Swift.String]) -> axeDevToolsXCUI.Attest
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @available(*, deprecated, message: "This will be removed November 2022.")
 @objc public enum Ternary : Swift.Int {
@@ -434,8 +452,8 @@ extension String {
   case False
   case Undefined
   public func toString() -> Swift.String?
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -453,15 +471,16 @@ extension String {
   case LabelInName
   case MeaningfulAccessibleName
   case NestedElementsName
+  case ScreenTitle
   case TouchTargetSize
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
+  public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeRuleId]
+  public typealias RawValue = Swift.Int
   public static var allCases: [axeDevToolsXCUI.AxeRuleId] {
     get
   }
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
   public var rawValue: Swift.Int {
     get
   }
@@ -508,13 +527,13 @@ extension String {
   case stepper = 79
   case tab = 80
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.UInt
   public init?(rawValue: Swift.UInt)
-  public var rawValue: Swift.UInt {
+  public typealias AllCases = [axeDevToolsXCUI.AxeElementType]
+  public typealias RawValue = Swift.UInt
+  public static var allCases: [axeDevToolsXCUI.AxeElementType] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.AxeElementType]
-  public static var allCases: [axeDevToolsXCUI.AxeElementType] {
+  public var rawValue: Swift.UInt {
     get
   }
 }
@@ -552,9 +571,9 @@ extension String {
   @available(*, deprecated, message: "This method will be removed November 2022. Please use AxeDevTools().postResult instead.")
   @discardableResult
   @objc public func andPushResult(withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) -> axeDevToolsXCUI.AttestResultKey?
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This will be removed November 2022. Please use AxeRect (or AxeBounds) instead.")
 @objc public class AxeFrame : ObjectiveC.NSObject, Swift.Codable {
@@ -590,8 +609,8 @@ extension String {
   @objc public func intersects(_ frame: axeDevToolsXCUI.AxeFrame) -> Swift.Bool
   @objc public func intersection(_ frame: axeDevToolsXCUI.AxeFrame) -> axeDevToolsXCUI.AxeFrame?
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class AxeBounds : axeDevToolsXCUI.AxeRect {
   @objc override final public var description: Swift.String {
@@ -654,13 +673,13 @@ extension String {
   case PLATFORM
   case BEST_PRACTICE
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsXCUI.AxeStandard]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.AxeStandard] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.AxeStandard]
-  public static var allCases: [axeDevToolsXCUI.AxeStandard] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -737,6 +756,7 @@ extension String {
   public static let isAccessibilityElement: Swift.String
   public static let accessibilityPath: Swift.String
   public static let accessibilityTraits: Swift.String
+  public static let supportedOrientations: Swift.String
   @available(*, deprecated, message: "This will be removed November 2022.")
   public static let hasSpeakableText: Swift.String
   @available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` instead.")
@@ -766,7 +786,7 @@ extension String {
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
   @objc final public var configuration: axeDevToolsXCUI.AxeConf
-  @objc final public var debugStatements: Swift.Bool {
+  @objc public static var debugStatements: Swift.Bool {
     @objc get
     @objc set
   }
@@ -782,10 +802,10 @@ extension String {
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
   @objc public var rawValue: Swift.UInt64
   @objc override dynamic public var hash: Swift.Int {
     @objc get
@@ -818,11 +838,11 @@ extension String {
   @objc public static let tabBar: axeDevToolsXCUI.AxeTraits
   @objc public static let updatesFrequently: axeDevToolsXCUI.AxeTraits
   @objc public func toString() -> Swift.String
-  required public init(from decoder: Swift.Decoder) throws
+  required convenience public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
-  public typealias RawValue = Swift.UInt64
-  public typealias Element = axeDevToolsXCUI.AxeTraits
   public typealias ArrayLiteralElement = axeDevToolsXCUI.AxeTraits
+  public typealias Element = axeDevToolsXCUI.AxeTraits
+  public typealias RawValue = Swift.UInt64
   @objc deinit
 }
 @available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
@@ -839,13 +859,13 @@ extension String {
   case ignoredElement
   case genericElement
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsXCUI.InheritedType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.InheritedType] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.InheritedType]
-  public static var allCases: [axeDevToolsXCUI.InheritedType] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -854,15 +874,14 @@ extension String {
   case MODERATE = 1
   case SERIOUS = 2
   case CRITICAL = 3
-  case BLOCKER = 4
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsXCUI.AxeImpact]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.AxeImpact] {
     get
   }
-  public typealias AllCases = [axeDevToolsXCUI.AxeImpact]
-  public static var allCases: [axeDevToolsXCUI.AxeImpact] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -886,6 +905,10 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Hashable {}
 extension axeDevToolsXCUI.RunStatus : Swift.RawRepresentable {}
+extension axeDevToolsXCUI.AxeOrientation : Swift.CaseIterable {}
+extension axeDevToolsXCUI.AxeOrientation : Swift.RawRepresentable {}
+extension axeDevToolsXCUI.AxeOrientation : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeOrientation : Swift.Equatable {}
 @available(*, deprecated, message: "This will be removed November 2022.")
 extension axeDevToolsXCUI.Ternary : Swift.Equatable {}
 @available(*, deprecated, message: "This will be removed November 2022.")
