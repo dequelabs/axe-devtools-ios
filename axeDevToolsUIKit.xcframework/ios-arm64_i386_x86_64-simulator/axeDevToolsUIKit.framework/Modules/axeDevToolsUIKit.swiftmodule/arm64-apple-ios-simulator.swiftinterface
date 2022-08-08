@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsUIKit
 import CoreGraphics
 import Foundation
@@ -10,15 +10,14 @@ import UIKit
   case MODERATE = 1
   case SERIOUS = 2
   case CRITICAL = 3
-  case BLOCKER = 4
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.AxeImpact]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.AxeImpact] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeImpact]
-  public static var allCases: [axeDevToolsUIKit.AxeImpact] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -35,20 +34,22 @@ import UIKit
   case LabelInName
   case MeaningfulAccessibleName
   case NestedElementsName
+  case ScreenTitle
   case TouchTargetSize
   case ColorContrast
   case InaccessibleAction
   case NestedActiveControls
+  case ScreenOrientation
   case SupportsDynamicType
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.AxeRuleId]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.AxeRuleId] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeRuleId]
-  public static var allCases: [axeDevToolsUIKit.AxeRuleId] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -58,13 +59,13 @@ import UIKit
   case PLATFORM
   case BEST_PRACTICE
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.AxeStandard]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.AxeStandard] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeStandard]
-  public static var allCases: [axeDevToolsUIKit.AxeStandard] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -75,13 +76,13 @@ import UIKit
   case FAIL = 3
   case IGNORED = 4
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.AxeStatus]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.AxeStatus] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeStatus]
-  public static var allCases: [axeDevToolsUIKit.AxeStatus] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -126,8 +127,8 @@ import UIKit
   @objc public func intersects(_ frame: axeDevToolsUIKit.AxeFrame) -> Swift.Bool
   @objc public func intersection(_ frame: axeDevToolsUIKit.AxeFrame) -> axeDevToolsUIKit.AxeFrame?
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeRect : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let left: Swift.Float
@@ -191,6 +192,7 @@ extension String {
   public static let isAccessibilityElement: Swift.String
   public static let accessibilityPath: Swift.String
   public static let accessibilityTraits: Swift.String
+  public static let supportedOrientations: Swift.String
   @available(*, deprecated, message: "This will be removed November 2022.")
   public static let hasSpeakableText: Swift.String
   @available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` instead.")
@@ -231,7 +233,7 @@ extension String {
   public func add(_ props: [axeDevToolsUIKit.Props.Name : Swift.Codable?])
   @objc deinit
 }
-@objc public protocol FABInterface : AnyObject {
+@objc public protocol FABInterface {
   @objc func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeRule", message: "This class has been renamed and will be removed November 2022. Please use `AxeRule` instead.")
@@ -298,8 +300,8 @@ open class AttestRule : Swift.Hashable {
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeDevice : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let name: Swift.String
@@ -376,9 +378,9 @@ open class AttestRule : Swift.Hashable {
   @available(*, deprecated, message: "This method will be removed November 2022. Please use AxeDevTools().postResult instead.")
   @discardableResult
   @objc public func andPushResult(withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) -> axeDevToolsUIKit.AttestResultKey?
-  required public init(from decoder: Swift.Decoder) throws
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class AxeRuleResult : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let status: axeDevToolsUIKit.AxeStatus
@@ -400,7 +402,7 @@ open class AttestRule : Swift.Hashable {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
   @objc public var rawValue: Swift.UInt64
   @objc override dynamic public var hash: Swift.Int {
     @objc get
@@ -433,11 +435,11 @@ open class AttestRule : Swift.Hashable {
   @objc public static let tabBar: axeDevToolsUIKit.AxeTraits
   @objc public static let updatesFrequently: axeDevToolsUIKit.AxeTraits
   @objc public func toString() -> Swift.String
-  required public init(from decoder: Swift.Decoder) throws
+  required convenience public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public typealias ArrayLiteralElement = axeDevToolsUIKit.AxeTraits
   public typealias Element = axeDevToolsUIKit.AxeTraits
   public typealias RawValue = Swift.UInt64
-  public typealias ArrayLiteralElement = axeDevToolsUIKit.AxeTraits
   @objc deinit
 }
 @objc public enum AxeRole : Swift.Int {
@@ -446,13 +448,13 @@ open class AttestRule : Swift.Hashable {
   case image
   case genericElement
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.AxeRole]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.AxeRole] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeRole]
-  public static var allCases: [axeDevToolsUIKit.AxeRole] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -583,15 +585,17 @@ open class AttestRule : Swift.Hashable {
   }
   @objc public init?(fabTitle: Swift.String)
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let summary: Swift.String
   @objc final public let standard: axeDevToolsUIKit.AxeStandard
-  @objc final public let impact: axeDevToolsUIKit.AxeImpact
+  @objc public var impact: axeDevToolsUIKit.AxeImpact {
+    get
+  }
   public init(impact: axeDevToolsUIKit.AxeImpact, standard: axeDevToolsUIKit.AxeStandard, summary: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
@@ -613,13 +617,13 @@ open class AttestRule : Swift.Hashable {
   case ignoredElement
   case genericElement
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+  public typealias AllCases = [axeDevToolsUIKit.InheritedType]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsUIKit.InheritedType] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.InheritedType]
-  public static var allCases: [axeDevToolsUIKit.InheritedType] {
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -644,8 +648,8 @@ extension String {
   case Continue
   case Stop
   case SkipDescendants
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -656,9 +660,25 @@ extension String {
   case False
   case Undefined
   public func toString() -> Swift.String?
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AxeOrientation : Swift.UInt, Swift.Codable {
+  case all = 0
+  case portrait = 1
+  case landscape = 2
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public init?(rawValue: Swift.UInt)
+  public typealias AllCases = [axeDevToolsUIKit.AxeOrientation]
+  public typealias RawValue = Swift.UInt
+  public static var allCases: [axeDevToolsUIKit.AxeOrientation] {
+    get
+  }
+  public var rawValue: Swift.UInt {
     get
   }
 }
@@ -716,13 +736,13 @@ extension String {
   case stepper = 79
   case tab = 80
   public func toString() -> Swift.String
-  public typealias RawValue = Swift.UInt
   public init?(rawValue: Swift.UInt)
-  public var rawValue: Swift.UInt {
+  public typealias AllCases = [axeDevToolsUIKit.AxeElementType]
+  public typealias RawValue = Swift.UInt
+  public static var allCases: [axeDevToolsUIKit.AxeElementType] {
     get
   }
-  public typealias AllCases = [axeDevToolsUIKit.AxeElementType]
-  public static var allCases: [axeDevToolsUIKit.AxeElementType] {
+  public var rawValue: Swift.UInt {
     get
   }
 }
@@ -739,7 +759,6 @@ extension String {
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
   @objc public static func login(withAccessToken accessToken: axeDevToolsUIKit.AccessToken, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
   @objc public static func setLocalConnection() throws -> axeDevToolsUIKit.AxeDevTools
-  @objc public static func setLocalConnection(ip: Swift.String) throws -> axeDevToolsUIKit.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey) throws -> axeDevToolsUIKit.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsUIKit.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsUIKit.AxeDevToolsResultKey
@@ -747,13 +766,14 @@ extension String {
   @objc final public func tagResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey, to scanName: Swift.String) throws
+  @objc public static func setLocalConnection(ip: Swift.String) throws -> axeDevToolsUIKit.AxeDevTools
   @objc final public func showA11yFAB(customFAB: axeDevToolsUIKit.FABInterface = A11yFAB())
   @objc final public func hideA11yFAB()
   @objc final public func run(onView view: UIKit.UIView) throws -> axeDevToolsUIKit.AxeResult
   @objc final public func run(onViewController viewController: UIKit.UIViewController) throws -> axeDevToolsUIKit.AxeResult
   @objc final public func run(onStoryboardName storyboardName: Swift.String, viewControllerId: Swift.String? = nil, bundle: Foundation.Bundle? = nil) throws -> axeDevToolsUIKit.AxeResult
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers open class AxeRule : Swift.Hashable {
   public static func == (lhs: axeDevToolsUIKit.AxeRule, rhs: axeDevToolsUIKit.AxeRule) -> Swift.Bool
@@ -773,10 +793,10 @@ extension String {
   open func runRule(_ props: axeDevToolsUIKit.AxeProps) throws -> axeDevToolsUIKit.AxeStatus
   open func tearDown()
   final public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
   open var hashValue: Swift.Int {
     get
   }
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please use `AxeDevTools`.")
 @objc final public class AttestClient : ObjectiveC.NSObject {
@@ -796,8 +816,8 @@ extension String {
   @discardableResult
   @objc final public func deleteResult(_ resultKey: axeDevToolsUIKit.AttestResultKey) -> Swift.Bool
   final public func getPolicy() -> Foundation.Data?
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class FloatingActionButton : UIKit.UIButton {
   @available(*, deprecated, message: "This function will be removed in November 2022.")
@@ -812,8 +832,8 @@ extension String {
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "Please use `showA11yFAB` to add the FAB to your application. This class will be removed in November 2022.")
 @objc open class ManualFABDelegate : ObjectiveC.NSObject, axeDevToolsUIKit.FABDelegate {
   @objc open func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please grab properties from the AxeView directly.")
 @objc public class CalculatedProps : axeDevToolsUIKit.Props {
@@ -828,8 +848,8 @@ extension String {
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please use `showA11yFAB` to add the FAB to your application.")
 @objc public class FABWindowStrategy : ObjectiveC.NSObject {
   @objc public static func attach(_ fab: axeDevToolsUIKit.FloatingActionButton)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeDevToolsResultKey", message: "This class has been renamed and will be removed November 2022. Please use `AxeDevToolsResultKey` instead.")
 @objc public class AttestResultKey : ObjectiveC.NSObject, Swift.Codable {
@@ -844,10 +864,10 @@ extension String {
   }
   @objc public init?(fabTitle: Swift.String)
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class A11yFAB : ObjectiveC.NSObject, axeDevToolsUIKit.FABInterface {
   @objc public func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
@@ -904,8 +924,8 @@ extension AxeView {
 @objc open class AutomatedTestDelegate : axeDevToolsUIKit.ManualTestDelegate {
   @objc override open func beforeRun()
   @objc override open func afterRun(_ resultKey: axeDevToolsUIKit.AttestResultKey?)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 extension UIView {
   @objc override dynamic open func value(forUndefinedKey key: Swift.String) -> Any?
@@ -913,18 +933,18 @@ extension UIView {
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "Please use `showA11yFAB` to add the FAB to your application. This class will be removed in November 2022.")
 @objc open class AutomatedFABDelegate : axeDevToolsUIKit.ManualFABDelegate {
   @objc override open func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class AutomatedTestFAB : ObjectiveC.NSObject, axeDevToolsUIKit.FABInterface {
   @objc public func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeView", message: "This class has been renamed and will be removed November 2022. Please use `AxeView` instead.")
 @objc public class AttestView : axeDevToolsUIKit.AxeView {
-  @objc deinit
   required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeDevTools", message: "This class will be removed November 2022. Please use `AxeDevTools` instead.")
 @objc final public class Attest : ObjectiveC.NSObject {
@@ -987,8 +1007,8 @@ extension UIView {
   @available(*, deprecated, message: "This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.")
   @discardableResult
   @objc final public func butNot(rules: [Swift.String]) -> axeDevToolsUIKit.Attest
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please use `showA11yFAB` to add the FAB to your application.")
 @objc open class ManualTestDelegate : ObjectiveC.NSObject, axeDevToolsUIKit.AttestDelegate {
@@ -1049,6 +1069,10 @@ extension axeDevToolsUIKit.Ternary : Swift.Equatable {}
 extension axeDevToolsUIKit.Ternary : Swift.Hashable {}
 @available(*, deprecated, message: "This will be removed November 2022.")
 extension axeDevToolsUIKit.Ternary : Swift.RawRepresentable {}
+extension axeDevToolsUIKit.AxeOrientation : Swift.CaseIterable {}
+extension axeDevToolsUIKit.AxeOrientation : Swift.RawRepresentable {}
+extension axeDevToolsUIKit.AxeOrientation : Swift.Hashable {}
+extension axeDevToolsUIKit.AxeOrientation : Swift.Equatable {}
 extension axeDevToolsUIKit.AxeElementType : Swift.CaseIterable {}
 extension axeDevToolsUIKit.AxeElementType : Swift.RawRepresentable {}
 extension axeDevToolsUIKit.AxeElementType : Swift.Hashable {}
