@@ -1,10 +1,12 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
+// swift-module-flags: -target arm64-apple-ios13.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
 import CoreGraphics
 import Foundation
 import Swift
 import UIKit
+import Vision
+import zlib
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeImage : ObjectiveC.NSObject {
   @objc final public let base64png: Swift.String
   @objc final public let frame: axeDevToolsXCUI.AxeBounds
@@ -36,27 +38,6 @@ import UIKit
   open var hashValue: Swift.Int {
     get
   }
-}
-@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please use `AxeDevTools`.")
-@objc final public class AttestClient : ObjectiveC.NSObject {
-  @objc convenience public init?(username: Swift.String, password: Swift.String, serverURL: Swift.String = "")
-  @objc convenience public init?(accessToken: axeDevToolsXCUI.AccessToken, serverURL: Swift.String = "")
-  @objc public init?(port: Swift.UInt)
-  @discardableResult
-  @nonobjc final public func postResult<T>(_ axeResult: T) -> axeDevToolsXCUI.AttestResultKey? where T : Swift.Encodable
-  @available(*, deprecated, message: "This method has been moved to AxeDevTools.")
-  @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AttestResultKey) -> Foundation.Data?
-  @available(*, deprecated, message: "This method has been moved to AxeDevTools.")
-  @discardableResult
-  @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AttestResultKey, tags: [Swift.String]) -> axeDevToolsXCUI.AttestResultKey?
-  @available(*, deprecated, message: "This method has been moved to AxeDevTools.")
-  @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AttestResultKey, name: Swift.String?)
-  @available(*, deprecated, message: "This method has been moved to AxeDevTools.")
-  @discardableResult
-  @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AttestResultKey) -> Swift.Bool
-  final public func getPolicy() -> Foundation.Data?
-  @objc override dynamic public init()
-  @objc deinit
 }
 @objc public enum AxeRole : Swift.Int {
   case textElement
@@ -120,15 +101,15 @@ import UIKit
   @objc public var isAccessibilityFocusable: Swift.Bool {
     get
   }
-  @objc public var isVisibleToUser: Swift.Bool {
-    get
-  }
   @objc public var children: [axeDevToolsXCUI.AxeView] {
     get
   }
   @objc weak public var parent: axeDevToolsXCUI.AxeView?
   @objc public var axeViewId: Swift.String {
     @objc get
+  }
+  @objc public var isVisibleToUser: Swift.Bool {
+    get
   }
   @objc override dynamic public var description: Swift.String {
     @objc get
@@ -149,135 +130,22 @@ import UIKit
   @objc public func isChild(ofProp propName: axeDevToolsXCUI.AxeProps.Name) -> Swift.Bool
   @objc public func isChild(ofElementType elementType: axeDevToolsXCUI.AxeElementType) -> Swift.Bool
   @objc public func isElementOrChild(ofElementType elementType: axeDevToolsXCUI.AxeElementType) -> Swift.Bool
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve any property using a `get` method.")
-  @objc final public let calculatedProps: axeDevToolsXCUI.CalculatedProps
-  @available(*, deprecated, message: "This property will be removed November 2022. Please use `elementType` instead.")
-  @objc public var inheritedType: Swift.String {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var frame: axeDevToolsXCUI.AxeRect {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var text: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var isActiveControl: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var isEnabled: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var a11yTraits: axeDevToolsXCUI.AxeTraits {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var isA11yElement: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc public var a11yPath: axeDevToolsXCUI.AxeBounds? {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using the `isChildOf(ofProp)` method.")
-  @objc public var isInFocusableView: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.")
-  @objc public var isInScrollView: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using the `isChild(ofProp)` method.")
-  @objc public var isInActiveControl: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.")
-  @objc public var isInTableViewCell: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.")
-  @objc public var isInCollectionViewCell: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  @objc public var hasSpeakableText: Swift.Bool {
-    @objc get
-  }
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  @objc public var speakableText: Swift.String? {
-    @objc get
-  }
   @objc override dynamic public init()
   @objc deinit
 }
 @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let experimental: Swift.Bool
   @objc final public let summary: Swift.String
   @objc final public let standard: axeDevToolsXCUI.AxeStandard
   @objc public var impact: axeDevToolsXCUI.AxeImpact {
     get
   }
-  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard, summary: Swift.String)
+  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard, summary: Swift.String, experimental: Swift.Bool = false)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
-}
-@_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeDevToolsResultKey", message: "This class has been renamed and will be removed November 2022. Please use `AxeDevToolsResultKey` instead.")
-@objc public class AttestResultKey : ObjectiveC.NSObject, Swift.Codable {
-  @objc final public let packageName: Swift.String
-  @objc final public let userId: Swift.String
-  @objc final public let resultId: Swift.String
-  @objc override dynamic public var hash: Swift.Int {
-    @objc get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public init?(fabTitle: Swift.String)
-  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeRule", message: "This class has been renamed and will be removed November 2022. Please use `AxeRule` instead.")
-open class AttestRule : Swift.Hashable {
-  public static func == (lhs: axeDevToolsXCUI.AttestRule, rhs: axeDevToolsXCUI.AttestRule) -> Swift.Bool
-  final public let id: Swift.String
-  public var summary: Swift.String {
-    get
-  }
-  public var standard: axeDevToolsXCUI.AxeStandard {
-    get
-  }
-  public var impact: axeDevToolsXCUI.AxeImpact {
-    get
-  }
-  public init(ruleConf: axeDevToolsXCUI.RuleConf)
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `init(ruleConf)` instead.")
-  public init(standard: axeDevToolsXCUI.AxeStandard, impact: axeDevToolsXCUI.AxeImpact, summary: Swift.String)
-  open func setUp(_ context: axeDevToolsXCUI.AxeContext)
-  open func collectProps(for node: axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.AxeProps
-  open func runRule(_ props: axeDevToolsXCUI.AxeProps) throws -> axeDevToolsXCUI.AxeStatus
-  open func tearDown()
-  final public func hash(into hasher: inout Swift.Hasher)
-  @objc deinit
-  open var hashValue: Swift.Int {
-    get
-  }
 }
 @_hasMissingDesignatedInitializers @objc public class AxeDevToolsResultKey : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let packageName: Swift.String
@@ -304,25 +172,12 @@ open class AttestRule : Swift.Hashable {
   @objc override final public var description: Swift.String {
     @objc get
   }
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `ignore(rule)` or `ignore(rules)` function to update which rule results you want to see instead.")
-  final public var ruleIds: Swift.Set<axeDevToolsXCUI.AxeRuleId> {
-    get
-    set
-  }
   @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
   final public func encode(to encoder: Swift.Encoder) throws
   @objc final public func ignore(rule: Swift.String, _ shouldIgnore: Swift.Bool = true)
   @objc final public func ignore(rules: [Swift.String], _ shouldIgnore: Swift.Bool = true)
   @objc final public func ignore(rulesFor: [Swift.String : Swift.Set<Swift.String>])
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `ignore` method instead.")
-  @nonobjc final public func remove(standards: [axeDevToolsXCUI.AxeStandard])
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `ignore` method instead.")
-  @objc final public func remove(standards: [Swift.String])
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `ignore(rule)` or `ignore(rules)` functions instead.")
-  @nonobjc final public func add(rules: [axeDevToolsXCUI.AxeRuleId])
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `ignore(rule)` or `ignore(rules)` functions instead.")
-  @objc final public func add(rules: [Swift.String])
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
 }
@@ -335,16 +190,6 @@ open class AttestRule : Swift.Hashable {
   public var rawValue: Swift.Int {
     get
   }
-}
-@_inheritsConvenienceInitializers @available(*, deprecated, message: "This class will be removed November 2022. Please grab properties from the AxeView directly.")
-@objc public class CalculatedProps : axeDevToolsXCUI.Props {
-  @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
-}
-@available(*, deprecated, message: "This class will be removed November 2022. Please grab properties from `props` on AxeView directly.")
-extension String {
-  public static let runColorContrast: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc public class AxeRuleResult : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let status: axeDevToolsXCUI.AxeStatus
@@ -405,62 +250,10 @@ extension String {
     get
   }
 }
-@_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "AxeDevTools", message: "This class will be removed November 2022. Please use `AxeDevTools` instead.")
-@objc final public class Attest : ObjectiveC.NSObject {
-  @objc public static var configuration: axeDevToolsXCUI.AxeConf
-  @objc public static var debugStatements: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `debugStatements` instead.")
-  @objc public static var logWarnings: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use the `AxeConf` object to set custom rules instead.")
-  public static var customRules: Swift.Set<axeDevToolsXCUI.AxeRule> {
-    get
-    set
-  }
-  @objc public static func setLocalConnection(withPort port: Swift.UInt = 48485)
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `login` within AxeDevTools class instead.")
-  @objc public static func setServer(to url: Swift.String = "", withUsername username: Swift.String, andPassword password: Swift.String)
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `login` within AxeDevTools class instead.")
-  @objc public static func setServer(usingAttestClient attestClient: axeDevToolsXCUI.AttestClient)
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.")
-  @objc public static func that(element: Any) -> axeDevToolsXCUI.Attest?
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.")
-  @discardableResult
-  @objc final public func isAccessible() -> axeDevToolsXCUI.AxeResult
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.")
-  @discardableResult
-  @nonobjc final public func isAccessible(_ resultConsumer: (axeDevToolsXCUI.AxeResult) -> Swift.Void = {
-        NSLog($0.description)
-    }) -> axeDevToolsXCUI.AxeResult
-  @available(*, deprecated, message: "This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.")
-  @discardableResult
-  @nonobjc final public func butNot(rules: [axeDevToolsXCUI.AxeRuleId]) -> axeDevToolsXCUI.Attest
-  @available(*, deprecated, message: "This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.")
-  @discardableResult
-  @objc final public func butNot(rules: [Swift.String]) -> axeDevToolsXCUI.Attest
-  @objc override dynamic public init()
-  @objc deinit
-}
-@available(*, deprecated, message: "This will be removed November 2022.")
-@objc public enum Ternary : Swift.Int {
-  case True
-  case False
-  case Undefined
-  public func toString() -> Swift.String?
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @objc public enum AxeRuleId : Swift.Int {
   case A11yElementFocusBox
   case ActiveControlName
+  case AssociatedText
   case CollidingControls
   case CollidingViews
   case ConflictingTraits
@@ -537,15 +330,11 @@ extension String {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
+@_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let axeConf: axeDevToolsXCUI.AxeConf
   @objc final public let axeContext: axeDevToolsXCUI.AxeContext
   @objc final public let axeRuleResults: [axeDevToolsXCUI.AxeRuleResult]
   @objc public var failures: [axeDevToolsXCUI.AxeRuleResult] {
-    @objc get
-  }
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use `failures` instead")
-  @objc public var violations: [axeDevToolsXCUI.AxeRuleResult] {
     @objc get
   }
   @objc public var passes: [axeDevToolsXCUI.AxeRuleResult] {
@@ -560,57 +349,11 @@ extension String {
   @objc public var shortDescription: Swift.String {
     @objc get
   }
-  @available(*, deprecated, message: "A result can no longer be empty with the API available in 3.0, so you no longer have to check for an empty result. This method will be removed in November 2022.")
-  @objc public var isEmpty: Swift.Bool {
-    @objc get
-  }
-  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use AxeDevTools().saveResult instead.")
-  @discardableResult
-  @objc public func andSaveResult(toPath path: Swift.String = "AttestResults", withName name: Swift.String = "") -> Swift.String?
-  @available(*, deprecated, message: "This method will be removed November 2022. Please use AxeDevTools().postResult instead.")
-  @discardableResult
-  @objc public func andPushResult(withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) -> axeDevToolsXCUI.AttestResultKey?
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This will be removed November 2022. Please use AxeRect (or AxeBounds) instead.")
-@objc public class AxeFrame : ObjectiveC.NSObject, Swift.Codable {
-  @objc public static let zero: axeDevToolsXCUI.AxeFrame
-  @objc public var left: Swift.Float {
-    @objc get
-  }
-  @objc public var right: Swift.Float {
-    @objc get
-  }
-  @objc public var top: Swift.Float {
-    @objc get
-  }
-  @objc public var bottom: Swift.Float {
-    @objc get
-  }
-  @objc public var width: Swift.Float {
-    @objc get
-  }
-  @objc public var height: Swift.Float {
-    @objc get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc override dynamic public var hash: Swift.Int {
-    @objc get
-  }
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
-  @objc public func contains(_ x: Swift.Float, _ y: Swift.Float) -> Swift.Bool
-  @objc public func contains(frame: axeDevToolsXCUI.AxeFrame) -> Swift.Bool
-  @objc public func intersects(_ frame: axeDevToolsXCUI.AxeFrame) -> Swift.Bool
-  @objc public func intersection(_ frame: axeDevToolsXCUI.AxeFrame) -> axeDevToolsXCUI.AxeFrame?
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class AxeBounds : axeDevToolsXCUI.AxeRect {
   @objc override final public var description: Swift.String {
@@ -621,36 +364,14 @@ extension String {
 }
 extension String {
   public static let label: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let accessibilityActivationPoint: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let accessibilityLabel: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let accessibilityValue: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let accessibilityViewIsModal: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let numberAccessibilityCustomActions: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let respondsToContentSizeNotification: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let overridesTraitCollectionDidChange: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let supportsAutoAdjustment: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let adjustsFontForContentSizeCategory: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let fontName: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let hasConfiguration: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc public class AxePoint : ObjectiveC.NSObject, Swift.Codable {
-  @objc final public let x: Swift.Float
-  @objc final public let y: Swift.Float
+  @objc final public let x: Swift.Int
+  @objc final public let y: Swift.Int
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
-  required public init(from decoder: Swift.Decoder) throws
+  convenience required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc override dynamic public init()
@@ -698,25 +419,6 @@ extension String {
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
 }
-@_inheritsConvenienceInitializers @available(*, deprecated, message: "This class will be removed November 2022.")
-@objc public class Props : ObjectiveC.NSObject, Swift.Codable {
-  public typealias Name = Swift.String
-  @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
-  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  public func get<T>(_ name: axeDevToolsXCUI.Props.Name, withType objType: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
-  public func get(_ name: axeDevToolsXCUI.Props.Name) -> Swift.Codable?
-  public func add(_ propName: axeDevToolsXCUI.Props.Name, _ prop: Swift.Codable?)
-  public func add(_ props: [axeDevToolsXCUI.Props.Name : Swift.Codable?])
-  @objc deinit
-}
-extension AxeView {
-  @available(*, deprecated, message: "This property will be removed November 2022. Please retrieve this property using a `get` method.")
-  @objc dynamic public var label: Swift.String? {
-    @objc get
-  }
-}
 @_inheritsConvenienceInitializers @objc final public class AxeProps : ObjectiveC.NSObject, Swift.Codable {
   public typealias Name = Swift.String
   @objc override final public var description: Swift.String {
@@ -757,32 +459,6 @@ extension String {
   public static let accessibilityPath: Swift.String
   public static let accessibilityTraits: Swift.String
   public static let supportedOrientations: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let hasSpeakableText: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` instead.")
-  public static let inheritedType: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isHidden: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let speakableText: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isInActiveControl: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isInScrollView: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isInTableViewCell: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isInCollectionViewCell: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let isInFocusableView: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let backgroundColor: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022.")
-  public static let hasBackground: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022. Please use `value` to determine a toggle's state.")
-  public static let isOn: Swift.String
-  @available(*, deprecated, message: "This will be removed November 2022. Please use `value` to determine a textField's placeholder text.")
-  public static let placeholderText: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
   @objc final public var configuration: axeDevToolsXCUI.AxeConf
@@ -797,10 +473,10 @@ extension String {
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
-  @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
+  @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc override dynamic public init()
   @objc deinit
@@ -845,30 +521,6 @@ extension String {
   public typealias RawValue = Swift.UInt64
   @objc deinit
 }
-@available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
-@objc public enum InheritedType : Swift.Int {
-  case textElement
-  case stepper
-  case textField
-  case segmentedControl
-  case control
-  case image
-  case scrollView
-  case tableViewCell
-  case collectionViewCell
-  case ignoredElement
-  case genericElement
-  public func toString() -> Swift.String
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [axeDevToolsXCUI.InheritedType]
-  public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.InheritedType] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @objc public enum AxeImpact : Swift.Int {
   case MINOR = 0
   case MODERATE = 1
@@ -886,7 +538,7 @@ extension String {
   }
 }
 @objc public class AccessToken : ObjectiveC.NSObject {
-  @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", clientSecret: Swift.String = "", authServerURL: Swift.String = "") throws
+  @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
   @objc override dynamic public init()
   @objc deinit
 }
@@ -909,12 +561,6 @@ extension axeDevToolsXCUI.AxeOrientation : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeOrientation : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeOrientation : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeOrientation : Swift.Equatable {}
-@available(*, deprecated, message: "This will be removed November 2022.")
-extension axeDevToolsXCUI.Ternary : Swift.Equatable {}
-@available(*, deprecated, message: "This will be removed November 2022.")
-extension axeDevToolsXCUI.Ternary : Swift.Hashable {}
-@available(*, deprecated, message: "This will be removed November 2022.")
-extension axeDevToolsXCUI.Ternary : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.Hashable {}
@@ -923,14 +569,6 @@ extension axeDevToolsXCUI.AxeStandard : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeStandard : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeStandard : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeStandard : Swift.Equatable {}
-@available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
-extension axeDevToolsXCUI.InheritedType : Swift.CaseIterable {}
-@available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
-extension axeDevToolsXCUI.InheritedType : Swift.RawRepresentable {}
-@available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
-extension axeDevToolsXCUI.InheritedType : Swift.Hashable {}
-@available(*, deprecated, message: "This will be removed November 2022. Please use `elementType` or `role` instead.")
-extension axeDevToolsXCUI.InheritedType : Swift.Equatable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.Hashable {}

@@ -226,193 +226,14 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 ///
 /// \param clientId Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-/// \param clientSecret Optional. Provide this if you have your own instance of the axeDevTools server.
-///
 /// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId clientSecret:(NSString * _Nonnull)clientSecret authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class AxeConf;
 @class NSNumber;
-@class AttestClient;
-@class AxeResult;
-
-/// The Attest class contains many static methods for you to set up automated accessibility scanning.
-/// This class allows you to
-/// <ul>
-///   <li>
-///     set up and run an accessibility test on an entire screen
-///   </li>
-///   <li>
-///     configure the Floating Action Button
-///   </li>
-///   <li>
-///     adjust which rules you would like to run
-///   </li>
-///   <li>
-///     turn on advanced logging (if you run into an issue, sometimes additional logging can be useful to help us debug!)
-///   </li>
-/// </ul>
-SWIFT_CLASS("_TtC15axeDevToolsXCUI6Attest") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please use `AxeDevTools` instead.", "_TtC15axeDevToolsXCUI11AxeDevTools")
-@interface Attest : NSObject
-/// Set this property if you want to change which rules are run or if you want to add custom rules.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AxeConf * _Nonnull configuration;)
-+ (AxeConf * _Nonnull)configuration SWIFT_WARN_UNUSED_RESULT;
-+ (void)setConfiguration:(AxeConf * _Nonnull)value;
-/// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
-/// We may request this to be turned on if an obscure bug is found.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
-+ (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDebugStatements:(BOOL)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL logWarnings SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `debugStatements` instead.");)
-+ (BOOL)logWarnings SWIFT_WARN_UNUSED_RESULT;
-+ (void)setLogWarnings:(BOOL)value;
-/// Sets up a local connection with the Attest Desktop Application.  This is required to locally push results
-/// and use manual testing with the Desktop Application.
-/// \param port the port number of the local server running in the Attest Desktop Application.
-/// If not specified, the port defaults to 48485.
-///
-+ (void)setLocalConnectionWithPort:(NSUInteger)port;
-/// Use this function to log into the cloud instance of the Attest Service.  This can be used in the
-/// AppDelegate/SceneDelegate (for manual or UI Testing) before attaching the FAB to the application,
-/// or it can be used to push results to the Attest Service in Unit Tests.
-/// If you are using Objective-C, simply pass in an empty String to the <code>url</code> parameter, and the Attest
-/// class will set the URL to the default server.  If you do not provide the correct credentials, an error
-/// message (with <code>DEQUE</code>) will be printed to the console, and no results will be pushed to the cloud
-/// server. Do NOT use this method to connect to the Desktop Client, as it will not work.  Please instead
-/// use <code>setLocalConnection</code>.
-/// note:
-/// Google authentication information does not work in this method.
-/// \param url the URL of the server you want to send scans to, as a String.  Defaults to the default cloud instance of the server.  Most users should not need to change this from default.
-///
-/// \param username your username for the Attest Service, as a String. Usually is an email address.
-///
-/// \param password your password for the Attest Service, as a String.
-///
-+ (void)setServerTo:(NSString * _Nonnull)url withUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `login` within AxeDevTools class instead.");
-/// Use this method to log into the cloud instance of the Attest Service.  Recommended for use in UI
-/// Integrated Tests. Having access to the AttestClient directly gives you additional access to API such
-/// as being able to retrieve, tag, and delete scans from the server.
-/// \param attestClient a class that allows you to directly interact with the Attest server.
-/// See <code>AttestClient</code> for more information.
-///
-+ (void)setServerUsingAttestClient:(AttestClient * _Nonnull)attestClient SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `login` within AxeDevTools class instead.");
-/// Returns an initialized Attest object. Can be used in your UI Tests to test a screen written in Swift UI.
-/// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
-///
-///
-/// returns:
-/// Initialized Attest object.
-+ (Attest * _Nullable)thatWithElement:(id _Nonnull)element SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.");
-/// Use this in a Unit Test to analyze the accessibility of the view or View Controller specified in the Attest class.
-///
-/// returns:
-/// the result of the scan, as an AxeResult.
-- (AxeResult * _Nonnull)isAccessible SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.");
-/// Removes Rules from the Ruleset.  Attest will <em>not</em> use the Rules specified when running a scan.
-/// This can be used in Unit Tests.
-/// \param rules A list of Rules that should <em>not</em> be run in Attest, as an array of String.
-///
-///
-/// returns:
-/// An initialized Attest class.
-- (Attest * _Nonnull)butNotWithRules:(NSArray<NSString *> * _Nonnull)rules SWIFT_DEPRECATED_MSG("This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AttestResultKey;
-@class NSData;
-
-/// AttestClient allows you to log into and interact with the Attest server.  With the AttestClient, you can directly
-/// push up scans to the server, and also retrieve, tag, and delete scans available on the server.
-/// We recommend using this API in conjunction with UI Tests. This way, you can automate pressing the Floating
-/// Action Button on every scan, and then retrieve the scan from the server so that the UI Tests can assert
-/// whatever information you want about the scan (if there are failures, if the failures are only from one
-/// rule, how many passes there are, etc).
-SWIFT_CLASS("_TtC15axeDevToolsXCUI12AttestClient") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please use `AxeDevTools`.")
-@interface AttestClient : NSObject
-/// Use this to log into the cloud instance of the Attest Service.  This will return <code>nil</code> and print to the console if the framework could not connect to the Attest Service.  If you are running into login issues, please search the console for <code>DEQUE</code> messages.
-/// \param username The username you use to log into the Attest Service.  This may be your email address.
-///
-/// \param password The password you use to log into the Attest Service.
-///
-/// \param serverURL The location of the cloud server. It defaults to the default cloud instance of the server.
-///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password serverURL:(NSString * _Nonnull)serverURL;
-- (nullable instancetype)initWithAccessToken:(AccessToken * _Nonnull)accessToken serverURL:(NSString * _Nonnull)serverURL;
-/// Use this to log into a local instance of the Attest Service (Desktop Client).  This will return <code>nil</code> and print to the console if the framework could not find the server instance.  The Desktop Client must be open and running for this call to work correctly.  Search the console for <code>DEQUE</code> messages if there are login issues.
-/// \param port The port number on which the local Attest Service is hosted. Default is 48485.
-///
-- (nullable instancetype)initWithPort:(NSUInteger)port OBJC_DESIGNATED_INITIALIZER;
-/// This retrieves the AxeResult from the Results server.
-/// You may want to do this if your UI Tests just pushed a result to the server by pressing the purple
-/// Floating Action Button. The Floating Action Button will contain an AttestResultKey that you can then use
-/// to assert things about the scan – such as, if there were any inaccessible views, or whether there were
-/// only failures from one rule.
-/// \param resultKey The AttestResultKey of the AxeResult you would like to retrieve from the server.
-///
-///
-/// returns:
-/// The scan from the Server, as <code>Data</code>. Use <code>JSONDecoder().decode()</code> to convert <code>Data</code> to the
-/// <code>AxeResult</code>. This will return <code>nil</code> if there was an issue with retrieving the scan from the server.
-/// Please see the Console for more information about the error.
-- (NSData * _Nullable)getResult:(AttestResultKey * _Nonnull)resultKey SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// This tags the scan with the corresponding AttestResultKey.
-/// \param resultKey The AttestResultKey of the scan you would like to tag.
-///
-/// \param tags The tags you would like to give the scan, as <code>[String]</code>.
-///
-///
-/// returns:
-/// the AttestResultKey of the scan you tagged. This will return <code>nil</code> if there was an error with
-/// tagging a scan. If it returns <code>nil</code>, please see the Console for more information about the error.
-- (AttestResultKey * _Nullable)tagResult:(AttestResultKey * _Nonnull)resultKey tags:(NSArray<NSString *> * _Nonnull)tags SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// Add the ability to set/update the scan name that is displayed in the dashboard.
-/// \param resultKey The AttestResultKey of the scan you would like to update.
-///
-/// \param name The name to update the scan to.
-///
-- (void)updateScanName:(AttestResultKey * _Nonnull)resultKey name:(NSString * _Nullable)name SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// Deletes the result if the result exists in the server.
-/// \param resultKey the AttestResultKey of the scan that should be deleted from the server.
-///
-///
-/// returns:
-/// Bool, indicating whether the scan was successfully deleted from the server.
-- (BOOL)deleteResult:(AttestResultKey * _Nonnull)resultKey SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// A scan’s unique identifier on the Results server. You can use the AttestResultKey to retrieve, tag, and
-/// delete scans on the server.
-SWIFT_CLASS("_TtC15axeDevToolsXCUI15AttestResultKey") SWIFT_DEPRECATED_MSG("This class has been renamed and will be removed November 2022. Please use `AxeDevToolsResultKey` instead.", "_TtC15axeDevToolsXCUI20AxeDevToolsResultKey")
-@interface AttestResultKey : NSObject
-/// The name of the application that the scan came from. Should be the Bundle Identifier.
-@property (nonatomic, readonly, copy) NSString * _Nonnull packageName;
-/// A unique String associated with the user who pushed up the scan.
-@property (nonatomic, readonly, copy) NSString * _Nonnull userId;
-/// A unique String associated with the specific scan.
-@property (nonatomic, readonly, copy) NSString * _Nonnull resultId;
-@property (nonatomic, readonly) NSUInteger hash;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-/// Use this in UI Testing to convert the Floating Action Button title into a valid AttestResultKey.
-/// This can then be used for functionality available in <code>AttestClient</code>. This will return <code>nil</code> if there
-/// was an error with pushing the scan to the results server.
-/// \param fabTitle The <code>title</code> of the Floating Action Button after the UI Test automatically presses
-/// it, sending a scan to the Results server.
-///
-- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 /// A class that contains the location and dimensions of a rectangle, in iOS points.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeRect")
@@ -469,16 +290,6 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeConf")
 /// \param rulesFor A dictionary where each key, the Class name or Accessibility Identifier of a view, has a <code>Set</code> of <code>Strings</code> containing Rule Id’s to ignore.
 ///
 - (void)ignoreWithRulesFor:(NSDictionary<NSString *, NSSet<NSString *> *> * _Nonnull)rulesFor;
-/// Removes a list of <code>AxeStandard</code>s from the configuration.
-/// This can be used to remove a list of rules associated with a standard from being run. For example, if you do not want Best Practice rules to run, you can use this function to remove Best Practice rules from the configuration.
-/// \param standards A list of standards that should be removed from the configuration, as an array of <code>String</code>.
-///
-- (void)removeWithStandards:(NSArray<NSString *> * _Nonnull)standards SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use the `ignore` method instead.");
-/// Adds a list of <code>AxeRule</code>s to the configuration.
-/// This can be used to add a list of rules that you want to run.
-/// \param rules A list of rules that should be added to the configuration, as an <code>Array<String></code>.
-///
-- (void)addWithRules:(NSArray<NSString *> * _Nonnull)rules SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use the `ignore(rule)` or `ignore(rules)` functions instead.");
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -505,20 +316,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI10AxeContext")
 
 
 @class AxeDevToolsResultKey;
+@class AxeResult;
 
-/// AxeDevTools class contains many static methods for you to set up testing for accessibility.
-/// With this class, you can:
-/// <ul>
-///   <li>
-///     set up an automated accessibility test for either an entire screen or a single view
-///   </li>
-///   <li>
-///     add the floating action button to your application to scan the current screen’s contents for accessibility issues when pressed
-///   </li>
-///   <li>
-///     configure your accessibility tests to suit your needs
-///   </li>
-/// </ul>
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeDevTools")
 @interface AxeDevTools : NSObject
 /// Set this property if you want to change which rules are run or if you want to add custom rules.
@@ -616,20 +415,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// AxeDevToolsResultKey, which can be used to retrieve the scan from the server.
 - (AxeDevToolsResultKey * _Nullable)postResult:(AxeResult * _Nonnull)result withTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error;
-/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
-/// note:
-/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
-/// \param result The result that should be saved to your machine.
-///
-/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
-///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
-///
-///
-/// returns:
-/// String, the path to the saved file.
-- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Tags the scan in the dashboard with the strings provided.  Will throw an error if there was an issue tagging the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to tag.
 ///
@@ -646,16 +431,31 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// \param scanName The name you would like to give the scan.
 ///
 - (BOOL)updateScanName:(AxeDevToolsResultKey * _Nonnull)resultKey to:(NSString * _Nonnull)scanName error:(NSError * _Nullable * _Nullable)error;
-/// Returns an initialized Attest object. Can be used in your UI Tests to test a screen written in Swift UI.
+/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
+/// note:
+/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
+/// \param result The result that should be saved to your machine.
+///
+/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
+///
+///
+/// returns:
+/// String, the path to the saved file.
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Use this in a UITest to analyze the accessibility of a screen or a view. This can be for views created in SwiftUI or UIKit.
 /// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
 ///
 ///
 /// returns:
-/// Initialized Attest object.
+/// the scan, as an AxeResult.
 - (AxeResult * _Nullable)runOnElement:(id _Nonnull)element error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 /// A scan’s unique identifier on the axeDevTools Mobile server. You can use the AxeDevToolsResultKey to retrieve, tag, and
@@ -748,28 +548,6 @@ typedef SWIFT_ENUM(NSUInteger, AxeElementType, open) {
 };
 
 
-SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeFrame") SWIFT_DEPRECATED_MSG("This will be removed November 2022. Please use AxeRect (or AxeBounds) instead.")
-@interface AxeFrame : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AxeFrame * _Nonnull zero;)
-+ (AxeFrame * _Nonnull)zero SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly) float left;
-@property (nonatomic, readonly) float right;
-@property (nonatomic, readonly) float top;
-@property (nonatomic, readonly) float bottom;
-@property (nonatomic, readonly) float width;
-@property (nonatomic, readonly) float height;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@property (nonatomic, readonly) NSUInteger hash;
-- (BOOL)contains:(float)x :(float)y SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)containsWithFrame:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)intersects:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (AxeFrame * _Nullable)intersection:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 /// A screenshot of a view, or the entire device’s screen.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeImage")
 @interface AxeImage : NSObject
@@ -826,9 +604,9 @@ typedef SWIFT_ENUM(NSUInteger, AxeOrientation, open) {
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxePoint")
 @interface AxePoint : NSObject
 /// The horizontal location of the point.
-@property (nonatomic, readonly) float x;
+@property (nonatomic, readonly) NSInteger x;
 /// The vertical location of the point.
-@property (nonatomic, readonly) float y;
+@property (nonatomic, readonly) NSInteger y;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -860,7 +638,6 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull axeRuleResults;
 /// All failures in the scan
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull failures;
-@property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull violations SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `failures` instead");
 /// All passes in the scan
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull passes;
 /// All incompletes in the scan
@@ -870,32 +647,9 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 /// Summary of the scan. Contains the number of failures, passes, and incompletes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull shortDescription;
-/// Sometimes a result may be empty if it could not completely create a scan.  Use this to determine whether the result is valid.
-@property (nonatomic, readonly) BOOL isEmpty SWIFT_DEPRECATED_MSG("A result can no longer be empty with the API available in 3.0, so you no longer have to check for an empty result. This method will be removed in November 2022.");
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-/// Use this after calling <code>isAccessible()</code> in your unit test to save the scan to your machine, as JSON.
-/// note:
-/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
-/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AttestResults” in your home directory (/Users/yourname/).
-///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
-///
-///
-/// returns:
-/// String, the path to the saved file.
-- (NSString * _Nullable)andSaveResultToPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use AxeDevTools().saveResult instead.");
-/// Use this after calling <code>isAccessible()</code> to send the scan to the server.
-/// \param tags A list of tags that should be associated with the scan, as an array of String.
-///
-/// \param scanName A String to change the scan name too in the dashboard.
-///
-///
-/// returns:
-/// AttestResultKey, <code>nil</code> if push was not successful.
-- (AttestResultKey * _Nullable)andPushResultWithTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use AxeDevTools().postResult instead.");
 @end
 
 /// The view’s primary purpose.
@@ -914,18 +668,19 @@ typedef SWIFT_ENUM(NSInteger, AxeRole, open) {
 typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdA11yElementFocusBox = 0,
   AxeRuleIdActiveControlName = 1,
-  AxeRuleIdCollidingControls = 2,
-  AxeRuleIdCollidingViews = 3,
-  AxeRuleIdConflictingTraits = 4,
-  AxeRuleIdFocusableText = 5,
-  AxeRuleIdImageViewName = 6,
-  AxeRuleIdInScrollView = 7,
-  AxeRuleIdLabelAtFront = 8,
-  AxeRuleIdLabelInName = 9,
-  AxeRuleIdMeaningfulAccessibleName = 10,
-  AxeRuleIdNestedElementsName = 11,
-  AxeRuleIdScreenTitle = 12,
-  AxeRuleIdTouchTargetSize = 13,
+  AxeRuleIdAssociatedText = 2,
+  AxeRuleIdCollidingControls = 3,
+  AxeRuleIdCollidingViews = 4,
+  AxeRuleIdConflictingTraits = 5,
+  AxeRuleIdFocusableText = 6,
+  AxeRuleIdImageViewName = 7,
+  AxeRuleIdInScrollView = 8,
+  AxeRuleIdLabelAtFront = 9,
+  AxeRuleIdLabelInName = 10,
+  AxeRuleIdMeaningfulAccessibleName = 11,
+  AxeRuleIdNestedElementsName = 12,
+  AxeRuleIdScreenTitle = 13,
+  AxeRuleIdTouchTargetSize = 14,
 };
 
 enum AxeStatus : NSInteger;
@@ -983,7 +738,6 @@ typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
 };
 
 
-/// The accessibility traits on a view.  Similar to UIAccessibilityTraits.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeTraits")
 @interface AxeTraits : NSObject
 @property (nonatomic) uint64_t rawValue;
@@ -1057,9 +811,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AxeTraits * 
 @end
 
 enum RunStatus : NSInteger;
-@class CalculatedProps;
 
-/// A class representing one view in a view hierarchy.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @interface AxeView : NSObject
 /// name of the original class, as a String (UIButton, UIWindow, DQButton, etc).
@@ -1080,14 +832,14 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @property (nonatomic, readonly, copy) NSString * _Nullable value;
 /// whether a view can be directly focused by VoiceOver. This property is calculated from isAccessibilityElement, and will be false for any child views within a VoiceOver-focusable view.
 @property (nonatomic, readonly) BOOL isAccessibilityFocusable;
-/// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar).
-@property (nonatomic, readonly) BOOL isVisibleToUser;
 /// The view’s subviews, as AxeViews
 @property (nonatomic, readonly, copy) NSArray<AxeView *> * _Nonnull children;
 /// The view’s parent, as an AxeView.
 @property (nonatomic, weak) AxeView * _Nullable parent;
 /// a unique identifier for the view.  The axeViewId will change between scans of the same view.
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeViewId;
+/// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar).
+@property (nonatomic, readonly) BOOL isVisibleToUser;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @property (nonatomic, readonly) NSUInteger hash;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -1130,93 +882,10 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 /// returns:
 /// true if the view is the elementType provided or if it is a child of the elementType provided; false otherwise.
 - (BOOL)isElementOrChildOfElementType:(enum AxeElementType)elementType SWIFT_WARN_UNUSED_RESULT;
-/// Additional properties that were calculated using the stored AxeView properties.
-@property (nonatomic, readonly, strong) CalculatedProps * _Nonnull calculatedProps SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve any property using a `get` method.");
-/// The type of object. We use this to help determine whether a rule should run on a specific view.
-@property (nonatomic, copy) NSString * _Nonnull inheritedType SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please use `elementType` instead.");
-/// the view’s frame. This property is taken directly from UIView and converted to an AxeRect.
-@property (nonatomic, strong) AxeRect * _Nonnull frame SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// the view’s text, if present.  Only available in axeDevToolsUIKit.
-@property (nonatomic, copy) NSString * _Nullable text SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// Whether the view can be activated (such as a button).
-@property (nonatomic) BOOL isActiveControl SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// Whether the view is a control and is available for interaction.
-/// This property is taken directly from the <code>isEnabled</code> property present in UIControls but is converted to a String.
-/// If the view is not a UIControl, this property returns <code>nil</code>.
-/// If the view is a control, it returns <code>"true"</code> if <code>view.isEnabled</code> is <code>true</code> and <code>"false"</code> if <code>view.isEnabled</code> is <code>false</code>.
-@property (nonatomic, copy) NSString * _Nullable isEnabled SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>accessibilityTraits</code> property present in UIViews,
-/// but is converted from <code>UIAccessibilityTraits</code> to <code>AxeTraits</code>. Do not use the
-/// <code>accessibilityTraits</code> property on AxeViews, as it may be inaccurate.
-@property (nonatomic, strong) AxeTraits * _Nonnull a11yTraits SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>isAccessibilityElement</code> property present in UIViews.
-/// Do not use the <code>isAccessibilityElement</code> property on AxeViews, as it may be inaccurate.  Only available in axeDevTools UIKit.
-@property (nonatomic) BOOL isA11yElement SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>accessibilityPath</code> property present in UIViews.
-/// Do not use the <code>accessibilityPath</code> property on AxeViews, as it may be inaccurate.
-@property (nonatomic, strong) AxeBounds * _Nullable a11yPath SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// whether the view has an ancestor that is VoiceOver focusable.
-@property (nonatomic, readonly) BOOL isInFocusableView SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChildOf(ofProp)` method.");
-/// whether the view has an ancestor that is a scrollView.
-@property (nonatomic, readonly) BOOL isInScrollView SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-/// whether the view has an ancestor that is an active control.
-@property (nonatomic, readonly) BOOL isInActiveControl SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofProp)` method.");
-/// whether the view has an ancestor that is a tableViewCell.
-@property (nonatomic, readonly) BOOL isInTableViewCell SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-/// the view’s text and any text available on its children.
-@property (nonatomic, readonly) BOOL isInCollectionViewCell SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-@property (nonatomic, readonly) BOOL hasSpeakableText SWIFT_DEPRECATED_MSG("This will be removed November 2022.");
-@property (nonatomic, readonly, copy) NSString * _Nullable speakableText SWIFT_DEPRECATED_MSG("This will be removed November 2022.");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@interface AxeView (SWIFT_EXTENSION(axeDevToolsXCUI))
-/// The text that VoiceOver reads aloud when focused on this view. Only available in axeDevTools XCUI.
-@property (nonatomic, readonly, copy) NSString * _Nullable label SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-@end
-
-
-
-SWIFT_CLASS("_TtC15axeDevToolsXCUI5Props") SWIFT_DEPRECATED_MSG("This class will be removed November 2022.")
-@interface Props : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// CalculatedProps are properties that can be calculated from the values given from the system.
-/// All CalculatedProps need to be serialized in AxeView for use in Attest UI or in Sauron.
-SWIFT_CLASS("_TtC15axeDevToolsXCUI15CalculatedProps") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please grab properties from the AxeView directly.")
-@interface CalculatedProps : Props
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, InheritedType, open) {
-/// An element that is guaranteed to have text
-  InheritedTypeTextElement = 0,
-/// Stepper has unique properties that can cause issues with axe DevTools
-  InheritedTypeStepper = 1,
-/// TextField has unique properties that can cause issues with axe DevTools
-  InheritedTypeTextField = 2,
-/// SegmentedControl has unique properties that can cause issues with axe DevTools
-  InheritedTypeSegmentedControl = 3,
-/// Any other element that inherits from the UIControl class
-  InheritedTypeControl = 4,
-/// An image that is not nil or empty
-  InheritedTypeImage = 5,
-/// A scrollView
-  InheritedTypeScrollView = 6,
-/// A tableView cell
-  InheritedTypeTableViewCell = 7,
-/// A collectionView cell
-  InheritedTypeCollectionViewCell = 8,
-/// An element that is likely to cause false positives
-  InheritedTypeIgnoredElement = 9,
-/// Any other element that axe DevTools does not need to scan
-  InheritedTypeGenericElement = 10,
-};
 
 
 
@@ -1224,6 +893,8 @@ typedef SWIFT_ENUM(NSInteger, InheritedType, open) {
 /// An object that holds information about the rule, including a brief description, the severity of a failure of the rule, and whether the rule is classified as a WCAG Success Criteria.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8RuleConf")
 @interface RuleConf : NSObject
+/// Whether a rule is currently experimental or not.
+@property (nonatomic, readonly) BOOL experimental;
 /// A brief description of the rule.
 @property (nonatomic, readonly, copy) NSString * _Nonnull summary;
 /// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
@@ -1243,12 +914,6 @@ typedef SWIFT_ENUM(NSInteger, RunStatus, open) {
   RunStatusStop = 1,
 /// The view hierarchy should continue to be traversed along siblings of this view and their descendants, but should not traverse through child elements of this view.
   RunStatusSkipDescendants = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, Ternary, open) {
-  TernaryTrue = 0,
-  TernaryFalse = 1,
-  TernaryUndefined = 2,
 };
 
 
@@ -1487,193 +1152,14 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 ///
 /// \param clientId Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-/// \param clientSecret Optional. Provide this if you have your own instance of the axeDevTools server.
-///
 /// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId clientSecret:(NSString * _Nonnull)clientSecret authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class AxeConf;
 @class NSNumber;
-@class AttestClient;
-@class AxeResult;
-
-/// The Attest class contains many static methods for you to set up automated accessibility scanning.
-/// This class allows you to
-/// <ul>
-///   <li>
-///     set up and run an accessibility test on an entire screen
-///   </li>
-///   <li>
-///     configure the Floating Action Button
-///   </li>
-///   <li>
-///     adjust which rules you would like to run
-///   </li>
-///   <li>
-///     turn on advanced logging (if you run into an issue, sometimes additional logging can be useful to help us debug!)
-///   </li>
-/// </ul>
-SWIFT_CLASS("_TtC15axeDevToolsXCUI6Attest") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please use `AxeDevTools` instead.", "_TtC15axeDevToolsXCUI11AxeDevTools")
-@interface Attest : NSObject
-/// Set this property if you want to change which rules are run or if you want to add custom rules.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AxeConf * _Nonnull configuration;)
-+ (AxeConf * _Nonnull)configuration SWIFT_WARN_UNUSED_RESULT;
-+ (void)setConfiguration:(AxeConf * _Nonnull)value;
-/// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
-/// We may request this to be turned on if an obscure bug is found.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
-+ (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
-+ (void)setDebugStatements:(BOOL)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL logWarnings SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `debugStatements` instead.");)
-+ (BOOL)logWarnings SWIFT_WARN_UNUSED_RESULT;
-+ (void)setLogWarnings:(BOOL)value;
-/// Sets up a local connection with the Attest Desktop Application.  This is required to locally push results
-/// and use manual testing with the Desktop Application.
-/// \param port the port number of the local server running in the Attest Desktop Application.
-/// If not specified, the port defaults to 48485.
-///
-+ (void)setLocalConnectionWithPort:(NSUInteger)port;
-/// Use this function to log into the cloud instance of the Attest Service.  This can be used in the
-/// AppDelegate/SceneDelegate (for manual or UI Testing) before attaching the FAB to the application,
-/// or it can be used to push results to the Attest Service in Unit Tests.
-/// If you are using Objective-C, simply pass in an empty String to the <code>url</code> parameter, and the Attest
-/// class will set the URL to the default server.  If you do not provide the correct credentials, an error
-/// message (with <code>DEQUE</code>) will be printed to the console, and no results will be pushed to the cloud
-/// server. Do NOT use this method to connect to the Desktop Client, as it will not work.  Please instead
-/// use <code>setLocalConnection</code>.
-/// note:
-/// Google authentication information does not work in this method.
-/// \param url the URL of the server you want to send scans to, as a String.  Defaults to the default cloud instance of the server.  Most users should not need to change this from default.
-///
-/// \param username your username for the Attest Service, as a String. Usually is an email address.
-///
-/// \param password your password for the Attest Service, as a String.
-///
-+ (void)setServerTo:(NSString * _Nonnull)url withUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `login` within AxeDevTools class instead.");
-/// Use this method to log into the cloud instance of the Attest Service.  Recommended for use in UI
-/// Integrated Tests. Having access to the AttestClient directly gives you additional access to API such
-/// as being able to retrieve, tag, and delete scans from the server.
-/// \param attestClient a class that allows you to directly interact with the Attest server.
-/// See <code>AttestClient</code> for more information.
-///
-+ (void)setServerUsingAttestClient:(AttestClient * _Nonnull)attestClient SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `login` within AxeDevTools class instead.");
-/// Returns an initialized Attest object. Can be used in your UI Tests to test a screen written in Swift UI.
-/// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
-///
-///
-/// returns:
-/// Initialized Attest object.
-+ (Attest * _Nullable)thatWithElement:(id _Nonnull)element SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.");
-/// Use this in a Unit Test to analyze the accessibility of the view or View Controller specified in the Attest class.
-///
-/// returns:
-/// the result of the scan, as an AxeResult.
-- (AxeResult * _Nonnull)isAccessible SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `run` within `AxeDevTools` instead.");
-/// Removes Rules from the Ruleset.  Attest will <em>not</em> use the Rules specified when running a scan.
-/// This can be used in Unit Tests.
-/// \param rules A list of Rules that should <em>not</em> be run in Attest, as an array of String.
-///
-///
-/// returns:
-/// An initialized Attest class.
-- (Attest * _Nonnull)butNotWithRules:(NSArray<NSString *> * _Nonnull)rules SWIFT_DEPRECATED_MSG("This method will be removed November 2022.  Please use the `configuration` variable within `AxeDevTools` to update rules instead.");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class AttestResultKey;
-@class NSData;
-
-/// AttestClient allows you to log into and interact with the Attest server.  With the AttestClient, you can directly
-/// push up scans to the server, and also retrieve, tag, and delete scans available on the server.
-/// We recommend using this API in conjunction with UI Tests. This way, you can automate pressing the Floating
-/// Action Button on every scan, and then retrieve the scan from the server so that the UI Tests can assert
-/// whatever information you want about the scan (if there are failures, if the failures are only from one
-/// rule, how many passes there are, etc).
-SWIFT_CLASS("_TtC15axeDevToolsXCUI12AttestClient") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please use `AxeDevTools`.")
-@interface AttestClient : NSObject
-/// Use this to log into the cloud instance of the Attest Service.  This will return <code>nil</code> and print to the console if the framework could not connect to the Attest Service.  If you are running into login issues, please search the console for <code>DEQUE</code> messages.
-/// \param username The username you use to log into the Attest Service.  This may be your email address.
-///
-/// \param password The password you use to log into the Attest Service.
-///
-/// \param serverURL The location of the cloud server. It defaults to the default cloud instance of the server.
-///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password serverURL:(NSString * _Nonnull)serverURL;
-- (nullable instancetype)initWithAccessToken:(AccessToken * _Nonnull)accessToken serverURL:(NSString * _Nonnull)serverURL;
-/// Use this to log into a local instance of the Attest Service (Desktop Client).  This will return <code>nil</code> and print to the console if the framework could not find the server instance.  The Desktop Client must be open and running for this call to work correctly.  Search the console for <code>DEQUE</code> messages if there are login issues.
-/// \param port The port number on which the local Attest Service is hosted. Default is 48485.
-///
-- (nullable instancetype)initWithPort:(NSUInteger)port OBJC_DESIGNATED_INITIALIZER;
-/// This retrieves the AxeResult from the Results server.
-/// You may want to do this if your UI Tests just pushed a result to the server by pressing the purple
-/// Floating Action Button. The Floating Action Button will contain an AttestResultKey that you can then use
-/// to assert things about the scan – such as, if there were any inaccessible views, or whether there were
-/// only failures from one rule.
-/// \param resultKey The AttestResultKey of the AxeResult you would like to retrieve from the server.
-///
-///
-/// returns:
-/// The scan from the Server, as <code>Data</code>. Use <code>JSONDecoder().decode()</code> to convert <code>Data</code> to the
-/// <code>AxeResult</code>. This will return <code>nil</code> if there was an issue with retrieving the scan from the server.
-/// Please see the Console for more information about the error.
-- (NSData * _Nullable)getResult:(AttestResultKey * _Nonnull)resultKey SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// This tags the scan with the corresponding AttestResultKey.
-/// \param resultKey The AttestResultKey of the scan you would like to tag.
-///
-/// \param tags The tags you would like to give the scan, as <code>[String]</code>.
-///
-///
-/// returns:
-/// the AttestResultKey of the scan you tagged. This will return <code>nil</code> if there was an error with
-/// tagging a scan. If it returns <code>nil</code>, please see the Console for more information about the error.
-- (AttestResultKey * _Nullable)tagResult:(AttestResultKey * _Nonnull)resultKey tags:(NSArray<NSString *> * _Nonnull)tags SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// Add the ability to set/update the scan name that is displayed in the dashboard.
-/// \param resultKey The AttestResultKey of the scan you would like to update.
-///
-/// \param name The name to update the scan to.
-///
-- (void)updateScanName:(AttestResultKey * _Nonnull)resultKey name:(NSString * _Nullable)name SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-/// Deletes the result if the result exists in the server.
-/// \param resultKey the AttestResultKey of the scan that should be deleted from the server.
-///
-///
-/// returns:
-/// Bool, indicating whether the scan was successfully deleted from the server.
-- (BOOL)deleteResult:(AttestResultKey * _Nonnull)resultKey SWIFT_DEPRECATED_MSG("This method has been moved to AxeDevTools.");
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// A scan’s unique identifier on the Results server. You can use the AttestResultKey to retrieve, tag, and
-/// delete scans on the server.
-SWIFT_CLASS("_TtC15axeDevToolsXCUI15AttestResultKey") SWIFT_DEPRECATED_MSG("This class has been renamed and will be removed November 2022. Please use `AxeDevToolsResultKey` instead.", "_TtC15axeDevToolsXCUI20AxeDevToolsResultKey")
-@interface AttestResultKey : NSObject
-/// The name of the application that the scan came from. Should be the Bundle Identifier.
-@property (nonatomic, readonly, copy) NSString * _Nonnull packageName;
-/// A unique String associated with the user who pushed up the scan.
-@property (nonatomic, readonly, copy) NSString * _Nonnull userId;
-/// A unique String associated with the specific scan.
-@property (nonatomic, readonly, copy) NSString * _Nonnull resultId;
-@property (nonatomic, readonly) NSUInteger hash;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-/// Use this in UI Testing to convert the Floating Action Button title into a valid AttestResultKey.
-/// This can then be used for functionality available in <code>AttestClient</code>. This will return <code>nil</code> if there
-/// was an error with pushing the scan to the results server.
-/// \param fabTitle The <code>title</code> of the Floating Action Button after the UI Test automatically presses
-/// it, sending a scan to the Results server.
-///
-- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 /// A class that contains the location and dimensions of a rectangle, in iOS points.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeRect")
@@ -1730,16 +1216,6 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeConf")
 /// \param rulesFor A dictionary where each key, the Class name or Accessibility Identifier of a view, has a <code>Set</code> of <code>Strings</code> containing Rule Id’s to ignore.
 ///
 - (void)ignoreWithRulesFor:(NSDictionary<NSString *, NSSet<NSString *> *> * _Nonnull)rulesFor;
-/// Removes a list of <code>AxeStandard</code>s from the configuration.
-/// This can be used to remove a list of rules associated with a standard from being run. For example, if you do not want Best Practice rules to run, you can use this function to remove Best Practice rules from the configuration.
-/// \param standards A list of standards that should be removed from the configuration, as an array of <code>String</code>.
-///
-- (void)removeWithStandards:(NSArray<NSString *> * _Nonnull)standards SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use the `ignore` method instead.");
-/// Adds a list of <code>AxeRule</code>s to the configuration.
-/// This can be used to add a list of rules that you want to run.
-/// \param rules A list of rules that should be added to the configuration, as an <code>Array<String></code>.
-///
-- (void)addWithRules:(NSArray<NSString *> * _Nonnull)rules SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use the `ignore(rule)` or `ignore(rules)` functions instead.");
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -1766,20 +1242,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI10AxeContext")
 
 
 @class AxeDevToolsResultKey;
+@class AxeResult;
 
-/// AxeDevTools class contains many static methods for you to set up testing for accessibility.
-/// With this class, you can:
-/// <ul>
-///   <li>
-///     set up an automated accessibility test for either an entire screen or a single view
-///   </li>
-///   <li>
-///     add the floating action button to your application to scan the current screen’s contents for accessibility issues when pressed
-///   </li>
-///   <li>
-///     configure your accessibility tests to suit your needs
-///   </li>
-/// </ul>
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeDevTools")
 @interface AxeDevTools : NSObject
 /// Set this property if you want to change which rules are run or if you want to add custom rules.
@@ -1877,20 +1341,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// AxeDevToolsResultKey, which can be used to retrieve the scan from the server.
 - (AxeDevToolsResultKey * _Nullable)postResult:(AxeResult * _Nonnull)result withTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error;
-/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
-/// note:
-/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
-/// \param result The result that should be saved to your machine.
-///
-/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
-///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
-///
-///
-/// returns:
-/// String, the path to the saved file.
-- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Tags the scan in the dashboard with the strings provided.  Will throw an error if there was an issue tagging the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to tag.
 ///
@@ -1907,16 +1357,31 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// \param scanName The name you would like to give the scan.
 ///
 - (BOOL)updateScanName:(AxeDevToolsResultKey * _Nonnull)resultKey to:(NSString * _Nonnull)scanName error:(NSError * _Nullable * _Nullable)error;
-/// Returns an initialized Attest object. Can be used in your UI Tests to test a screen written in Swift UI.
+/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
+/// note:
+/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
+/// \param result The result that should be saved to your machine.
+///
+/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
+///
+///
+/// returns:
+/// String, the path to the saved file.
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Use this in a UITest to analyze the accessibility of a screen or a view. This can be for views created in SwiftUI or UIKit.
 /// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
 ///
 ///
 /// returns:
-/// Initialized Attest object.
+/// the scan, as an AxeResult.
 - (AxeResult * _Nullable)runOnElement:(id _Nonnull)element error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 /// A scan’s unique identifier on the axeDevTools Mobile server. You can use the AxeDevToolsResultKey to retrieve, tag, and
@@ -2009,28 +1474,6 @@ typedef SWIFT_ENUM(NSUInteger, AxeElementType, open) {
 };
 
 
-SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeFrame") SWIFT_DEPRECATED_MSG("This will be removed November 2022. Please use AxeRect (or AxeBounds) instead.")
-@interface AxeFrame : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AxeFrame * _Nonnull zero;)
-+ (AxeFrame * _Nonnull)zero SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly) float left;
-@property (nonatomic, readonly) float right;
-@property (nonatomic, readonly) float top;
-@property (nonatomic, readonly) float bottom;
-@property (nonatomic, readonly) float width;
-@property (nonatomic, readonly) float height;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@property (nonatomic, readonly) NSUInteger hash;
-- (BOOL)contains:(float)x :(float)y SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)containsWithFrame:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)intersects:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (AxeFrame * _Nullable)intersection:(AxeFrame * _Nonnull)frame SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 /// A screenshot of a view, or the entire device’s screen.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeImage")
 @interface AxeImage : NSObject
@@ -2087,9 +1530,9 @@ typedef SWIFT_ENUM(NSUInteger, AxeOrientation, open) {
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxePoint")
 @interface AxePoint : NSObject
 /// The horizontal location of the point.
-@property (nonatomic, readonly) float x;
+@property (nonatomic, readonly) NSInteger x;
 /// The vertical location of the point.
-@property (nonatomic, readonly) float y;
+@property (nonatomic, readonly) NSInteger y;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2121,7 +1564,6 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull axeRuleResults;
 /// All failures in the scan
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull failures;
-@property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull violations SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use `failures` instead");
 /// All passes in the scan
 @property (nonatomic, readonly, copy) NSArray<AxeRuleResult *> * _Nonnull passes;
 /// All incompletes in the scan
@@ -2131,32 +1573,9 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 /// Summary of the scan. Contains the number of failures, passes, and incompletes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull shortDescription;
-/// Sometimes a result may be empty if it could not completely create a scan.  Use this to determine whether the result is valid.
-@property (nonatomic, readonly) BOOL isEmpty SWIFT_DEPRECATED_MSG("A result can no longer be empty with the API available in 3.0, so you no longer have to check for an empty result. This method will be removed in November 2022.");
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-/// Use this after calling <code>isAccessible()</code> in your unit test to save the scan to your machine, as JSON.
-/// note:
-/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
-/// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AttestResults” in your home directory (/Users/yourname/).
-///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
-///
-///
-/// returns:
-/// String, the path to the saved file.
-- (NSString * _Nullable)andSaveResultToPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use AxeDevTools().saveResult instead.");
-/// Use this after calling <code>isAccessible()</code> to send the scan to the server.
-/// \param tags A list of tags that should be associated with the scan, as an array of String.
-///
-/// \param scanName A String to change the scan name too in the dashboard.
-///
-///
-/// returns:
-/// AttestResultKey, <code>nil</code> if push was not successful.
-- (AttestResultKey * _Nullable)andPushResultWithTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName SWIFT_DEPRECATED_MSG("This method will be removed November 2022. Please use AxeDevTools().postResult instead.");
 @end
 
 /// The view’s primary purpose.
@@ -2175,18 +1594,19 @@ typedef SWIFT_ENUM(NSInteger, AxeRole, open) {
 typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdA11yElementFocusBox = 0,
   AxeRuleIdActiveControlName = 1,
-  AxeRuleIdCollidingControls = 2,
-  AxeRuleIdCollidingViews = 3,
-  AxeRuleIdConflictingTraits = 4,
-  AxeRuleIdFocusableText = 5,
-  AxeRuleIdImageViewName = 6,
-  AxeRuleIdInScrollView = 7,
-  AxeRuleIdLabelAtFront = 8,
-  AxeRuleIdLabelInName = 9,
-  AxeRuleIdMeaningfulAccessibleName = 10,
-  AxeRuleIdNestedElementsName = 11,
-  AxeRuleIdScreenTitle = 12,
-  AxeRuleIdTouchTargetSize = 13,
+  AxeRuleIdAssociatedText = 2,
+  AxeRuleIdCollidingControls = 3,
+  AxeRuleIdCollidingViews = 4,
+  AxeRuleIdConflictingTraits = 5,
+  AxeRuleIdFocusableText = 6,
+  AxeRuleIdImageViewName = 7,
+  AxeRuleIdInScrollView = 8,
+  AxeRuleIdLabelAtFront = 9,
+  AxeRuleIdLabelInName = 10,
+  AxeRuleIdMeaningfulAccessibleName = 11,
+  AxeRuleIdNestedElementsName = 12,
+  AxeRuleIdScreenTitle = 13,
+  AxeRuleIdTouchTargetSize = 14,
 };
 
 enum AxeStatus : NSInteger;
@@ -2244,7 +1664,6 @@ typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
 };
 
 
-/// The accessibility traits on a view.  Similar to UIAccessibilityTraits.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeTraits")
 @interface AxeTraits : NSObject
 @property (nonatomic) uint64_t rawValue;
@@ -2318,9 +1737,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AxeTraits * 
 @end
 
 enum RunStatus : NSInteger;
-@class CalculatedProps;
 
-/// A class representing one view in a view hierarchy.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @interface AxeView : NSObject
 /// name of the original class, as a String (UIButton, UIWindow, DQButton, etc).
@@ -2341,14 +1758,14 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @property (nonatomic, readonly, copy) NSString * _Nullable value;
 /// whether a view can be directly focused by VoiceOver. This property is calculated from isAccessibilityElement, and will be false for any child views within a VoiceOver-focusable view.
 @property (nonatomic, readonly) BOOL isAccessibilityFocusable;
-/// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar).
-@property (nonatomic, readonly) BOOL isVisibleToUser;
 /// The view’s subviews, as AxeViews
 @property (nonatomic, readonly, copy) NSArray<AxeView *> * _Nonnull children;
 /// The view’s parent, as an AxeView.
 @property (nonatomic, weak) AxeView * _Nullable parent;
 /// a unique identifier for the view.  The axeViewId will change between scans of the same view.
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeViewId;
+/// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar).
+@property (nonatomic, readonly) BOOL isVisibleToUser;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @property (nonatomic, readonly) NSUInteger hash;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -2391,93 +1808,10 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 /// returns:
 /// true if the view is the elementType provided or if it is a child of the elementType provided; false otherwise.
 - (BOOL)isElementOrChildOfElementType:(enum AxeElementType)elementType SWIFT_WARN_UNUSED_RESULT;
-/// Additional properties that were calculated using the stored AxeView properties.
-@property (nonatomic, readonly, strong) CalculatedProps * _Nonnull calculatedProps SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve any property using a `get` method.");
-/// The type of object. We use this to help determine whether a rule should run on a specific view.
-@property (nonatomic, copy) NSString * _Nonnull inheritedType SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please use `elementType` instead.");
-/// the view’s frame. This property is taken directly from UIView and converted to an AxeRect.
-@property (nonatomic, strong) AxeRect * _Nonnull frame SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// the view’s text, if present.  Only available in axeDevToolsUIKit.
-@property (nonatomic, copy) NSString * _Nullable text SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// Whether the view can be activated (such as a button).
-@property (nonatomic) BOOL isActiveControl SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// Whether the view is a control and is available for interaction.
-/// This property is taken directly from the <code>isEnabled</code> property present in UIControls but is converted to a String.
-/// If the view is not a UIControl, this property returns <code>nil</code>.
-/// If the view is a control, it returns <code>"true"</code> if <code>view.isEnabled</code> is <code>true</code> and <code>"false"</code> if <code>view.isEnabled</code> is <code>false</code>.
-@property (nonatomic, copy) NSString * _Nullable isEnabled SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>accessibilityTraits</code> property present in UIViews,
-/// but is converted from <code>UIAccessibilityTraits</code> to <code>AxeTraits</code>. Do not use the
-/// <code>accessibilityTraits</code> property on AxeViews, as it may be inaccurate.
-@property (nonatomic, strong) AxeTraits * _Nonnull a11yTraits SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>isAccessibilityElement</code> property present in UIViews.
-/// Do not use the <code>isAccessibilityElement</code> property on AxeViews, as it may be inaccurate.  Only available in axeDevTools UIKit.
-@property (nonatomic) BOOL isA11yElement SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// This property is taken directly from the <code>accessibilityPath</code> property present in UIViews.
-/// Do not use the <code>accessibilityPath</code> property on AxeViews, as it may be inaccurate.
-@property (nonatomic, strong) AxeBounds * _Nullable a11yPath SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-/// whether the view has an ancestor that is VoiceOver focusable.
-@property (nonatomic, readonly) BOOL isInFocusableView SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChildOf(ofProp)` method.");
-/// whether the view has an ancestor that is a scrollView.
-@property (nonatomic, readonly) BOOL isInScrollView SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-/// whether the view has an ancestor that is an active control.
-@property (nonatomic, readonly) BOOL isInActiveControl SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofProp)` method.");
-/// whether the view has an ancestor that is a tableViewCell.
-@property (nonatomic, readonly) BOOL isInTableViewCell SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-/// the view’s text and any text available on its children.
-@property (nonatomic, readonly) BOOL isInCollectionViewCell SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using the `isChild(ofElementType)` method.");
-@property (nonatomic, readonly) BOOL hasSpeakableText SWIFT_DEPRECATED_MSG("This will be removed November 2022.");
-@property (nonatomic, readonly, copy) NSString * _Nullable speakableText SWIFT_DEPRECATED_MSG("This will be removed November 2022.");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-@interface AxeView (SWIFT_EXTENSION(axeDevToolsXCUI))
-/// The text that VoiceOver reads aloud when focused on this view. Only available in axeDevTools XCUI.
-@property (nonatomic, readonly, copy) NSString * _Nullable label SWIFT_DEPRECATED_MSG("This property will be removed November 2022. Please retrieve this property using a `get` method.");
-@end
-
-
-
-SWIFT_CLASS("_TtC15axeDevToolsXCUI5Props") SWIFT_DEPRECATED_MSG("This class will be removed November 2022.")
-@interface Props : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// CalculatedProps are properties that can be calculated from the values given from the system.
-/// All CalculatedProps need to be serialized in AxeView for use in Attest UI or in Sauron.
-SWIFT_CLASS("_TtC15axeDevToolsXCUI15CalculatedProps") SWIFT_DEPRECATED_MSG("This class will be removed November 2022. Please grab properties from the AxeView directly.")
-@interface CalculatedProps : Props
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-typedef SWIFT_ENUM(NSInteger, InheritedType, open) {
-/// An element that is guaranteed to have text
-  InheritedTypeTextElement = 0,
-/// Stepper has unique properties that can cause issues with axe DevTools
-  InheritedTypeStepper = 1,
-/// TextField has unique properties that can cause issues with axe DevTools
-  InheritedTypeTextField = 2,
-/// SegmentedControl has unique properties that can cause issues with axe DevTools
-  InheritedTypeSegmentedControl = 3,
-/// Any other element that inherits from the UIControl class
-  InheritedTypeControl = 4,
-/// An image that is not nil or empty
-  InheritedTypeImage = 5,
-/// A scrollView
-  InheritedTypeScrollView = 6,
-/// A tableView cell
-  InheritedTypeTableViewCell = 7,
-/// A collectionView cell
-  InheritedTypeCollectionViewCell = 8,
-/// An element that is likely to cause false positives
-  InheritedTypeIgnoredElement = 9,
-/// Any other element that axe DevTools does not need to scan
-  InheritedTypeGenericElement = 10,
-};
 
 
 
@@ -2485,6 +1819,8 @@ typedef SWIFT_ENUM(NSInteger, InheritedType, open) {
 /// An object that holds information about the rule, including a brief description, the severity of a failure of the rule, and whether the rule is classified as a WCAG Success Criteria.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8RuleConf")
 @interface RuleConf : NSObject
+/// Whether a rule is currently experimental or not.
+@property (nonatomic, readonly) BOOL experimental;
 /// A brief description of the rule.
 @property (nonatomic, readonly, copy) NSString * _Nonnull summary;
 /// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
@@ -2504,12 +1840,6 @@ typedef SWIFT_ENUM(NSInteger, RunStatus, open) {
   RunStatusStop = 1,
 /// The view hierarchy should continue to be traversed along siblings of this view and their descendants, but should not traverse through child elements of this view.
   RunStatusSkipDescendants = 2,
-};
-
-typedef SWIFT_ENUM(NSInteger, Ternary, open) {
-  TernaryTrue = 0,
-  TernaryFalse = 1,
-  TernaryUndefined = 2,
 };
 
 
