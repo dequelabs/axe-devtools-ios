@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleShortVersionString</key>
+	<string>3.2.0-739-9fa4e612</string>
+	<key>CFBundleVersion</key>
+	<string>3.2.0</string>
+	<key>UIStoryboardDesignatedEntryPointIdentifier</key>
+	<string>50 Views</string>
+	<key>UIStoryboardVersion</key>
+	<integer>1</integer>
+	<key>UIViewControllerIdentifiersToNibNames</key>
+	<dict>
+		<key>100 Views</key>
+		<string>100 Views</string>
+		<key>150 Views</key>
+		<string>150 Views</string>
+		<key>200 Views</key>
+		<string>200 Views</string>
+		<key>400 Views</key>
+		<string>400 Views</string>
+		<key>50 Views</key>
+		<string>50 Views</string>
+		<key>600 Views</key>
+		<string>600 Views</string>
+		<key>800 Views</key>
+		<string>800 Views</string>
+	</dict>
+</dict>
+</plist>
