@@ -24,6 +24,9 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+axeDevToolsUIKit_noauth.xcframework
+axeDevToolsUIKit_noauth.xcframework/*
+
 ## Obj-C/Swift specific
 *.hmap
 
