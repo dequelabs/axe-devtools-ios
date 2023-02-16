@@ -6,6 +6,18 @@
 	<array>
 		<dict>
 			<key>LibraryIdentifier</key>
+			<string>ios-arm64</string>
+			<key>LibraryPath</key>
+			<string>axeDevToolsUIKit.framework</string>
+			<key>SupportedArchitectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>SupportedPlatform</key>
+			<string>ios</string>
+		</dict>
+		<dict>
+			<key>LibraryIdentifier</key>
 			<string>ios-arm64_x86_64-simulator</string>
 			<key>LibraryPath</key>
 			<string>axeDevToolsUIKit.framework</string>
@@ -19,25 +31,13 @@
 			<key>SupportedPlatformVariant</key>
 			<string>simulator</string>
 		</dict>
-		<dict>
-			<key>LibraryIdentifier</key>
-			<string>ios-arm64</string>
-			<key>LibraryPath</key>
-			<string>axeDevToolsUIKit.framework</string>
-			<key>SupportedArchitectures</key>
-			<array>
-				<string>arm64</string>
-			</array>
-			<key>SupportedPlatform</key>
-			<string>ios</string>
-		</dict>
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.2.0-739-9fa4e612</string>
+	<string>3.3.0-770-c72d8d78</string>
 	<key>CFBundleVersion</key>
-	<string>3.2.0</string>
+	<string>3.3.0</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>

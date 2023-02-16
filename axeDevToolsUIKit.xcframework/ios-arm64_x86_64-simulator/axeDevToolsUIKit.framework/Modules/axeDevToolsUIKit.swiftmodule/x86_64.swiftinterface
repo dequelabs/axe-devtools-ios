@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsUIKit
 import CoreGraphics
 import Foundation
 import Swift
 import UIKit
 import Vision
+import _Concurrency
 import zlib
 @objc public enum AxeImpact : Swift.Int {
   case MINOR = 0
@@ -116,7 +117,6 @@ import zlib
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
-  @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class AxeProps : ObjectiveC.NSObject, Swift.Codable {
@@ -136,7 +136,7 @@ import zlib
   final public func add(_ propName: axeDevToolsUIKit.AxeProps.Name, _ prop: Swift.Codable?)
   @objc deinit
 }
-extension String {
+extension Swift.String {
   public static let className: Swift.String
   public static let elementType: Swift.String
   public static let axeViewId: Swift.String
@@ -159,6 +159,7 @@ extension String {
   public static let accessibilityPath: Swift.String
   public static let accessibilityTraits: Swift.String
   public static let supportedOrientations: Swift.String
+  public static let actions: Swift.String
 }
 @objc public protocol FABInterface {
   @objc func onCreate(_ fab: axeDevToolsUIKit.FloatingActionButton)
@@ -188,10 +189,9 @@ extension String {
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
-  @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeDevice : ObjectiveC.NSObject, Swift.Codable {
+@_hasMissingDesignatedInitializers @objc public class AxeDevice : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let name: Swift.String
   @objc final public let os: Swift.String
   @objc final public let osVersion: Swift.String
@@ -229,7 +229,6 @@ extension String {
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
-  @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
@@ -252,7 +251,6 @@ extension String {
     @objc get
   }
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -265,6 +263,8 @@ extension String {
   @objc final public let props: axeDevToolsUIKit.AxeProps
   @objc final public let axeViewId: Swift.String
   @objc final public let isVisibleToUser: Swift.Bool
+  @objc final public let experimental: Swift.Bool
+  @objc final public let standard: axeDevToolsUIKit.AxeStandard
   @nonobjc public var axeRuleId: axeDevToolsUIKit.AxeRuleId? {
     get
   }
@@ -274,7 +274,6 @@ extension String {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
@@ -375,7 +374,6 @@ extension String {
   @objc public func isChild(ofProp propName: axeDevToolsUIKit.AxeProps.Name) -> Swift.Bool
   @objc public func isChild(ofElementType elementType: axeDevToolsUIKit.AxeElementType) -> Swift.Bool
   @objc public func isElementOrChild(ofElementType elementType: axeDevToolsUIKit.AxeElementType) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeDevToolsResultKey : ObjectiveC.NSObject, Swift.Codable {
@@ -390,7 +388,6 @@ extension String {
   }
   @objc public init?(fabTitle: Swift.String)
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -406,10 +403,9 @@ extension String {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
 }
-extension String {
+extension Swift.String {
   public static let accessibilityActivationPoint: Swift.String
   public static let accessibilityLabel: Swift.String
   public static let accessibilityValue: Swift.String
@@ -459,7 +455,9 @@ extension String {
   convenience required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class UsageServiceBody : ObjectiveC.NSObject {
   @objc deinit
 }
 @objc public enum AxeElementType : Swift.UInt {
@@ -514,8 +512,14 @@ extension String {
     get
   }
 }
+extension UIKit.UIGestureRecognizer {
+  @objc override dynamic open func value(forUndefinedKey key: Swift.String) -> Any?
+}
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
-  @objc final public var configuration: axeDevToolsUIKit.AxeConf
+  @objc final public var configuration: axeDevToolsUIKit.AxeConf {
+    @objc get
+    @objc set
+  }
   @objc public static var debugStatements: Swift.Bool {
     @objc get
     @objc set
@@ -523,9 +527,10 @@ extension String {
   @objc final public var fab: axeDevToolsUIKit.FloatingActionButton? {
     @objc get
   }
-  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
-  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
-  @objc public static func login(withAccessToken accessToken: axeDevToolsUIKit.AccessToken, toServer url: Swift.String = "") throws -> axeDevToolsUIKit.AxeDevTools
+  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsUIKit.AxeDevTools
+  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsUIKit.AxeDevTools
+  @objc public static func login(withAccessToken accessToken: axeDevToolsUIKit.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsUIKit.AxeDevTools
+  @available(iOS, deprecated, message: "This method will be removed in May 2023, when the Desktop App will no longer be supported.")
   @objc public static func setLocalConnection() throws -> axeDevToolsUIKit.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey) throws -> axeDevToolsUIKit.AxeResult
   @discardableResult
@@ -534,6 +539,7 @@ extension String {
   @objc final public func deleteResult(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsUIKit.AxeDevToolsResultKey, to scanName: Swift.String) throws
   @objc final public func saveResult(_ result: axeDevToolsUIKit.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
+  @available(iOS, deprecated, message: "This method will be removed in May 2023, when the Desktop App will no longer be supported.")
   @objc public static func setLocalConnection(ip: Swift.String) throws -> axeDevToolsUIKit.AxeDevTools
   @objc public static func showAxeFAB() -> axeDevToolsUIKit.AxeDevTools
   @objc final public func hideAxeFAB()
@@ -542,7 +548,6 @@ extension String {
   @objc final public func run(onView view: UIKit.UIView) throws -> axeDevToolsUIKit.AxeResult
   @objc final public func run(onViewController viewController: UIKit.UIViewController) throws -> axeDevToolsUIKit.AxeResult
   @objc final public func run(onStoryboardName storyboardName: Swift.String, viewControllerId: Swift.String? = nil, bundle: Foundation.Bundle? = nil) throws -> axeDevToolsUIKit.AxeResult
-  @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class AxeRule : Swift.Hashable {
@@ -568,8 +573,7 @@ extension String {
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class FloatingActionButton : UIKit.UIButton {
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class FloatingActionButton : UIKit.UIButton {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class A11yFAB : ObjectiveC.NSObject, axeDevToolsUIKit.FABInterface {
@@ -577,7 +581,7 @@ extension String {
   @objc override dynamic public init()
   @objc deinit
 }
-extension UIView {
+extension UIKit.UIView {
   @objc override dynamic open func value(forUndefinedKey key: Swift.String) -> Any?
 }
 @_inheritsConvenienceInitializers @objc public class AutomatedTestFAB : ObjectiveC.NSObject, axeDevToolsUIKit.FABInterface {
@@ -587,7 +591,6 @@ extension UIView {
 }
 @objc public class AccessToken : ObjectiveC.NSObject {
   @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
-  @objc override dynamic public init()
   @objc deinit
 }
 extension axeDevToolsUIKit.AxeImpact : Swift.CaseIterable {}
