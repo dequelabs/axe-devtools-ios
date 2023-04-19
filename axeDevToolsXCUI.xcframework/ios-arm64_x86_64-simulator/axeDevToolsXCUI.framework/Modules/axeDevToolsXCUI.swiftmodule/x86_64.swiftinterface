@@ -64,6 +64,7 @@ import zlib
   @objc final public let analysisTimestamp: Swift.Int64
   @objc final public let axeVersion: Swift.String
   @objc final public let screenTitle: Swift.String
+  @objc final public let isFullScreenForML: Swift.Bool
   @objc override dynamic public var hash: Swift.Int {
     @objc get
   }
@@ -256,6 +257,7 @@ import zlib
   case AssociatedText
   case CollidingControls
   case CollidingViews
+  case ColorContrast
   case ConflictingTraits
   case FocusableText
   case ImageViewName
@@ -264,8 +266,10 @@ import zlib
   case LabelInName
   case MeaningfulAccessibleName
   case NestedElementsName
+  case ScreenOrientation
   case ScreenTitle
   case TouchTargetSize
+  case TouchTargetSpacing
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
   public init?(rawValue: Swift.Int)
@@ -388,6 +392,7 @@ extension Swift.String {
 @objc public enum AxeStandard : Swift.Int {
   case WCAG_20
   case WCAG_21
+  case WCAG_22
   case PLATFORM
   case BEST_PRACTICE
   public func toString() -> Swift.String
@@ -478,7 +483,9 @@ extension Swift.String {
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
+  @available(*, deprecated, renamed: "saveResult(_:toPath:withFileName:withScanName:)")
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
+  @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc deinit
 }

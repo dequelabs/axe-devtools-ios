@@ -477,17 +477,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
 /// note:
 /// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
 /// \param result The result that should be saved to your machine.
 ///
 /// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
 ///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
+/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>”.
 ///
 ///
 /// returns:
 /// String, the path to the saved file.
-- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("", "saveResult:toPath:withFileName:withScanName:error:");
+/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
+/// note:
+/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
+/// \param result The result that should be saved to your machine.
+///
+/// \param path Where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param fileName What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>” or if scanName if specified, “<appIdentifier>-<scanName>”.
+///
+/// \param scanName What you want the scan to be called. If not specified, the scanName will be “<screenTitle>”
+///
+///
+/// returns:
+/// String, the path to the saved file.
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
 /// warning:
 /// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
@@ -498,7 +514,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// initialized AxeDevTools object.
 + (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Start the Axe Floating Action Button in your app; when this button is tapped a login screen will display where you can enter your credentials to log into AxeDevTools. Call this in the App or SceneDelegate.
-+ (AxeDevTools * _Nonnull)showAxeFAB SWIFT_WARN_UNUSED_RESULT;
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance.
+///
++ (AxeDevTools * _Nonnull)showAxeFABForServer:(NSString * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
 /// Removes the Axe Floating Action Button from your app. Call this in the App or SceneDelegate.
 - (void)hideAxeFAB;
 /// Start the Floating Action Button in your app so that you can test for accessibility issues. Call this in the App or SceneDelegate.
@@ -673,6 +695,7 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeMetaData")
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeVersion;
 /// The title of the screen that was scanned, if available
 @property (nonatomic, readonly, copy) NSString * _Nonnull screenTitle;
+@property (nonatomic, readonly) BOOL isFullScreenForML;
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -758,21 +781,22 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdAssociatedText = 2,
   AxeRuleIdCollidingControls = 3,
   AxeRuleIdCollidingViews = 4,
-  AxeRuleIdConflictingTraits = 5,
-  AxeRuleIdFocusableText = 6,
-  AxeRuleIdImageViewName = 7,
-  AxeRuleIdInScrollView = 8,
-  AxeRuleIdLabelAtFront = 9,
-  AxeRuleIdLabelInName = 10,
-  AxeRuleIdMeaningfulAccessibleName = 11,
-  AxeRuleIdNestedElementsName = 12,
-  AxeRuleIdScreenTitle = 13,
-  AxeRuleIdTouchTargetSize = 14,
-  AxeRuleIdColorContrast = 15,
-  AxeRuleIdInaccessibleAction = 16,
-  AxeRuleIdNestedActiveControls = 17,
-  AxeRuleIdScreenOrientation = 18,
-  AxeRuleIdSupportsDynamicType = 19,
+  AxeRuleIdColorContrast = 5,
+  AxeRuleIdConflictingTraits = 6,
+  AxeRuleIdFocusableText = 7,
+  AxeRuleIdImageViewName = 8,
+  AxeRuleIdInScrollView = 9,
+  AxeRuleIdLabelAtFront = 10,
+  AxeRuleIdLabelInName = 11,
+  AxeRuleIdMeaningfulAccessibleName = 12,
+  AxeRuleIdNestedElementsName = 13,
+  AxeRuleIdScreenOrientation = 14,
+  AxeRuleIdScreenTitle = 15,
+  AxeRuleIdTouchTargetSize = 16,
+  AxeRuleIdTouchTargetSpacing = 17,
+  AxeRuleIdInaccessibleAction = 18,
+  AxeRuleIdNestedActiveControls = 19,
+  AxeRuleIdSupportsDynamicType = 20,
 };
 
 enum AxeStatus : NSInteger;
@@ -814,10 +838,12 @@ typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
   AxeStandardWCAG_20 = 0,
 /// The rule detects a failure of a WCAG 2.1 Success Criteria
   AxeStandardWCAG_21 = 1,
+/// The rule detects a failure of a WCAG 2.2 Success Criteria
+  AxeStandardWCAG_22 = 2,
 /// The rule is a recommendation from Apple Design Guidelines
-  AxeStandardPLATFORM = 2,
+  AxeStandardPLATFORM = 3,
 /// The rule is a recommendation from Deque on how to best make your app accessible.  The rule may also follow a WCAG Best Practice.
-  AxeStandardBEST_PRACTICE = 3,
+  AxeStandardBEST_PRACTICE = 4,
 };
 
 /// A set of options for when a rule is run on a view.
@@ -990,6 +1016,7 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit7AxeView")
 
 @class NSCoder;
 
+/// Appears in your application when using <code>showA11yFAB</code>.  Tap on this button to run a scan on the current screen, and the scan will be available in the axeDevTools Mobile Dashboard.  The FAB can also be dragged around the screen.
 SWIFT_CLASS("_TtC16axeDevToolsUIKit20FloatingActionButton")
 @interface FloatingActionButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
@@ -1536,17 +1563,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
 /// note:
 /// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
 /// \param result The result that should be saved to your machine.
 ///
 /// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
 ///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
+/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>”.
 ///
 ///
 /// returns:
 /// String, the path to the saved file.
-- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("", "saveResult:toPath:withFileName:withScanName:error:");
+/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
+/// note:
+/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
+/// \param result The result that should be saved to your machine.
+///
+/// \param path Where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param fileName What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>” or if scanName if specified, “<appIdentifier>-<scanName>”.
+///
+/// \param scanName What you want the scan to be called. If not specified, the scanName will be “<screenTitle>”
+///
+///
+/// returns:
+/// String, the path to the saved file.
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
 /// warning:
 /// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
@@ -1557,7 +1600,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// initialized AxeDevTools object.
 + (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Start the Axe Floating Action Button in your app; when this button is tapped a login screen will display where you can enter your credentials to log into AxeDevTools. Call this in the App or SceneDelegate.
-+ (AxeDevTools * _Nonnull)showAxeFAB SWIFT_WARN_UNUSED_RESULT;
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance.
+///
++ (AxeDevTools * _Nonnull)showAxeFABForServer:(NSString * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
 /// Removes the Axe Floating Action Button from your app. Call this in the App or SceneDelegate.
 - (void)hideAxeFAB;
 /// Start the Floating Action Button in your app so that you can test for accessibility issues. Call this in the App or SceneDelegate.
@@ -1732,6 +1781,7 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit11AxeMetaData")
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeVersion;
 /// The title of the screen that was scanned, if available
 @property (nonatomic, readonly, copy) NSString * _Nonnull screenTitle;
+@property (nonatomic, readonly) BOOL isFullScreenForML;
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -1817,21 +1867,22 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdAssociatedText = 2,
   AxeRuleIdCollidingControls = 3,
   AxeRuleIdCollidingViews = 4,
-  AxeRuleIdConflictingTraits = 5,
-  AxeRuleIdFocusableText = 6,
-  AxeRuleIdImageViewName = 7,
-  AxeRuleIdInScrollView = 8,
-  AxeRuleIdLabelAtFront = 9,
-  AxeRuleIdLabelInName = 10,
-  AxeRuleIdMeaningfulAccessibleName = 11,
-  AxeRuleIdNestedElementsName = 12,
-  AxeRuleIdScreenTitle = 13,
-  AxeRuleIdTouchTargetSize = 14,
-  AxeRuleIdColorContrast = 15,
-  AxeRuleIdInaccessibleAction = 16,
-  AxeRuleIdNestedActiveControls = 17,
-  AxeRuleIdScreenOrientation = 18,
-  AxeRuleIdSupportsDynamicType = 19,
+  AxeRuleIdColorContrast = 5,
+  AxeRuleIdConflictingTraits = 6,
+  AxeRuleIdFocusableText = 7,
+  AxeRuleIdImageViewName = 8,
+  AxeRuleIdInScrollView = 9,
+  AxeRuleIdLabelAtFront = 10,
+  AxeRuleIdLabelInName = 11,
+  AxeRuleIdMeaningfulAccessibleName = 12,
+  AxeRuleIdNestedElementsName = 13,
+  AxeRuleIdScreenOrientation = 14,
+  AxeRuleIdScreenTitle = 15,
+  AxeRuleIdTouchTargetSize = 16,
+  AxeRuleIdTouchTargetSpacing = 17,
+  AxeRuleIdInaccessibleAction = 18,
+  AxeRuleIdNestedActiveControls = 19,
+  AxeRuleIdSupportsDynamicType = 20,
 };
 
 enum AxeStatus : NSInteger;
@@ -1873,10 +1924,12 @@ typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
   AxeStandardWCAG_20 = 0,
 /// The rule detects a failure of a WCAG 2.1 Success Criteria
   AxeStandardWCAG_21 = 1,
+/// The rule detects a failure of a WCAG 2.2 Success Criteria
+  AxeStandardWCAG_22 = 2,
 /// The rule is a recommendation from Apple Design Guidelines
-  AxeStandardPLATFORM = 2,
+  AxeStandardPLATFORM = 3,
 /// The rule is a recommendation from Deque on how to best make your app accessible.  The rule may also follow a WCAG Best Practice.
-  AxeStandardBEST_PRACTICE = 3,
+  AxeStandardBEST_PRACTICE = 4,
 };
 
 /// A set of options for when a rule is run on a view.
@@ -2049,6 +2102,7 @@ SWIFT_CLASS("_TtC16axeDevToolsUIKit7AxeView")
 
 @class NSCoder;
 
+/// Appears in your application when using <code>showA11yFAB</code>.  Tap on this button to run a scan on the current screen, and the scan will be available in the axeDevTools Mobile Dashboard.  The FAB can also be dragged around the screen.
 SWIFT_CLASS("_TtC16axeDevToolsUIKit20FloatingActionButton")
 @interface FloatingActionButton : UIButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
