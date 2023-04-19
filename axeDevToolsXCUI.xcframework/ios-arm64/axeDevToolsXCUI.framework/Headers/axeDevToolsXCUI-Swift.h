@@ -432,17 +432,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
 /// note:
 /// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “appIdentifier-screenTitle-1.json”).
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
 /// \param result The result that should be saved to your machine.
 ///
 /// \param path where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
 ///
-/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “appIdentifier-screenTitle”.
+/// \param name What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>”.
 ///
 ///
 /// returns:
 /// String, the path to the saved file.
-- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withName:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("", "saveResult:toPath:withFileName:withScanName:error:");
+/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
+/// note:
+/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
+/// \param result The result that should be saved to your machine.
+///
+/// \param path Where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param fileName What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>” or if scanName if specified, “<appIdentifier>-<scanName>”.
+///
+/// \param scanName What you want the scan to be called. If not specified, the scanName will be “<screenTitle>”
+///
+///
+/// returns:
+/// String, the path to the saved file.
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Use this in a UITest to analyze the accessibility of a screen or a view. This can be for views created in SwiftUI or UIKit.
 /// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
 ///
@@ -584,6 +600,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeMetaData")
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeVersion;
 /// The title of the screen that was scanned, if available
 @property (nonatomic, readonly, copy) NSString * _Nonnull screenTitle;
+@property (nonatomic, readonly) BOOL isFullScreenForML;
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -669,16 +686,19 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdAssociatedText = 2,
   AxeRuleIdCollidingControls = 3,
   AxeRuleIdCollidingViews = 4,
-  AxeRuleIdConflictingTraits = 5,
-  AxeRuleIdFocusableText = 6,
-  AxeRuleIdImageViewName = 7,
-  AxeRuleIdInScrollView = 8,
-  AxeRuleIdLabelAtFront = 9,
-  AxeRuleIdLabelInName = 10,
-  AxeRuleIdMeaningfulAccessibleName = 11,
-  AxeRuleIdNestedElementsName = 12,
-  AxeRuleIdScreenTitle = 13,
-  AxeRuleIdTouchTargetSize = 14,
+  AxeRuleIdColorContrast = 5,
+  AxeRuleIdConflictingTraits = 6,
+  AxeRuleIdFocusableText = 7,
+  AxeRuleIdImageViewName = 8,
+  AxeRuleIdInScrollView = 9,
+  AxeRuleIdLabelAtFront = 10,
+  AxeRuleIdLabelInName = 11,
+  AxeRuleIdMeaningfulAccessibleName = 12,
+  AxeRuleIdNestedElementsName = 13,
+  AxeRuleIdScreenOrientation = 14,
+  AxeRuleIdScreenTitle = 15,
+  AxeRuleIdTouchTargetSize = 16,
+  AxeRuleIdTouchTargetSpacing = 17,
 };
 
 enum AxeStatus : NSInteger;
@@ -720,10 +740,12 @@ typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
   AxeStandardWCAG_20 = 0,
 /// The rule detects a failure of a WCAG 2.1 Success Criteria
   AxeStandardWCAG_21 = 1,
+/// The rule detects a failure of a WCAG 2.2 Success Criteria
+  AxeStandardWCAG_22 = 2,
 /// The rule is a recommendation from Apple Design Guidelines
-  AxeStandardPLATFORM = 2,
+  AxeStandardPLATFORM = 3,
 /// The rule is a recommendation from Deque on how to best make your app accessible.  The rule may also follow a WCAG Best Practice.
-  AxeStandardBEST_PRACTICE = 3,
+  AxeStandardBEST_PRACTICE = 4,
 };
 
 /// A set of options for when a rule is run on a view.

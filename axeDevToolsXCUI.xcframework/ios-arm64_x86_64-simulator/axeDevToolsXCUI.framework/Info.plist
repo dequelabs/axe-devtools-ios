@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3.0-770-c72d8d78</string>
+	<string>2.4.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>iPhoneSimulator</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.3.0</string>
+	<string>2.4.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -40,11 +40,14 @@
 	<string>1300</string>
 	<key>DTXcodeBuild</key>
 	<string>13A233</string>
+	<key>DequeMeta</key>
+	<string>2.4.0-802-a356ce22</string>
 	<key>MinimumOSVersion</key>
 	<string>13.4</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
+		<integer>2</integer>
 	</array>
 </dict>
 </plist>
