@@ -17,7 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "axeDevToolsUIKit",
-            path: "axeDevToolsUIKit.xcframework"
+            url: "https://github.com/dequelabs/axe-devtools-ios/archive/refs/tags/3.4.0-UIKit.zip",
+            checksum: "809ab990927a9d223b4aba122675a56d52ef07e63e3ae99ccb50eebbd7896f22"
         ),
         .binaryTarget(
             name: "axeDevToolsXCUI",
