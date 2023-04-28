@@ -1,12 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreGraphics
 import Foundation
 import Swift
 import UIKit
 import Vision
 import _Concurrency
+import _StringProcessing
 import zlib
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeImage : ObjectiveC.NSObject {
   @objc final public let base64png: Swift.String
@@ -486,6 +488,7 @@ extension Swift.String {
   @available(*, deprecated, renamed: "saveResult(_:toPath:withFileName:withScanName:)")
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
+  @objc final public func run(onBundleIdentifier bundleId: Swift.String) throws -> axeDevToolsXCUI.AxeResult
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc deinit
 }

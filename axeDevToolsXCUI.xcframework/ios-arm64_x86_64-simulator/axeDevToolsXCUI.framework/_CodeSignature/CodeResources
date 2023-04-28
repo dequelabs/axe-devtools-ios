@@ -6,59 +6,51 @@
 	<dict>
 		<key>Headers/axeDevToolsXCUI-Swift.h</key>
 		<data>
-		hQob3OQuALlL2YK+EZnpXfZE9Pw=
+		VSK8HGYt+kz4d4AQt3A1pJNsbEA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xUfNHK6n5C6PZKY95qwGMJDN30Y=
+		Q7aBKvY2aR4+T4l9AbBmRoS4tm4=
+		</data>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		y2v0RGiFF59cXMAYCi+8hnjxCEE=
+		</data>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		wJ+d6H+n/dKJo9kNOD8aC4R1VN8=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		hzJj1laSKroL6zDGivqTPcM8TfU=
+		qY5WJV126gffk6NkfbfsVyibZz8=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bXRRPcXRojFS29XH+ybWT1d0se4=
+		wJ+d6H+n/dKJo9kNOD8aC4R1VN8=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		trurKJ+Q84w6cw2A6qOlVLYFw4A=
+		9fTAjiY9TjeZkAZqlfiJBGqHco8=
 		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		hzJj1laSKroL6zDGivqTPcM8TfU=
+		y2v0RGiFF59cXMAYCi+8hnjxCEE=
 		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bXRRPcXRojFS29XH+ybWT1d0se4=
-		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		trurKJ+Q84w6cw2A6qOlVLYFw4A=
+		VqNfMdavs/4uoyBm96OJbdFimIw=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xDQS09j5p2Eg3BN2agerBa1pCGA=
+		XvPI80BLsBgL48J4kVTh9OkeCZM=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vuG5nFCrSvyvFniMfPVnVWueGB4=
+		VqNfMdavs/4uoyBm96OJbdFimIw=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZM2maPTDlPfRwR5+PpFyg+jvlS8=
-		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		xDQS09j5p2Eg3BN2agerBa1pCGA=
-		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		vuG5nFCrSvyvFniMfPVnVWueGB4=
-		</data>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		ZM2maPTDlPfRwR5+PpFyg+jvlS8=
+		iqyREWDjjTbw7eEho6wHk5ivkSA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,91 +63,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z9BbUOXcmWvVqC4WCNDbDDJcPEYcg8T9tvcI63VJxOg=
+			CSVc56cRu1z869L1340JM2/hlpSQuDvikTC5Ayoz/iQ=
+			</data>
+		</dict>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5tBk+Ry/cY5F7S3ZhOVAk3RE5m866QXggR4edm6PKjk=
+			</data>
+		</dict>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NcclNislG4Mh98skzrKGipPoheCg/aT5ZSZGOwOYZBI=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dv4+eLEy1ywKH80chg+YDWY0JJIdVLg1ZRK8pByYn4c=
+			9RDF6znenhhDFZc1pyOvAwzv7CeuiqkHjlz6kbbz1Ac=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yCXzL1DE2MoKnX0UQWSLovJZBUzuLS1n5eCf9WZmujg=
+			NcclNislG4Mh98skzrKGipPoheCg/aT5ZSZGOwOYZBI=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			23KtvyzKj/V6F+E4qccx9kRx7gt5Elgz86a+0wI8ffs=
+			zzJtrSmbyyUNky0VBzLzz52kMjUUfVQNI2eFA5qP/vs=
 			</data>
 		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dv4+eLEy1ywKH80chg+YDWY0JJIdVLg1ZRK8pByYn4c=
+			5tBk+Ry/cY5F7S3ZhOVAk3RE5m866QXggR4edm6PKjk=
 			</data>
 		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yCXzL1DE2MoKnX0UQWSLovJZBUzuLS1n5eCf9WZmujg=
-			</data>
-		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			23KtvyzKj/V6F+E4qccx9kRx7gt5Elgz86a+0wI8ffs=
+			tNvOl6rNeU883VnQ0R+fd++XnS2asDqfeE8AKYpKzv8=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lESvEDx66SDFx4QOoao8d9izogDLW4EEt66DdoDQKVU=
+			c7wSrT7mMQwvHfdqtawCRj237xZFh1iXpG9/oBG949g=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NEnwbemJ4fuDcLM55GIUQ6l0/e1D1PM23teqovQ5j6c=
+			tNvOl6rNeU883VnQ0R+fd++XnS2asDqfeE8AKYpKzv8=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u/nimC1uSXit+L/Joty5EHn1dU7xUfuxPwrccuRsATY=
-			</data>
-		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lESvEDx66SDFx4QOoao8d9izogDLW4EEt66DdoDQKVU=
-			</data>
-		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NEnwbemJ4fuDcLM55GIUQ6l0/e1D1PM23teqovQ5j6c=
-			</data>
-		</dict>
-		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			u/nimC1uSXit+L/Joty5EHn1dU7xUfuxPwrccuRsATY=
+			AmX8Sosvawl5eEHz0eWrD3oSfMKCVB7+7b13p5jiBBY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
