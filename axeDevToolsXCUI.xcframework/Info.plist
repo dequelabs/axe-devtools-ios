@@ -6,18 +6,6 @@
 	<array>
 		<dict>
 			<key>LibraryIdentifier</key>
-			<string>ios-arm64</string>
-			<key>LibraryPath</key>
-			<string>axeDevToolsXCUI.framework</string>
-			<key>SupportedArchitectures</key>
-			<array>
-				<string>arm64</string>
-			</array>
-			<key>SupportedPlatform</key>
-			<string>ios</string>
-		</dict>
-		<dict>
-			<key>LibraryIdentifier</key>
 			<string>ios-arm64_x86_64-simulator</string>
 			<key>LibraryPath</key>
 			<string>axeDevToolsXCUI.framework</string>
@@ -31,15 +19,27 @@
 			<key>SupportedPlatformVariant</key>
 			<string>simulator</string>
 		</dict>
+		<dict>
+			<key>LibraryIdentifier</key>
+			<string>ios-arm64</string>
+			<key>LibraryPath</key>
+			<string>axeDevToolsXCUI.framework</string>
+			<key>SupportedArchitectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>SupportedPlatform</key>
+			<string>ios</string>
+		</dict>
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.4.0</string>
+	<string>2.5.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.4.0</string>
+	<string>2.5.0</string>
 	<key>DequeMeta</key>
-	<string>2.4.0-802-a356ce22</string>
+	<string>2.5.0-816-1c2458cb</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>

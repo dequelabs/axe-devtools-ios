@@ -328,8 +328,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 + (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
 + (void)setDebugStatements:(BOOL)value;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop: use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -352,8 +350,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop:  use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -390,13 +386,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
 + (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise.
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -461,8 +450,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// String, the path to the saved file.
 - (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Use this in a UITest to analyze the accessibility of a screen or a view. This can be for views created in SwiftUI or UIKit.
-/// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
+/// Use this in a UITest to analyze the accessibility of an application.  Useful in testing views built in SwiftUI, Native iOS or React Native.
+/// \param onBundleIdentifier The bundle identifier of the application to test. Application must be loaded at the time of the test.
+///
+///
+/// returns:
+/// the scan, as an AxeResult.
+- (AxeResult * _Nullable)runOnBundleIdentifier:(NSString * _Nonnull)bundleId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Use this in a UITest to analyze the accessibility of a screen or a view. Useful in testing views built in SwiftUI, Native iOS or React Native.
+/// \param onElement The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
 ///
 ///
 /// returns:
@@ -943,6 +939,7 @@ typedef SWIFT_ENUM(NSInteger, RunStatus, open) {
 /// The view hierarchy should continue to be traversed along siblings of this view and their descendants, but should not traverse through child elements of this view.
   RunStatusSkipDescendants = 2,
 };
+
 
 
 
@@ -1290,8 +1287,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 + (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
 + (void)setDebugStatements:(BOOL)value;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop: use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -1314,8 +1309,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop:  use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -1352,13 +1345,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
 + (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise.
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -1423,8 +1409,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// String, the path to the saved file.
 - (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Use this in a UITest to analyze the accessibility of a screen or a view. This can be for views created in SwiftUI or UIKit.
-/// \param element The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
+/// Use this in a UITest to analyze the accessibility of an application.  Useful in testing views built in SwiftUI, Native iOS or React Native.
+/// \param onBundleIdentifier The bundle identifier of the application to test. Application must be loaded at the time of the test.
+///
+///
+/// returns:
+/// the scan, as an AxeResult.
+- (AxeResult * _Nullable)runOnBundleIdentifier:(NSString * _Nonnull)bundleId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Use this in a UITest to analyze the accessibility of a screen or a view. Useful in testing views built in SwiftUI, Native iOS or React Native.
+/// \param onElement The root element of the screen you wanted tested, or one component.  Must be an XCUIElement.
 ///
 ///
 /// returns:
@@ -1905,6 +1898,7 @@ typedef SWIFT_ENUM(NSInteger, RunStatus, open) {
 /// The view hierarchy should continue to be traversed along siblings of this view and their descendants, but should not traverse through child elements of this view.
   RunStatusSkipDescendants = 2,
 };
+
 
 
 

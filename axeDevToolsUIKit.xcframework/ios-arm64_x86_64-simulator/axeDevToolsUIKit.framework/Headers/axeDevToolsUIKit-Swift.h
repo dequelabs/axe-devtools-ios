@@ -371,8 +371,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// Use this property to customize the Floating Action Button.
 @property (nonatomic, readonly, strong) FloatingActionButton * _Nullable fab;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop: use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -395,8 +393,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop:  use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -433,13 +429,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
 + (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise.
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -504,15 +493,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// String, the path to the saved file.
 - (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
-/// \param ip The IP Address of the computer hosting axe DevTools Dashboard app. If using a device, they must be on the same network.
-///
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Start the Axe Floating Action Button in your app; when this button is tapped a login screen will display where you can enter your credentials to log into AxeDevTools. Call this in the App or SceneDelegate.
 /// <ul>
 ///   <li>
@@ -1457,8 +1437,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// Use this property to customize the Floating Action Button.
 @property (nonatomic, readonly, strong) FloatingActionButton * _Nullable fab;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop: use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -1481,8 +1459,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
-/// warning:
-/// To connect to axeDevTools for Desktop:  use <code>setLocalConnection</code>.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
@@ -1519,13 +1495,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
 + (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise.
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -1590,15 +1559,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// String, the path to the saved file.
 - (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// Sets up a local connection with the axeDevTools Desktop Client.  This is required to post scans locally and use manual testing with the Desktop Client.
-/// warning:
-/// The Desktop Client must be open and ready to accept scans before this method is called.  This method may throw an error otherwise. For other setup, please see https://docs.deque.com/devtools-mobile/ > Introduction > Setup for Desktop.
-/// \param ip The IP Address of the computer hosting axe DevTools Dashboard app. If using a device, they must be on the same network.
-///
-///
-/// returns:
-/// initialized AxeDevTools object.
-+ (AxeDevTools * _Nullable)setLocalConnectionWithIp:(NSString * _Nonnull)ip error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="This method will be removed in May 2023, when the Desktop App will no longer be supported.");
 /// Start the Axe Floating Action Button in your app; when this button is tapped a login screen will display where you can enter your credentials to log into AxeDevTools. Call this in the App or SceneDelegate.
 /// <ul>
 ///   <li>

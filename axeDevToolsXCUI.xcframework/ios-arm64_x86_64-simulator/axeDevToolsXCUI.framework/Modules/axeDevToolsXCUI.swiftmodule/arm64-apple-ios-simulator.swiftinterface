@@ -475,8 +475,6 @@ extension Swift.String {
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
-  @available(iOS, deprecated, message: "This method will be removed in May 2023, when the Desktop App will no longer be supported.")
-  @objc public static func setLocalConnection() throws -> axeDevToolsXCUI.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
@@ -486,6 +484,7 @@ extension Swift.String {
   @available(*, deprecated, renamed: "saveResult(_:toPath:withFileName:withScanName:)")
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
+  @objc final public func run(onBundleIdentifier bundleId: Swift.String) throws -> axeDevToolsXCUI.AxeResult
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc deinit
 }
