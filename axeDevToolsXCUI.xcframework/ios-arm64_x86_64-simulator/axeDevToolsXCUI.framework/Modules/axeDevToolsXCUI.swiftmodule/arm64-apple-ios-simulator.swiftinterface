@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
-// swift-module-flags: -target arm64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
 import CoreGraphics
 import Foundation
 import Swift
@@ -170,6 +170,10 @@ import zlib
     get
     set
   }
+  final public var optInToSupportsDynamicType: Swift.Bool {
+    get
+    set
+  }
   @objc override final public var description: Swift.String {
     @objc get
   }
@@ -270,6 +274,7 @@ import zlib
   case ScreenTitle
   case TouchTargetSize
   case TouchTargetSpacing
+  case SupportsDynamicType
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
   public init?(rawValue: Swift.Int)
@@ -335,6 +340,7 @@ import zlib
   }
 }
 @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var scanName: Swift.String?
   @objc final public let axeConf: axeDevToolsXCUI.AxeConf
   @objc final public let axeContext: axeDevToolsXCUI.AxeContext
   @objc final public let axeRuleResults: [axeDevToolsXCUI.AxeRuleResult]
@@ -436,6 +442,7 @@ extension Swift.String {
   final public func getOrError<T>(_ name: axeDevToolsXCUI.AxeProps.Name, withType objType: T.Type) throws -> T where T : Swift.Decodable, T : Swift.Encodable
   final public func add(_ props: [axeDevToolsXCUI.AxeProps.Name : Swift.Codable?])
   final public func add(_ propName: axeDevToolsXCUI.AxeProps.Name, _ prop: Swift.Codable?)
+  final public func remove(_ propName: axeDevToolsXCUI.AxeProps.Name)
   @objc deinit
 }
 extension Swift.String {
@@ -481,8 +488,6 @@ extension Swift.String {
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
-  @available(*, deprecated, renamed: "saveResult(_:toPath:withFileName:withScanName:)")
-  @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withName name: Swift.String = "") throws -> Swift.String
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
   @objc final public func run(onBundleIdentifier bundleId: Swift.String) throws -> axeDevToolsXCUI.AxeResult
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
