@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.6.0</string>
+	<string>2.7.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>iPhoneSimulator</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.6.0</string>
+	<string>2.7.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -41,7 +41,7 @@
 	<key>DTXcodeBuild</key>
 	<string>13F100</string>
 	<key>DequeMeta</key>
-	<string>2.6.0-834-43f1cc82</string>
+	<string>2.7.0-846-327c8877</string>
 	<key>MinimumOSVersion</key>
 	<string>14.0</string>
 	<key>UIDeviceFamily</key>

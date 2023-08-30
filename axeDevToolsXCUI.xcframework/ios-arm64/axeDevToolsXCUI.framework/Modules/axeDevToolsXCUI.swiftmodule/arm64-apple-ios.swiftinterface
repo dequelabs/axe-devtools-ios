@@ -266,6 +266,7 @@ import zlib
   case FocusableText
   case ImageViewName
   case InScrollView
+  case InaccessibleAction
   case LabelAtFront
   case LabelInName
   case MeaningfulAccessibleName
@@ -341,6 +342,7 @@ import zlib
 }
 @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
   @objc public var scanName: Swift.String?
+  @objc public var tags: [Swift.String]?
   @objc final public let axeConf: axeDevToolsXCUI.AxeConf
   @objc final public let axeContext: axeDevToolsXCUI.AxeContext
   @objc final public let axeRuleResults: [axeDevToolsXCUI.AxeRuleResult]
@@ -468,6 +470,7 @@ extension Swift.String {
   public static let accessibilityPath: Swift.String
   public static let accessibilityTraits: Swift.String
   public static let supportedOrientations: Swift.String
+  public static let accessibilityActivationPoint: Swift.String
   public static let actions: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
