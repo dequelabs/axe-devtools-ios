@@ -634,6 +634,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeProps")
 SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @interface AxeResult : NSObject
 @property (nonatomic, copy) NSString * _Nullable scanName;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable tags;
 /// The configuration of the scan
 @property (nonatomic, readonly, strong) AxeConf * _Nonnull axeConf;
 /// Information about the screen that was scanned
@@ -680,15 +681,16 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdFocusableText = 7,
   AxeRuleIdImageViewName = 8,
   AxeRuleIdInScrollView = 9,
-  AxeRuleIdLabelAtFront = 10,
-  AxeRuleIdLabelInName = 11,
-  AxeRuleIdMeaningfulAccessibleName = 12,
-  AxeRuleIdNestedElementsName = 13,
-  AxeRuleIdScreenOrientation = 14,
-  AxeRuleIdScreenTitle = 15,
-  AxeRuleIdTouchTargetSize = 16,
-  AxeRuleIdTouchTargetSpacing = 17,
-  AxeRuleIdSupportsDynamicType = 18,
+  AxeRuleIdInaccessibleAction = 10,
+  AxeRuleIdLabelAtFront = 11,
+  AxeRuleIdLabelInName = 12,
+  AxeRuleIdMeaningfulAccessibleName = 13,
+  AxeRuleIdNestedElementsName = 14,
+  AxeRuleIdScreenOrientation = 15,
+  AxeRuleIdScreenTitle = 16,
+  AxeRuleIdTouchTargetSize = 17,
+  AxeRuleIdTouchTargetSpacing = 18,
+  AxeRuleIdSupportsDynamicType = 19,
 };
 
 enum AxeStatus : NSInteger;
