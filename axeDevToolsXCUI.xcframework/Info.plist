@@ -35,11 +35,11 @@
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.6.0</string>
+	<string>2.8.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.6.0</string>
+	<string>2.8.0</string>
 	<key>DequeMeta</key>
-	<string>2.6.0-834-43f1cc82</string>
+	<string>2.8.0-866-6e0c1369</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>
