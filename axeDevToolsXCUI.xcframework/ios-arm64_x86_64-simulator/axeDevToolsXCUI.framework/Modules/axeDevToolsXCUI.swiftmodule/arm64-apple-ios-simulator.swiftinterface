@@ -273,9 +273,9 @@ import zlib
   case NestedElementsName
   case ScreenOrientation
   case ScreenTitle
+  case SupportsDynamicType
   case TouchTargetSize
   case TouchTargetSpacing
-  case SupportsDynamicType
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
   public init?(rawValue: Swift.Int)
