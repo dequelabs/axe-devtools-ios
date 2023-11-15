@@ -319,6 +319,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI10AxeContext")
 @end
 
 
+
 @class AxeDevToolsResultKey;
 @class AxeResult;
 
@@ -457,7 +458,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 /// A scan’s unique identifier on the axeDevTools Mobile server. You can use the AxeDevToolsResultKey to retrieve, tag, and
@@ -688,9 +688,9 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdNestedElementsName = 14,
   AxeRuleIdScreenOrientation = 15,
   AxeRuleIdScreenTitle = 16,
-  AxeRuleIdTouchTargetSize = 17,
-  AxeRuleIdTouchTargetSpacing = 18,
-  AxeRuleIdSupportsDynamicType = 19,
+  AxeRuleIdSupportsDynamicType = 17,
+  AxeRuleIdTouchTargetSize = 18,
+  AxeRuleIdTouchTargetSpacing = 19,
 };
 
 enum AxeStatus : NSInteger;
