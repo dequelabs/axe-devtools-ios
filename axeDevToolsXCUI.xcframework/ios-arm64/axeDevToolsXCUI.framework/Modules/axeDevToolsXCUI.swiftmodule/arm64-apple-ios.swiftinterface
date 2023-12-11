@@ -375,6 +375,7 @@ import zlib
 }
 extension Swift.String {
   public static let label: Swift.String
+  public static let isSwiftUIApp: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc public class AxePoint : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let x: Swift.Int
