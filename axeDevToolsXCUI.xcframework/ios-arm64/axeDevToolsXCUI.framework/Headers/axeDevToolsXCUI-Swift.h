@@ -219,21 +219,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 /// The AccessToken handles logging into the axeDevTools server and keeping the session alive.  Users who have their own instance of the axeDevTools server may need to use this class.  If you are using the default server, you should not need to use this class.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 @interface AccessToken : NSObject
-/// Creates a new AccessToken with the given parameters.
-/// This will throw an error if the parameters provided are not correct.
-/// note:
-/// Google authentication information will not work.
-/// \param username Your username used to log into mobile docs and the axeDevTools Dashboard.  Usually an email address.
-///
-/// \param password The password used to log into mobile docs and the axeDevTools Dashboard.
-///
-/// \param realm Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-/// \param clientId Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-/// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in our July/August release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -312,7 +298,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI10AxeContext")
 /// A screenshot of the view that was scanned.
 @property (nonatomic, readonly, strong) AxeImage * _Nonnull screenshot;
 /// Additional meta data.
-@property (nonatomic, readonly, strong) AxeMetaData * _Nonnull axeMetaData;
+@property (nonatomic, strong) AxeMetaData * _Nonnull axeMetaData;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -390,7 +376,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
-+ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -587,7 +573,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeMetaData")
 /// The version of axeDevTools iOS used
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeVersion;
 /// The title of the screen that was scanned, if available
-@property (nonatomic, readonly, copy) NSString * _Nonnull screenTitle;
+@property (nonatomic, copy) NSString * _Nonnull screenTitle;
 @property (nonatomic, readonly) BOOL isFullScreenForML;
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
@@ -859,7 +845,6 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 /// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar).
 @property (nonatomic, readonly) BOOL isVisibleToUser;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@property (nonatomic, readonly) NSUInteger hash;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 /// Runs through the view hierarchy in a depth-first search, with the view that this method was called on as the “root” view.
 /// \param function The function that should be run on the view hierarchy.
