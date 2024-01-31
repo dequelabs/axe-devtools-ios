@@ -63,7 +63,7 @@ import zlib
   @objc final public let appIdentifier: Swift.String
   @objc final public let analysisTimestamp: Swift.Int64
   @objc final public let axeVersion: Swift.String
-  @objc final public let screenTitle: Swift.String
+  @objc public var screenTitle: Swift.String
   @objc final public let isFullScreenForML: Swift.Bool
   @objc override dynamic public var hash: Swift.Int {
     @objc get
@@ -116,9 +116,6 @@ import zlib
     get
   }
   @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc override dynamic public var hash: Swift.Int {
     @objc get
   }
   required public init(from decoder: Swift.Decoder) throws
@@ -392,7 +389,7 @@ extension Swift.String {
   @objc final public let axeView: axeDevToolsXCUI.AxeView
   @objc final public let axeDevice: axeDevToolsXCUI.AxeDevice
   @objc final public let screenshot: axeDevToolsXCUI.AxeImage
-  @objc final public let axeMetaData: axeDevToolsXCUI.AxeMetaData
+  @objc public var axeMetaData: axeDevToolsXCUI.AxeMetaData
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
@@ -485,6 +482,7 @@ extension Swift.String {
   }
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "This will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
@@ -554,6 +552,7 @@ extension Swift.String {
   }
 }
 @objc public class AccessToken : ObjectiveC.NSObject {
+  @available(*, deprecated, message: "This will be removed in our July/August release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead")
   @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
   @objc deinit
 }
