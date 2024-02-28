@@ -5,6 +5,22 @@
 	<key>AvailableLibraries</key>
 	<array>
 		<dict>
+			<key>BinaryPath</key>
+			<string>axeDevToolsXCUI.framework/axeDevToolsXCUI</string>
+			<key>LibraryIdentifier</key>
+			<string>ios-arm64</string>
+			<key>LibraryPath</key>
+			<string>axeDevToolsXCUI.framework</string>
+			<key>SupportedArchitectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>SupportedPlatform</key>
+			<string>ios</string>
+		</dict>
+		<dict>
+			<key>BinaryPath</key>
+			<string>axeDevToolsXCUI.framework/axeDevToolsXCUI</string>
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64_x86_64-simulator</string>
 			<key>LibraryPath</key>
@@ -19,27 +35,15 @@
 			<key>SupportedPlatformVariant</key>
 			<string>simulator</string>
 		</dict>
-		<dict>
-			<key>LibraryIdentifier</key>
-			<string>ios-arm64</string>
-			<key>LibraryPath</key>
-			<string>axeDevToolsXCUI.framework</string>
-			<key>SupportedArchitectures</key>
-			<array>
-				<string>arm64</string>
-			</array>
-			<key>SupportedPlatform</key>
-			<string>ios</string>
-		</dict>
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.9.0</string>
+	<string>2.9.2</string>
 	<key>CFBundleVersion</key>
-	<string>2.9.0</string>
+	<string>2.9.2</string>
 	<key>DequeMeta</key>
-	<string>2.9.0-890-46943587</string>
+	<string>2.9.2-896-3c78a5ac</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>
