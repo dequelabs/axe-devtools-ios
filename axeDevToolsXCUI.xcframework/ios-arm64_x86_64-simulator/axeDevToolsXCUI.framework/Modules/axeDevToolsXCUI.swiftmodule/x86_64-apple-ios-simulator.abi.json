@@ -431,6 +431,116 @@
           },
           {
             "kind": "Var",
+            "name": "passingDescription",
+            "printedName": "passingDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvp",
+            "mangledName": "$s15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvg",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvs",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvs",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvM",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC18passingDescriptionSSSgvM",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "standard",
             "printedName": "standard",
             "children": [
@@ -805,6 +915,680 @@
         "printedName": "UsageServiceBody",
         "children": [
           {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC6encode2toys7Encoder_p_tKF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CodingKeys",
+            "printedName": "CodingKeys",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "version",
+                "printedName": "version",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO7versionyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO7versionyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "event",
+                "printedName": "event",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO5eventyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO5eventyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "productName",
+                "printedName": "productName",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11productNameyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11productNameyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "organization",
+                "printedName": "organization",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO12organizationyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO12organizationyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "productComponent",
+                "printedName": "productComponent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO16productComponentyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO16productComponentyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "productComponentVersion",
+                "printedName": "productComponentVersion",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO23productComponentVersionyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO23productComponentVersionyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "distinctId",
+                "printedName": "distinctId",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO10distinctIdyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO10distinctIdyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "userId",
+                "printedName": "userId",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO6userIdyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO6userIdyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Var",
+                "name": "dateTime",
+                "printedName": "dateTime",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type) -> axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8dateTimeyA2EmF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8dateTimeyA2EmF",
+                "moduleName": "axeDevToolsXCUI"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CodingKeys",
+                    "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CodingKeys",
+                    "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                    "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO2eeoiySbAE_AEtFZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO9hashValueSivp",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO9hashValueSivp",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO9hashValueSivg",
+                    "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO9hashValueSivg",
+                    "moduleName": "axeDevToolsXCUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO4hash4intoys6HasherVz_tF",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "stringValue",
+                "printedName": "stringValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueSSvp",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueSSvp",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueSSvg",
+                    "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueSSvg",
+                    "moduleName": "axeDevToolsXCUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(stringValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueAESgSS_tcfc",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO11stringValueAESgSS_tcfc",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "intValue",
+                "printedName": "intValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueSiSgvp",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueSiSgvp",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueSiSgvg",
+                    "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueSiSgvg",
+                    "moduleName": "axeDevToolsXCUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(intValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "axeDevToolsXCUI.UsageServiceBody.CodingKeys",
+                        "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueAESgSi_tcfc",
+                "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO8intValueAESgSi_tcfc",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO",
+            "mangledName": "$s15axeDevToolsXCUI16UsageServiceBodyC10CodingKeysO",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CodingKey",
+                "printedName": "CodingKey",
+                "usr": "s:s9CodingKeyP",
+                "mangledName": "$ss9CodingKeyP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -845,6 +1629,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -15036,7 +15827,55 @@
             "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login12withUsername11andPassword8toServer12organizationACSS_S3SSgtKFZ",
             "moduleName": "axeDevToolsXCUI",
             "static": true,
+            "deprecated": true,
             "objc_name": "loginWithUsername:andPassword:toServer:organization:error:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "login",
+            "printedName": "login(withUsername:andPassword:toServer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeDevTools",
+                "printedName": "axeDevToolsXCUI.AxeDevTools",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools(cm)loginWithUsername:andPassword:toServer:error:",
+            "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login12withUsername11andPassword8toServerACSS_S2StKFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "objc_name": "loginWithUsername:andPassword:toServer:error:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -15091,7 +15930,49 @@
             "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login10withAPIKey8toServer12organizationACSS_S2SSgtKFZ",
             "moduleName": "axeDevToolsXCUI",
             "static": true,
+            "deprecated": true,
             "objc_name": "loginWithAPIKey:toServer:organization:error:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "login",
+            "printedName": "login(withAPIKey:toServer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeDevTools",
+                "printedName": "axeDevToolsXCUI.AxeDevTools",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools(cm)loginWithAPIKey:toServer:error:",
+            "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login10withAPIKey8toServerACSS_SStKFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "objc_name": "loginWithAPIKey:toServer:error:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -20193,140 +21074,147 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 1322,
+      "offset": 1366,
       "length": 19,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 1340,
+      "offset": 1384,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "BooleanLiteral",
-      "offset": 1493,
+      "offset": 1537,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "BooleanLiteral",
-      "offset": 2324,
+      "offset": 2368,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "BooleanLiteral",
-      "offset": 2362,
+      "offset": 2406,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 2828,
+      "offset": 2872,
       "length": 78,
       "value": "\"DEQUE ERROR: Must override function collectProps in class \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 2904,
+      "offset": 2948,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 3387,
+      "offset": 3431,
       "length": 73,
       "value": "\"DEQUE ERROR: Must override function runRule in class \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "StringLiteral",
-      "offset": 3458,
+      "offset": 3502,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 324,
+      "offset": 287,
+      "length": 52,
+      "value": "\"This view's name is included in its visible label.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
+      "kind": "StringLiteral",
+      "offset": 494,
       "length": 90,
       "value": "\"An accessibility focusable view should ensure its name is included in its visible label.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 573,
+      "offset": 743,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 1936,
+      "offset": 2106,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 2409,
+      "offset": 2579,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 2600,
+      "offset": 2770,
       "length": 20,
       "value": "\"SwiftUIApplication\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 2647,
+      "offset": 2817,
       "length": 15,
       "value": "\"UIHostingView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 2980,
+      "offset": 3150,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 3019,
+      "offset": 3189,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 4473,
+      "offset": 4643,
       "length": 20,
       "value": "\"_UIButtonBarButton\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 4827,
+      "offset": 4997,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 4940,
+      "offset": 5110,
       "length": 2,
       "value": "\"\""
     },
@@ -20340,28 +21228,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 5257,
+      "offset": 5427,
       "length": 25,
       "value": "\"Control's Visible Label\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleNestedElementsName.swift",
       "kind": "StringLiteral",
-      "offset": 338,
+      "offset": 301,
+      "length": 72,
+      "value": "\"This view contains all of its visible text within its accessible name.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleNestedElementsName.swift",
+      "kind": "StringLiteral",
+      "offset": 528,
       "length": 144,
       "value": "\"A focusable view should have all visible text within its accessible name available to assistive technologies like VoiceOver and Voice Control.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleNestedElementsName.swift",
       "kind": "BooleanLiteral",
-      "offset": 1246,
+      "offset": 1436,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleNestedElementsName.swift",
       "kind": "BooleanLiteral",
-      "offset": 1362,
+      "offset": 1552,
       "length": 4,
       "value": "true"
     },
@@ -20382,121 +21277,30 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 267,
+      "offset": 277,
       "length": 4,
       "value": "\"v2\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 309,
+      "offset": 380,
       "length": 21,
       "value": "\"axe-devtools-mobile\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 915,
-      "length": 7,
-      "value": "\"UIKit\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 973,
-      "length": 7,
-      "value": "\"UIKit\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 983,
-      "length": 6,
-      "value": "\"XCUI\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1030,
-      "length": 21,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1050,
-      "length": 1,
-      "value": "\"\""
+      "offset": 497,
+      "length": 9,
+      "value": "\"sdk-ios\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "IntegerLiteral",
-      "offset": 1198,
+      "offset": 810,
       "length": 4,
       "value": "1000"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1272,
-      "length": 9,
-      "value": "\"version\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1308,
-      "length": 13,
-      "value": "\"productName\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1352,
-      "length": 18,
-      "value": "\"productComponent\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1406,
-      "length": 25,
-      "value": "\"productComponentVersion\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1474,
-      "length": 12,
-      "value": "\"distinctId\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1516,
-      "length": 14,
-      "value": "\"organization\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1562,
-      "length": 8,
-      "value": "\"userId\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1596,
-      "length": 10,
-      "value": "\"dateTime\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1634,
-      "length": 7,
-      "value": "\"event\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
@@ -20507,31 +21311,31 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2114,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 1713,
+      "offset": 2213,
       "length": 7,
       "value": "\"login\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 1737,
+      "offset": 2252,
       "length": 6,
       "value": "\"scan\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1713,
-      "length": 7,
-      "value": "\"login\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceBody.swift",
-      "kind": "StringLiteral",
-      "offset": 1737,
-      "length": 6,
-      "value": "\"scan\""
+      "kind": "IntegerLiteral",
+      "offset": 2114,
+      "length": 4,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/String.swift",
@@ -21054,112 +21858,112 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 1467,
+      "offset": 1520,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 1871,
+      "offset": 1924,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 2367,
+      "offset": 2420,
       "length": 11,
       "value": "\"unhandled\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 2634,
+      "offset": 2687,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 3015,
+      "offset": 3068,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "IntegerLiteral",
-      "offset": 3253,
+      "offset": 3306,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 3452,
+      "offset": 3505,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "FloatLiteral",
-      "offset": 3960,
+      "offset": 4013,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "FloatLiteral",
-      "offset": 3999,
+      "offset": 4052,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 4295,
+      "offset": 4348,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "IntegerLiteral",
-      "offset": 4502,
+      "offset": 4555,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "IntegerLiteral",
-      "offset": 4553,
+      "offset": 4606,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 4786,
+      "offset": 4839,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 5054,
+      "offset": 5107,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "BooleanLiteral",
-      "offset": 5290,
+      "offset": 5343,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "IntegerLiteral",
-      "offset": 5393,
+      "offset": 5446,
       "length": 1,
       "value": "0"
     },
@@ -21180,63 +21984,70 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 5656,
+      "offset": 5709,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 5714,
+      "offset": 5767,
       "length": 21,
       "value": "\"All Color Contrasts\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 5785,
+      "offset": 5838,
       "length": 23,
       "value": "\"Is Large or Bold Text\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 5865,
+      "offset": 5918,
       "length": 27,
       "value": "\"Minimum Required Contrast\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 5938,
+      "offset": 5991,
       "length": 14,
       "value": "\"mayBeEditing\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "StringLiteral",
-      "offset": 332,
+      "offset": 294,
+      "length": 72,
+      "value": "\"This view has an accessible name available for assistive technologies.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
+      "kind": "StringLiteral",
+      "offset": 522,
       "length": 127,
       "value": "\"Any interactive view should have an accessible name available for assistive technologies such as VoiceOver and Voice Control.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "BooleanLiteral",
-      "offset": 1756,
+      "offset": 1946,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "BooleanLiteral",
-      "offset": 2174,
+      "offset": 2364,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "StringLiteral",
-      "offset": 3494,
+      "offset": 3684,
       "length": 110,
       "value": "\"This control does not have a valid name. Ensure the element's accessibility label exists and is descriptive.\""
     },
@@ -21404,65 +22215,23 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
       "kind": "StringLiteral",
-      "offset": 238,
-      "length": 28,
-      "value": "\"CFBundleShortVersionString\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 435,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 565,
-      "length": 28,
-      "value": "\"com.deque.axeDevToolsUIKit\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 258,
       "length": 27,
       "value": "\"com.deque.axeDevToolsXCUI\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
       "kind": "StringLiteral",
-      "offset": 731,
-      "length": 34,
-      "value": "\"XCUI: \""
+      "offset": 304,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
       "kind": "StringLiteral",
-      "offset": 764,
-      "length": 1,
+      "offset": 539,
+      "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 855,
-      "length": 35,
-      "value": "\"UIKit: \""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 889,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Bundle.swift",
-      "kind": "StringLiteral",
-      "offset": 927,
-      "length": 5,
-      "value": "\"1.0\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/KeyedDecodingContainer.swift",
@@ -21621,28 +22390,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleImageViewName.swift",
       "kind": "StringLiteral",
-      "offset": 324,
+      "offset": 962,
+      "length": 78,
+      "value": "\"This image provides a meaningful accessible name for assistive technologies.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleImageViewName.swift",
+      "kind": "StringLiteral",
+      "offset": 1207,
       "length": 144,
       "value": "\"Focusable image elements should provide a meaningful accessible name available for assistive technologies such as VoiceOver and Voice Control.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleImageViewName.swift",
       "kind": "StringLiteral",
-      "offset": 1619,
+      "offset": 3025,
       "length": 123,
       "value": "\"This image is focusable and does not have a valid name. Ensure the image's accessibility label exists and is descriptive.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleImageViewName.swift",
       "kind": "StringLiteral",
-      "offset": 177,
+      "offset": 841,
       "length": 17,
       "value": "\"axeDevToolsXCUI.RuleImageViewName\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleImageViewName.swift",
       "kind": "StringLiteral",
-      "offset": 177,
+      "offset": 841,
       "length": 17,
       "value": "\"axeDevToolsXCUI.RuleImageViewName\""
     },
@@ -22692,28 +23468,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenOrientation.swift",
       "kind": "StringLiteral",
-      "offset": 647,
+      "offset": 336,
+      "length": 56,
+      "value": "\"The application supports multiple screen orientations.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenOrientation.swift",
+      "kind": "StringLiteral",
+      "offset": 821,
       "length": 66,
       "value": "\"Views should adhere to the user's preferred display orientation.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenOrientation.swift",
       "kind": "IntegerLiteral",
-      "offset": 1614,
+      "offset": 1788,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenOrientation.swift",
       "kind": "IntegerLiteral",
-      "offset": 1744,
+      "offset": 1918,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenOrientation.swift",
       "kind": "IntegerLiteral",
-      "offset": 1880,
+      "offset": 2054,
       "length": 1,
       "value": "1"
     },
@@ -24414,63 +25197,70 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 337,
-      "length": 74,
-      "value": "\"An element's accessible name should not include its accessibility trait.\""
+      "offset": 301,
+      "length": 77,
+      "value": "\"This element's accessible name does not include its accessibility trait(s).\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2059,
+      "offset": 532,
+      "length": 77,
+      "value": "\"An element's accessible name should not include its accessibility trait(s).\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
+      "kind": "StringLiteral",
+      "offset": 2257,
       "length": 12,
       "value": "\"text field\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2121,
+      "offset": 2319,
       "length": 11,
       "value": "\"textfield\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2278,
+      "offset": 2476,
       "length": 8,
       "value": "\"switch\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2336,
+      "offset": 2534,
       "length": 8,
       "value": "\"toggle\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2494,
+      "offset": 2692,
       "length": 12,
       "value": "\"adjustable\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 2855,
+      "offset": 3053,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 3211,
+      "offset": 3409,
       "length": 6,
       "value": "\"link\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleMeaningfulAccessibleName.swift",
       "kind": "StringLiteral",
-      "offset": 3576,
+      "offset": 3774,
       "length": 8,
       "value": "\"button\""
     },
@@ -25016,56 +25806,56 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Dictionary",
-      "offset": 1498,
+      "offset": 1499,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 1723,
+      "offset": 1724,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "BooleanLiteral",
-      "offset": 2648,
+      "offset": 2649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 4600,
+      "offset": 4601,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 6162,
+      "offset": 6163,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 6209,
+      "offset": 6210,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 8874,
+      "offset": 8875,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Axe.swift",
       "kind": "Array",
-      "offset": 10681,
+      "offset": 10806,
       "length": 2,
       "value": "[]"
     },
@@ -25911,155 +26701,162 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
+      "kind": "StringLiteral",
+      "offset": 349,
+      "length": 275,
+      "value": "\"This control has a minimum dimension of 24 x 24 points or is positioned in such a way that if a circle with a diameter of 24 points is placed on the control's center, the circle will not intersect with another target or with the 24 point diameter circle for another target.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 281,
+      "offset": 703,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 330,
+      "offset": 752,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "FloatLiteral",
-      "offset": 371,
+      "offset": 793,
       "length": 4,
       "value": "0.01"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 431,
+      "offset": 853,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 859,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 447,
+      "offset": 869,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 458,
+      "offset": 880,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 492,
+      "offset": 914,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 1067,
       "length": 267,
       "value": "\"Actionable controls should have a minimum dimension of 24 x 24 points or must be positioned so that if a circle with a diameter of 24 points is placed on the center of control, the circle will not intersect with another target or with the circle for another target.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1152,
+      "offset": 1574,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1158,
+      "offset": 1580,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "Array",
-      "offset": 2552,
+      "offset": 2974,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 3629,
+      "offset": 4051,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 5995,
+      "offset": 6417,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 6001,
+      "offset": 6423,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 6011,
+      "offset": 6433,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 6022,
+      "offset": 6444,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 6041,
+      "offset": 6463,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 7111,
+      "offset": 7533,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 8433,
+      "offset": 8855,
       "length": 15,
       "value": "\"UIDimmingView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 8546,
+      "offset": 8968,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 8717,
+      "offset": 9139,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
@@ -26080,42 +26877,42 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 8951,
+      "offset": 9373,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 9012,
+      "offset": 9434,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 9074,
+      "offset": 9496,
       "length": 15,
       "value": "\"isBehindModal\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 9140,
+      "offset": 9562,
       "length": 18,
       "value": "\"allNearbyTargets\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 9210,
+      "offset": 9632,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 9281,
+      "offset": 9703,
       "length": 19,
       "value": "\"overlappingBounds\""
     },
@@ -26668,7 +27465,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleConflictingTraits.swift",
       "kind": "StringLiteral",
-      "offset": 332,
+      "offset": 294,
+      "length": 59,
+      "value": "\"This view does not have conflicting accessibility traits.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleConflictingTraits.swift",
+      "kind": "StringLiteral",
+      "offset": 517,
       "length": 57,
       "value": "\"Views should not have conflicting accessibility traits.\""
     },
@@ -26689,7 +27493,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleConflictingTraits.swift",
       "kind": "StringLiteral",
-      "offset": 1583,
+      "offset": 1768,
       "length": 20,
       "value": "\"Conflicting Traits\""
     },
@@ -26975,197 +27779,204 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 72,
+      "value": "\"The active control has a visual and tappable area of at least 44 x 44.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 255,
+      "offset": 441,
       "length": 2,
       "value": "44"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 304,
+      "offset": 490,
       "length": 2,
       "value": "44"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "FloatLiteral",
-      "offset": 345,
+      "offset": 531,
       "length": 4,
       "value": "0.01"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 405,
+      "offset": 591,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 411,
+      "offset": 597,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 421,
+      "offset": 607,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 432,
+      "offset": 618,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 466,
+      "offset": 652,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 814,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 642,
+      "offset": 828,
       "length": 2,
       "value": "\"pt by \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 662,
+      "offset": 848,
       "length": 2,
       "value": "\"pt\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 957,
       "length": 83,
       "value": "\"All active controls should have a minimum of \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 827,
+      "offset": 1013,
       "length": 6,
       "value": "\" visual and tappable area.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 1093,
+      "offset": 1279,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 1099,
+      "offset": 1285,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 2159,
+      "offset": 2345,
       "length": 20,
       "value": "\"SwiftUIApplication\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 2206,
+      "offset": 2392,
       "length": 15,
       "value": "\"UIHostingView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "BooleanLiteral",
-      "offset": 2539,
+      "offset": 2725,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "BooleanLiteral",
-      "offset": 2578,
+      "offset": 2764,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "BooleanLiteral",
-      "offset": 3035,
+      "offset": 3221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "BooleanLiteral",
-      "offset": 4346,
+      "offset": 4532,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "BooleanLiteral",
-      "offset": 4370,
+      "offset": 4556,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 5196,
+      "offset": 5382,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 5202,
+      "offset": 5388,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 5212,
+      "offset": 5398,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 5223,
+      "offset": 5409,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 5242,
+      "offset": 5428,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5341,
+      "offset": 5527,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
@@ -27186,28 +27997,28 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5594,
+      "offset": 5780,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5655,
+      "offset": 5841,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5717,
+      "offset": 5903,
       "length": 19,
       "value": "\"Is Behind a Modal\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5799,
+      "offset": 5985,
       "length": 36,
       "value": "\"Is TextField or Child of TextField\""
     },
@@ -27220,260 +28031,246 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
-      "kind": "StringLiteral",
-      "offset": 1507,
-      "length": 11,
-      "value": "\"More Info\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 1540,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1618,
+      "offset": 1473,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 1821,
+      "offset": 1676,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 1862,
+      "offset": 1717,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 2111,
+      "offset": 1966,
       "length": 37,
       "value": "\"UITableViewCellAccessibilityElement\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 2199,
+      "offset": 2054,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 2992,
+      "offset": 2847,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 3240,
+      "offset": 3095,
       "length": 7,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 3246,
+      "offset": 3101,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 4349,
+      "offset": 4204,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 4415,
+      "offset": 4270,
       "length": 11,
       "value": "\"enabled, \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 4429,
+      "offset": 4284,
       "length": 10,
       "value": "\"dimmed, \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 4512,
+      "offset": 4367,
       "length": 12,
       "value": "\"selected, \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 4693,
+      "offset": 4548,
       "length": 9,
       "value": "\"empty, \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 4779,
+      "offset": 4634,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 5181,
+      "offset": 5036,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 5423,
+      "offset": 5278,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 5616,
+      "offset": 5471,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 6862,
+      "offset": 6717,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "Dictionary",
-      "offset": 7041,
+      "offset": 6896,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "Dictionary",
-      "offset": 7324,
+      "offset": 7179,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 7600,
+      "offset": 7455,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 8051,
+      "offset": 7906,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 8820,
+      "offset": 8675,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 9073,
+      "offset": 8928,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 9211,
+      "offset": 9066,
       "length": 20,
       "value": "\"UIKeyboardDockView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 9257,
+      "offset": 9112,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 9493,
+      "offset": 9348,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 9724,
+      "offset": 9579,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "Array",
-      "offset": 9939,
+      "offset": 9794,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 10541,
+      "offset": 10396,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 11112,
+      "offset": 10967,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "StringLiteral",
-      "offset": 11701,
+      "offset": 11556,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 11709,
+      "offset": 11564,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 11739,
+      "offset": 11594,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "IntegerLiteral",
-      "offset": 11743,
+      "offset": 11598,
       "length": 1,
       "value": "0"
     },
@@ -27633,50 +28430,57 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
+      "kind": "StringLiteral",
+      "offset": 287,
+      "length": 74,
+      "value": "\"The screen has a title that can be announced by an assistive technology.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "BooleanLiteral",
-      "offset": 244,
+      "offset": 432,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 428,
+      "offset": 616,
       "length": 100,
       "value": "\"Every screen within an application should provide a title to be announced by assistive technology.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "BooleanLiteral",
-      "offset": 1191,
+      "offset": 1379,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 1337,
+      "offset": 1525,
       "length": 24,
       "value": "\"RNSScreenContainerView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 2112,
+      "offset": 2300,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 2266,
+      "offset": 2454,
       "length": 14,
       "value": "\"TitleControl\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 3438,
+      "offset": 3626,
       "length": 71,
       "value": "\"Missing context. Scan the entire screen to get results for this rule.\""
     },
@@ -27697,91 +28501,98 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 3723,
+      "offset": 3911,
       "length": 13,
       "value": "\"screenTitle\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 3782,
+      "offset": 3970,
       "length": 14,
       "value": "\"notFirstView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
+      "length": 67,
+      "value": "\"The text elements can be resized to the user's device preference.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "FloatLiteral",
-      "offset": 338,
+      "offset": 522,
       "length": 4,
       "value": "0.50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 812,
       "length": 128,
       "value": "\"Text elements should have the required properties to support Dynamic Type and resize the text to the user's device preference.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "BooleanLiteral",
-      "offset": 836,
+      "offset": 1020,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "BooleanLiteral",
-      "offset": 955,
+      "offset": 1139,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "FloatLiteral",
-      "offset": 1299,
+      "offset": 1483,
       "length": 4,
       "value": "0.75"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "Array",
-      "offset": 1561,
+      "offset": 1745,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "Dictionary",
-      "offset": 1923,
+      "offset": 2107,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "IntegerLiteral",
-      "offset": 2772,
+      "offset": 2956,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "Array",
-      "offset": 3365,
+      "offset": 3549,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "Array",
-      "offset": 3410,
+      "offset": 3594,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "BooleanLiteral",
-      "offset": 3945,
+      "offset": 4129,
       "length": 4,
       "value": "true"
     },
@@ -27802,56 +28613,56 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 4711,
+      "offset": 4895,
       "length": 30,
       "value": "\"supportsDynamicTypeBoundsMap\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 4796,
+      "offset": 4980,
       "length": 23,
       "value": "\"originalTextBoundsMap\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 4952,
+      "offset": 5136,
       "length": 23,
       "value": "\"com.apple.Preferences\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5133,
+      "offset": 5317,
       "length": 15,
       "value": "\"Accessibility\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5335,
+      "offset": 5519,
       "length": 21,
       "value": "\"Display & Text Size\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5449,
+      "offset": 5633,
       "length": 13,
       "value": "\"Larger Text\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5570,
+      "offset": 5754,
       "length": 6,
       "value": "\"Back\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "IntegerLiteral",
-      "offset": 7043,
+      "offset": 7227,
       "length": 3,
       "value": "100"
     },
@@ -27977,9 +28788,44 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
       "kind": "StringLiteral",
-      "offset": 1089,
-      "length": 32,
-      "value": "\"Unable to start Usage Service.\""
+      "offset": 1616,
+      "length": 43,
+      "value": "\"Unable to send usage service login event.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1724,
+      "length": 42,
+      "value": "\"Unable to send usage service scan event.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1860,
+      "length": 7,
+      "value": "\"login\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1888,
+      "length": 6,
+      "value": "\"scan\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1860,
+      "length": 7,
+      "value": "\"login\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1888,
+      "length": 6,
+      "value": "\"scan\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevice.swift",
@@ -28054,21 +28900,28 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 437,
+      "offset": 399,
+      "length": 68,
+      "value": "\"The text in this view can be focused using assistive technologies.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
+      "kind": "StringLiteral",
+      "offset": 618,
       "length": 89,
       "value": "\"Views containing text should be focusable for assistive technologies such as VoiceOver.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "FloatLiteral",
-      "offset": 3441,
+      "offset": 3622,
       "length": 4,
       "value": "0.95"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "BooleanLiteral",
-      "offset": 5034,
+      "offset": 5215,
       "length": 4,
       "value": "true"
     },
@@ -28089,35 +28942,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 6233,
+      "offset": 6414,
       "length": 27,
       "value": "\"Encapsulating View's Name\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 6322,
+      "offset": 6503,
       "length": 34,
       "value": "\"Encapsulating View's elementType\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 6416,
+      "offset": 6597,
       "length": 32,
       "value": "\"Encapsulating View's className\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 6508,
+      "offset": 6689,
       "length": 32,
       "value": "\"Associated Control's className\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 6602,
+      "offset": 6783,
       "length": 34,
       "value": "\"Associated Control's elementType\""
     },
@@ -28194,77 +29047,84 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 444,
+      "offset": 407,
+      "length": 48,
+      "value": "\"This text element is within a scrollable view.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
+      "kind": "StringLiteral",
+      "offset": 609,
       "length": 102,
       "value": "\"Text should be within a scrollable view to ensure that all elements are visible on all screen sizes.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 857,
+      "offset": 1022,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 863,
+      "offset": 1028,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2067,
+      "offset": 2232,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3688,
+      "offset": 3853,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3694,
+      "offset": 3859,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3704,
+      "offset": 3869,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3715,
+      "offset": 3880,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 3958,
+      "offset": 4123,
       "length": 98,
       "value": "\"This text is not within a scroll-able view. Information may be cut off when using a larger font.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4299,
+      "offset": 4464,
       "length": 99,
       "value": "\"Text is behind a modal. Unable to detect if it is in a ScrollView or needs to be in a ScrollView.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4455,
+      "offset": 4620,
       "length": 71,
       "value": "\"Missing context. Scan the entire screen to get results for this rule.\""
     },
@@ -28285,56 +29145,63 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4739,
+      "offset": 4904,
       "length": 12,
       "value": "\"isOnScreen\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4798,
+      "offset": 4963,
       "length": 15,
       "value": "\"isInTextField\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4865,
+      "offset": 5030,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4932,
+      "offset": 5097,
       "length": 15,
       "value": "\"isBehindModal\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 4995,
+      "offset": 5160,
       "length": 16,
       "value": "\"isInScrollView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelAtFront.swift",
       "kind": "StringLiteral",
-      "offset": 353,
+      "offset": 303,
+      "length": 83,
+      "value": "\"This interactive view's accessible name begins with the visible text of the view.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelAtFront.swift",
+      "kind": "StringLiteral",
+      "offset": 554,
       "length": 95,
       "value": "\"Any visible text of an interactive view should be at the start of the view's accessible name.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelAtFront.swift",
       "kind": "StringLiteral",
-      "offset": 1121,
+      "offset": 1322,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelAtFront.swift",
       "kind": "StringLiteral",
-      "offset": 1238,
+      "offset": 1439,
       "length": 2,
       "value": "\"\""
     },
@@ -28691,42 +29558,49 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 684,
+      "offset": 295,
+      "length": 102,
+      "value": "\"This view's accessibility path (or VoiceOver focus box) encapsulates its own visual on-screen frame.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
+      "kind": "StringLiteral",
+      "offset": 903,
       "length": 107,
       "value": "\"Ensures a view's accessibility path, or VoiceOver focus box, encapsulates its own visual on-screen frame.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "IntegerLiteral",
-      "offset": 1044,
+      "offset": 1263,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "IntegerLiteral",
-      "offset": 1050,
+      "offset": 1269,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "FloatLiteral",
-      "offset": 4183,
+      "offset": 4402,
       "length": 4,
       "value": "0.95"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 4593,
+      "offset": 4812,
       "length": 31,
       "value": "\"Could not find view's bounds.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 4673,
+      "offset": 4892,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
@@ -28747,7 +29621,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5038,
+      "offset": 5257,
       "length": 14,
       "value": "\"visibleFrame\""
     },
@@ -28803,175 +29677,189 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 3018,
+      "offset": 3186,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 4408,
+      "offset": 3838,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 6046,
+      "offset": 5295,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
+      "kind": "StringLiteral",
+      "offset": 5943,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
+      "kind": "StringLiteral",
+      "offset": 7486,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "Array",
-      "offset": 7885,
+      "offset": 9325,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 8479,
+      "offset": 9919,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12148,
+      "offset": 13588,
       "length": 20,
       "value": "\"AxeDevToolsResults\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12229,
+      "offset": 13669,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12374,
+      "offset": 13814,
       "length": 6,
       "value": "\"json\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12406,
+      "offset": 13846,
       "length": 21,
       "value": "\"SIMULATOR_HOST_HOME\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12816,
+      "offset": 14256,
       "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12842,
+      "offset": 14282,
       "length": 1,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 12857,
+      "offset": 14297,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 13476,
+      "offset": 14916,
       "length": 3,
       "value": "\"~\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 15188,
+      "offset": 16636,
       "length": 101,
       "value": "\"Element of type \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 15212,
+      "offset": 16660,
       "length": 5,
       "value": "\" could not be converted to an XCUIElement. This scan could not be completed.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "IntegerLiteral",
-      "offset": 16317,
+      "offset": 18075,
       "length": 10,
       "value": "1000000000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "BooleanLiteral",
-      "offset": 16493,
+      "offset": 18251,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 16500,
+      "offset": 18258,
       "length": 5,
       "value": "\"SDK\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 16507,
+      "offset": 18265,
       "length": 10,
       "value": "\"analyzer\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 17534,
+      "offset": 19303,
       "length": 35,
       "value": "\"No view found on view controller.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 17632,
+      "offset": 19401,
       "length": 32,
       "value": "\"Could not find home directory.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 17725,
+      "offset": 19494,
       "length": 39,
       "value": "\"Could not serialize result into JSON.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 17819,
+      "offset": 19588,
       "length": 71,
       "value": "\"Unable to verify authentication. Please login using a `login` method.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 17941,
+      "offset": 19710,
       "length": 49,
       "value": "\"There was an issue. Could not complete request.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 18269,
+      "offset": 20038,
       "length": 45,
       "value": "\"Attempting to save scan to local directory.\""
     },
@@ -29468,30 +30356,30 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "IntegerLiteral",
-      "offset": 3734,
+      "offset": 3733,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4768,
+      "offset": 4906,
       "length": 94,
       "value": "\"Text was not legible with optical character recognition, yet text was assigned to this view.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4920,
+      "offset": 5058,
       "length": 119,
       "value": "\"The full text string was not legible or available. Ensure views with important information are not hidden or cut off.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 172,
-      "length": 18,
-      "value": "\"axeDevToolsXCUI.RuleCollidingViews\""
+      "offset": 5236,
+      "length": 177,
+      "value": "\"There was an overlap in text detected. Please verify if text is legible or not. Note: an overlapping view may cause text to become illegible with some device settings enabled.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
@@ -29503,14 +30391,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 5256,
+      "offset": 172,
+      "length": 18,
+      "value": "\"axeDevToolsXCUI.RuleCollidingViews\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
+      "kind": "StringLiteral",
+      "offset": 5630,
       "length": 19,
       "value": "\"Overlapping Views\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 5321,
+      "offset": 5695,
       "length": 15,
       "value": "\"Assigned Text\""
     },
@@ -29902,91 +30797,105 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 355,
+      "offset": 426,
+      "length": 64,
+      "value": "\"This view does not have intersecting bounds with another view.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
+      "kind": "StringLiteral",
+      "offset": 646,
       "length": 56,
       "value": "\"Interactive views should not have intersecting bounds.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4265,
+      "offset": 4701,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 175,
+      "offset": 285,
       "length": 21,
       "value": "\"axeDevToolsXCUI.RuleCollidingControls\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 175,
+      "offset": 285,
       "length": 21,
       "value": "\"axeDevToolsXCUI.RuleCollidingControls\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4509,
+      "offset": 4945,
       "length": 24,
       "value": "\"collidingViewClassName\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4591,
+      "offset": 5027,
       "length": 26,
       "value": "\"collidingViewElementType\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4678,
+      "offset": 5114,
       "length": 29,
       "value": "\"collidingViewBoundsInScreen\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4758,
+      "offset": 5194,
       "length": 19,
       "value": "\"collidingViewText\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4839,
+      "offset": 5275,
       "length": 30,
       "value": "\"collidingViewIsVisibleToUser\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleCollidingControls.swift",
       "kind": "StringLiteral",
-      "offset": 4921,
+      "offset": 5357,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 418,
+      "offset": 382,
+      "length": 70,
+      "value": "\"This control's accessibility label matches its nearby visible label.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
+      "kind": "StringLiteral",
+      "offset": 607,
       "length": 136,
       "value": "\"A control should get its accessible name from a nearby label available for assistive technologies such as VoiceOver and Voice Control.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "BooleanLiteral",
-      "offset": 1455,
+      "offset": 1644,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 3337,
+      "offset": 3526,
       "length": 107,
       "value": "\"This control does not have a valid name. Ensure the accessibility label matches its nearby visible label.\""
     },
@@ -30007,7 +30916,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 3663,
+      "offset": 3852,
       "length": 30,
       "value": "\"Class Name of Focusable View\""
     },
@@ -30126,252 +31035,259 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 322,
+      "offset": 2870,
+      "length": 59,
+      "value": "\"This view can be activated using an assistive technology.\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
+      "kind": "StringLiteral",
+      "offset": 3081,
       "length": 88,
       "value": "\"An interactive view should have the ability to be activated with assistive technology.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 489,
+      "offset": 3248,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 801,
+      "offset": 3560,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 1069,
+      "offset": 3828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 1740,
+      "offset": 4499,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 2693,
+      "offset": 5452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3059,
+      "offset": 5818,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 3118,
+      "offset": 5877,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 3314,
+      "offset": 6073,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3361,
+      "offset": 6120,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3495,
+      "offset": 6254,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 4533,
+      "offset": 7292,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 5281,
+      "offset": 8040,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 5927,
+      "offset": 8686,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "IntegerLiteral",
-      "offset": 6876,
+      "offset": 9635,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 7849,
+      "offset": 10608,
       "length": 15,
       "value": "\"UIDimmingView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 8241,
+      "offset": 11000,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10207,
+      "offset": 12966,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10235,
+      "offset": 12994,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10613,
+      "offset": 13372,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10673,
+      "offset": 13432,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10888,
+      "offset": 13647,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 10914,
+      "offset": 13673,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 11069,
+      "offset": 13828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 11450,
+      "offset": 14209,
       "length": 135,
       "value": "\"This control is not focusable by assistive technology. Ensure the control is focusable or within a focusable element to be activated.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 11648,
+      "offset": 14407,
       "length": 100,
       "value": "\"A slider that is directly focusable by VoiceOver must have the adjustable accessibility trait set.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 11903,
+      "offset": 14662,
       "length": 204,
       "value": "\"Unable to determine control's action or activation method. Please add a custom action, gesture recognizer, enable the activation point or use an adjustable trait to ensure VoiceOver is able to interact.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 170,
+      "offset": 2756,
       "length": 22,
       "value": "\"axeDevToolsXCUI.RuleInaccessibleAction\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 170,
+      "offset": 2756,
       "length": 22,
       "value": "\"axeDevToolsXCUI.RuleInaccessibleAction\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12349,
+      "offset": 15108,
       "length": 47,
       "value": "\"Is Activated via accessibilityActivationPoint\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12455,
+      "offset": 15214,
       "length": 33,
       "value": "\"Is Activated via Custom Actions\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12544,
+      "offset": 15303,
       "length": 33,
       "value": "\"Focusable Parent View className\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12640,
+      "offset": 15399,
       "length": 41,
       "value": "\"Is Activated via Tap Gesture Recognizer\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12792,
+      "offset": 15551,
       "length": 29,
       "value": "\"numberOfChildActiveControls\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12870,
+      "offset": 15629,
       "length": 24,
       "value": "\"hasAdjustableA11yTrait\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 12944,
+      "offset": 15703,
       "length": 25,
       "value": "\"numberA11yCustomActions\""
     },
@@ -30742,161 +31658,161 @@
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10340,
+      "offset": 10018,
       "length": 32,
       "value": "\"Could not send scan to server.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10440,
+      "offset": 10118,
       "length": 43,
       "value": "\"Could not set tags to the correct format.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10542,
+      "offset": 10220,
       "length": 21,
       "value": "\"Could not tag scan.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10625,
+      "offset": 10303,
       "length": 36,
       "value": "\"Could not delete scan from server.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10720,
+      "offset": 10398,
       "length": 33,
       "value": "\"Could not get scan from server.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10815,
+      "offset": 10493,
       "length": 41,
       "value": "\"Could not send an update to the server.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 10918,
+      "offset": 10596,
       "length": 85,
       "value": "\"Authentication could not be validated. Please check your credentials and try again.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 11070,
+      "offset": 10748,
       "length": 42,
       "value": "\"Could not serialize AxeResult into JSON.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 11828,
+      "offset": 11514,
       "length": 38,
       "value": "\"Attempting to send scan to server...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 11943,
+      "offset": 11629,
       "length": 55,
       "value": "\"Scan successfully sent to server with URL: \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 11997,
+      "offset": 11683,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12054,
+      "offset": 11740,
       "length": 39,
       "value": "\"Attempting to get scan from server...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12156,
+      "offset": 11842,
       "length": 41,
       "value": "\"Retrieving scan from server successful.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12263,
+      "offset": 11949,
       "length": 56,
       "value": "\"Attempting to tag scan with tags \""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12315,
+      "offset": 12001,
       "length": 3,
       "value": "\"...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12382,
+      "offset": 12068,
       "length": 28,
       "value": "\"Successfully tagged scans.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12469,
+      "offset": 12155,
       "length": 42,
       "value": "\"Attempting to delete scan from server...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12577,
+      "offset": 12263,
       "length": 28,
       "value": "\"Scan successfully deleted.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12666,
+      "offset": 12352,
       "length": 35,
       "value": "\"Attempting to update scan name...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12769,
+      "offset": 12455,
       "length": 36,
       "value": "\"Updating scan name was successful.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12872,
+      "offset": 12558,
       "length": 29,
       "value": "\"Verifying authentication...\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 12965,
+      "offset": 12651,
       "length": 26,
       "value": "\"Authentication verified.\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 13060,
+      "offset": 12746,
       "length": 32,
       "value": "\"Unable to start usage service.\""
     },
