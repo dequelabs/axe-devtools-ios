@@ -424,7 +424,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
++ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
 /// <ul>
 ///   <li>
@@ -444,7 +445,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
++ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.  Use this version of login if you have a special instance of the server to log into.
 /// <ul>
 ///   <li>
@@ -461,7 +463,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
-+ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead");
++ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead");
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///

@@ -26,6 +26,7 @@ import zlib
   public var summary: Swift.String {
     get
   }
+  public var passingDescription: Swift.String?
   public var standard: axeDevToolsXCUI.AxeStandard {
     get
   }
@@ -43,7 +44,32 @@ import zlib
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class UsageServiceBody : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class UsageServiceBody : ObjectiveC.NSObject, Swift.Encodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public enum CodingKeys : Swift.CodingKey {
+    case version
+    case event
+    case productName
+    case organization
+    case productComponent
+    case productComponentVersion
+    case distinctId
+    case userId
+    case dateTime
+    public static func == (a: axeDevToolsXCUI.UsageServiceBody.CodingKeys, b: axeDevToolsXCUI.UsageServiceBody.CodingKeys) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
   @objc deinit
 }
 @objc public enum AxeRole : Swift.Int {
@@ -484,9 +510,13 @@ extension Swift.String {
     @objc get
     @objc set
   }
+  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
+  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
@@ -560,6 +590,8 @@ extension Swift.String {
   @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
   @objc deinit
 }
+extension axeDevToolsXCUI.UsageServiceBody.CodingKeys : Swift.Equatable {}
+extension axeDevToolsXCUI.UsageServiceBody.CodingKeys : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeRole : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRole : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRole : Swift.Hashable {}
