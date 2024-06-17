@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name axeDevToolsXCUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreGraphics
@@ -9,7 +9,6 @@ import UIKit
 import Vision
 import _Concurrency
 import _StringProcessing
-import _SwiftConcurrencyShims
 import zlib
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeImage : ObjectiveC.NSObject {
   @objc final public let base64png: Swift.String
@@ -44,33 +43,15 @@ import zlib
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class UsageServiceBody : ObjectiveC.NSObject, Swift.Encodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public enum CodingKeys : Swift.CodingKey {
-    case version
-    case event
-    case productName
-    case organization
-    case productComponent
-    case productComponentVersion
-    case distinctId
-    case userId
-    case dateTime
-    public static func == (a: axeDevToolsXCUI.UsageServiceBody.CodingKeys, b: axeDevToolsXCUI.UsageServiceBody.CodingKeys) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  @objc deinit
+extension axeDevToolsXCUI.AxeDevTools {
+  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
+  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
+  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
+  @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
 }
 @objc public enum AxeRole : Swift.Int {
   case textElement
@@ -174,6 +155,8 @@ import zlib
   public func encode(to encoder: any Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
+}
+extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
 }
 @_hasMissingDesignatedInitializers @objc public class AxeDevToolsResultKey : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let packageName: Swift.String
@@ -510,14 +493,6 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
-  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
-  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
-  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
-  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
-  @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
@@ -590,8 +565,6 @@ extension Swift.String {
   @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
   @objc deinit
 }
-extension axeDevToolsXCUI.UsageServiceBody.CodingKeys : Swift.Equatable {}
-extension axeDevToolsXCUI.UsageServiceBody.CodingKeys : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeRole : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRole : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRole : Swift.Hashable {}
@@ -603,7 +576,6 @@ extension axeDevToolsXCUI.AxeStatus : Swift.Equatable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.Hashable {}
-extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Hashable {}
 extension axeDevToolsXCUI.RunStatus : Swift.RawRepresentable {}
