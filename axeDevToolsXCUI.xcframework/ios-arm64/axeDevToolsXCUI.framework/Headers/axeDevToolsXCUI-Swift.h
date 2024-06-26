@@ -747,23 +747,22 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
   AxeRuleIdA11yElementFocusBox = 0,
   AxeRuleIdActiveControlName = 1,
   AxeRuleIdAssociatedText = 2,
-  AxeRuleIdCollidingControls = 3,
-  AxeRuleIdCollidingViews = 4,
-  AxeRuleIdColorContrast = 5,
-  AxeRuleIdConflictingTraits = 6,
-  AxeRuleIdFocusableText = 7,
-  AxeRuleIdImageViewName = 8,
-  AxeRuleIdInScrollView = 9,
-  AxeRuleIdInaccessibleAction = 10,
-  AxeRuleIdLabelAtFront = 11,
-  AxeRuleIdLabelInName = 12,
-  AxeRuleIdMeaningfulAccessibleName = 13,
-  AxeRuleIdNestedElementsName = 14,
-  AxeRuleIdScreenOrientation = 15,
-  AxeRuleIdScreenTitle = 16,
-  AxeRuleIdSupportsDynamicType = 17,
-  AxeRuleIdTouchTargetSize = 18,
-  AxeRuleIdTouchTargetSpacing = 19,
+  AxeRuleIdCollidingViews = 3,
+  AxeRuleIdColorContrast = 4,
+  AxeRuleIdConflictingTraits = 5,
+  AxeRuleIdFocusableText = 6,
+  AxeRuleIdImageViewName = 7,
+  AxeRuleIdInScrollView = 8,
+  AxeRuleIdInaccessibleAction = 9,
+  AxeRuleIdLabelAtFront = 10,
+  AxeRuleIdLabelInName = 11,
+  AxeRuleIdMeaningfulAccessibleName = 12,
+  AxeRuleIdNestedElementsName = 13,
+  AxeRuleIdScreenOrientation = 14,
+  AxeRuleIdScreenTitle = 15,
+  AxeRuleIdSupportsDynamicType = 16,
+  AxeRuleIdTouchTargetSize = 17,
+  AxeRuleIdTouchTargetSpacing = 18,
 };
 
 enum AxeStatus : NSInteger;
@@ -976,6 +975,13 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+/// Attempts to identify the type of app that we are testing against
+typedef SWIFT_ENUM(NSInteger, AxeViewHierarchy, open) {
+  AxeViewHierarchyUIKit = 0,
+  AxeViewHierarchySwiftUI = 1,
+  AxeViewHierarchyReactNative = 2,
+};
 
 
 

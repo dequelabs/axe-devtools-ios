@@ -195,6 +195,21 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
 }
+@objc public enum AxeViewHierarchy : Swift.Int {
+  case UIKit
+  case SwiftUI
+  case ReactNative
+  public func toString() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [axeDevToolsXCUI.AxeViewHierarchy]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [axeDevToolsXCUI.AxeViewHierarchy] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public enum RunStatus : Swift.Int {
   case Continue
   case Stop
@@ -268,7 +283,6 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case A11yElementFocusBox
   case ActiveControlName
   case AssociatedText
-  case CollidingControls
   case CollidingViews
   case ColorContrast
   case ConflictingTraits
@@ -384,7 +398,6 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
 }
 extension Swift.String {
   public static let label: Swift.String
-  public static let isSwiftUIApp: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc public class AxePoint : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let x: Swift.Int
@@ -483,6 +496,7 @@ extension Swift.String {
   public static let accessibilityActivationPoint: Swift.String
   public static let actions: Swift.String
   public static let keyboardOnScreen: Swift.String
+  public static let viewHierarchyType: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
   @objc final public var configuration: axeDevToolsXCUI.AxeConf {
@@ -576,6 +590,10 @@ extension axeDevToolsXCUI.AxeStatus : Swift.Equatable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeViewHierarchy : Swift.CaseIterable {}
+extension axeDevToolsXCUI.AxeViewHierarchy : Swift.RawRepresentable {}
+extension axeDevToolsXCUI.AxeViewHierarchy : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeViewHierarchy : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Equatable {}
 extension axeDevToolsXCUI.RunStatus : Swift.Hashable {}
 extension axeDevToolsXCUI.RunStatus : Swift.RawRepresentable {}
