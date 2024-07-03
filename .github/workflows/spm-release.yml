@@ -1,0 +1,51 @@
+name: Release to SPM
+on:
+    workflow_dispatch:
+        inputs:
+            releaseVersion:
+                description: 'The version/tag of the release'
+                required: true
+
+jobs:
+    update_spm:
+        runs-on: ubuntu-latest
+        steps:
+
+          - name: Checkout main branch
+            uses: actions/checkout@v4
+            with:
+                ref: main
+
+          - name: Remove existing framework and docs
+            run: |
+                rm -rf axeDevToolsXCUI.*
+
+          - name: Download latest XCUI framework & DocC archive
+            env:
+                DQ_AGORA_KEY: ${{ secrets.DQ_AGORA_KEY }}
+            run: |
+                sh .github/scripts/DownloadLatestFrameworkAndDocs.sh ${{ github.event.inputs.releaseVersion }}
+
+          - name: Commit changes
+            run: |
+                git config user.name "deque-mobileteam"
+                git config user.email "mobileteam@deque.com"
+                git add axeDevToolsXCUI.*
+                git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}"
+                git push
+
+          - name: Create and push tag
+            run: |
+                git tag -a ${{ github.event.inputs.releaseVersion }} -m "Release ${{ github.event.inputs.releaseVersion }}"
+                git push origin tag ${{ github.event.inputs.releaseVersion }}
+
+          - name: Create GitHub release
+            uses: softprops/action-gh-release@v2
+            with:
+                tag_name: ${{ github.event.inputs.releaseVersion }}
+                release_name: ${{ github.event.inputs.releaseVersion }}
+                generate_release_notes: true
+                draft: false
+                prerelease: false
+
+    
