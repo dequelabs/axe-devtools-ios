@@ -13,4 +13,4 @@ jobs:
           - name: Notify Analyzer
             run: |
                 echo "ohai"
-                curl -X POST 'https://api.github.com/repos/dequelabs/axe-devtools-mobile-analyzer/actions/workflows/test_a_workflow.yml/dispatches' -H 'Content-Type: application/json' -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -d "{\"ref\": \"develop\"}"
+                curl -X POST 'https://api.github.com/repos/dequelabs/axe-devtools-mobile-analyzer/actions/workflows/test_a_workflow.yml/dispatches' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -d '{"ref": "testing-a-workflow"}'
