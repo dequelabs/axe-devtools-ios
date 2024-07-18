@@ -1,0 +1,15 @@
+name: Notify Dependents
+on:
+    push:
+        branches:
+            - main
+            - notify-dependents
+
+jobs:
+    send-notification:
+        runs-on: ubuntu-latest
+        steps:
+
+          - name: Notify Analyzer
+            run: |
+                echo "ohai"
