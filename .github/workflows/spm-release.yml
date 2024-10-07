@@ -50,8 +50,8 @@ jobs:
                 curl -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
 
                 # Unzip framework & docs
-                unzip -o "./${LOCAL_ZIPPED_FRAMEWORK_URL}" -d .
-                unzip -o "./${LOCAL_ZIPPED_DOCS_URL} -d" .
+                unzip -o "${pwd}/${LOCAL_ZIPPED_FRAMEWORK_URL}" -d .
+                unzip -o "${pwd}/${LOCAL_ZIPPED_DOCS_URL} -d" .
 
                 ls -al .
 
