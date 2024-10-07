@@ -27,7 +27,33 @@ jobs:
             env:
                 DQ_AGORA_KEY: ${{ secrets.DQ_AGORA_KEY }}
             run: |
-                sh .github/scripts/DownloadLatestFrameworkAndDocs.sh ${{ github.event.inputs.releaseVersion }} ${{ github.event.inputs.commitHash }}
+                VERSION_NUM=${{ github.event.inputs.releaseVersion }}
+                COMMIT_HASH=${{ github.event.inputs.commitHash }}
+
+                BASE_URL="https://agora.dequecloud.com/artifactory/Attest-iOS/axeDevToolsXCUI"
+                FRAMEWORK_FILENAME="axeDevToolsXCUI.xcframework-${VERSION_NUM}"
+                DOCS_FILENAME="axeDevToolsXCUI.doccarchive-${VERSION_NUM}"
+
+                if [ -n "$COMMIT_HASH" ]; then
+                    FRAMEWORK_FILENAME="${FRAMEWORK_FILENAME}-${COMMIT_HASH}"
+                    DOCS_FILENAME="${DOCS_FILENAME}-${COMMIT_HASH}"
+                fi
+
+                FRAMEWORK_URL="${BASE_URL}/frameworks/${FRAMEWORK_FILENAME}.zip"
+                DOCS_URL="${BASE_URL}/docs/${DOCS_FILENAME}.zip"
+
+                LOCAL_ZIPPED_FRAMEWORK_URL="${FRAMEWORK_FILENAME}.zip"
+                LOCAL_ZIPPED_DOCS_URL="${DOCS_FILENAME}.zip"
+
+                # Download framework & docs
+                curl -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
+                curl -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
+
+                # Unzip framework & docs
+                unzip -o $LOCAL_ZIPPED_FRAMEWORK_URL -d .
+                unzip -o $LOCAL_ZIPPED_DOCS_URL -d .
+
+                ls -al .
 
           - name: Commit changes
             run: |
