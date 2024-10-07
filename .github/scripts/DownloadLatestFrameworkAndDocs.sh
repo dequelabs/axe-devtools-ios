@@ -1,8 +1,14 @@
 VERSION_NUM=$1
+COMMIT_HASH=$2
 
 BASE_URL="https://agora.dequecloud.com/artifactory/Attest-iOS/axeDevToolsXCUI"
 FRAMEWORK_FILENAME="axeDevToolsXCUI.xcframework-${VERSION_NUM}"
 DOCS_FILENAME="axeDevToolsXCUI.doccarchive-${VERSION_NUM}"
+
+if [ -n "$COMMIT_HASH" ]; then
+    FRAMEWORK_FILENAME="${FRAMEWORK_FILENAME}-${COMMIT_HASH}"
+    DOCS_FILENAME="${DOCS_FILENAME}-${COMMIT_HASH}"
+fi
 
 FRAMEWORK_URL="${BASE_URL}/frameworks/${FRAMEWORK_FILENAME}.zip"
 DOCS_URL="${BASE_URL}/docs/${DOCS_FILENAME}.zip"

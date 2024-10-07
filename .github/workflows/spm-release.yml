@@ -5,6 +5,9 @@ on:
             releaseVersion:
                 description: 'The version/tag of the release'
                 required: true
+            commitHash:
+                description: 'The commit hash if included in Agora filename'
+                required: false
 
 jobs:
     update_spm:
@@ -24,7 +27,7 @@ jobs:
             env:
                 DQ_AGORA_KEY: ${{ secrets.DQ_AGORA_KEY }}
             run: |
-                sh .github/scripts/DownloadLatestFrameworkAndDocs.sh ${{ github.event.inputs.releaseVersion }}
+                sh .github/scripts/DownloadLatestFrameworkAndDocs.sh ${{ github.event.inputs.releaseVersion }} ${{ github.event.inputs.commitHash }}
 
           - name: Commit changes
             run: |
@@ -32,20 +35,6 @@ jobs:
                 git config user.email "mobileteam@deque.com"
                 git add axeDevToolsXCUI.*
                 git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}"
-                git push
-
-          - name: Create and push tag
-            run: |
-                git tag -a ${{ github.event.inputs.releaseVersion }} -m "Release ${{ github.event.inputs.releaseVersion }}"
-                git push origin tag ${{ github.event.inputs.releaseVersion }}
-
-          - name: Create GitHub release
-            uses: softprops/action-gh-release@v2
-            with:
-                tag_name: ${{ github.event.inputs.releaseVersion }}
-                release_name: ${{ github.event.inputs.releaseVersion }}
-                generate_release_notes: true
-                draft: false
-                prerelease: false
+                git status
 
     
