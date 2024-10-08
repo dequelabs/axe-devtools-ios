@@ -46,8 +46,8 @@ jobs:
                 LOCAL_ZIPPED_DOCS_URL="${DOCS_FILENAME}.zip"
 
                 # Download framework & docs
-                curl -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
-                curl -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
                 ls -al .
 
                 # Unzip framework & docs
