@@ -48,12 +48,12 @@ jobs:
                 # Download framework & docs
                 curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
                 curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
-                ls -al .
-
+                
                 # Unzip framework & docs
                 unzip -o ${LOCAL_ZIPPED_FRAMEWORK_URL} -d .
                 unzip -o $LOCAL_ZIPPED_DOCS_URL -d .
-
+                
+                ls -al .
 
           - name: Commit changes
             run: |
@@ -62,5 +62,3 @@ jobs:
                 git add axeDevToolsXCUI.*
                 git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}"
                 git status
-
-    
