@@ -55,6 +55,10 @@ jobs:
                 
                 ls -al .
 
+          - name: Remove Zipped Files
+            run: |
+                rm -rf *.zip
+
           - name: Commit changes
             run: |
                 git config user.name "deque-mobileteam"
