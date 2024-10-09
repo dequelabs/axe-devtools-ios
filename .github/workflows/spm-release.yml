@@ -5,6 +5,9 @@ on:
             releaseVersion:
                 description: 'The version/tag of the release'
                 required: true
+            commitHash:
+                description: 'The commit hash if included in Agora filename'
+                required: false
 
 jobs:
     update_spm:
@@ -24,15 +27,49 @@ jobs:
             env:
                 DQ_AGORA_KEY: ${{ secrets.DQ_AGORA_KEY }}
             run: |
-                sh .github/scripts/DownloadLatestFrameworkAndDocs.sh ${{ github.event.inputs.releaseVersion }}
+                VERSION_NUM=${{ github.event.inputs.releaseVersion }}
+                COMMIT_HASH=${{ github.event.inputs.commitHash }}
+
+                BASE_URL="https://agora.dequecloud.com/artifactory/Attest-iOS/axeDevToolsXCUI"
+                FRAMEWORK_FILENAME="axeDevToolsXCUI.xcframework-${VERSION_NUM}"
+                DOCS_FILENAME="axeDevToolsXCUI.doccarchive-${VERSION_NUM}"
+
+                if [ -n "$COMMIT_HASH" ]; then
+                    FRAMEWORK_FILENAME="${FRAMEWORK_FILENAME}-${COMMIT_HASH}"
+                    DOCS_FILENAME="${DOCS_FILENAME}-${COMMIT_HASH}"
+                fi
+
+                FRAMEWORK_URL="${BASE_URL}/frameworks/${FRAMEWORK_FILENAME}.zip"
+                DOCS_URL="${BASE_URL}/docs/${DOCS_FILENAME}.zip"
+
+                LOCAL_ZIPPED_FRAMEWORK_URL="${FRAMEWORK_FILENAME}.zip"
+                LOCAL_ZIPPED_DOCS_URL="${DOCS_FILENAME}.zip"
+
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
+                
+                unzip -o ${LOCAL_ZIPPED_FRAMEWORK_URL} -d .
+                unzip -o $LOCAL_ZIPPED_DOCS_URL -d .
+
+          - name: Remove Zipped Files
+            run: |
+                rm -rf *.zip
+
+          - name: Verify Files Exist
+            run: |
+                if [[ -f "Package.swift" && -d "axeDevToolsXCUI.doccarchive" && -d "axeDevToolsXCUI.xcframework" ]]; then
+                  echo "All required files and directories are present."
+                else
+                  echo "One or more required files/directories are missing."
+                exit 1
+                fi
 
           - name: Commit changes
             run: |
                 git config user.name "deque-mobileteam"
                 git config user.email "mobileteam@deque.com"
                 git add axeDevToolsXCUI.*
-                git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}"
-                git push
+                git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}" 
 
           - name: Create and push tag
             run: |
@@ -47,5 +84,3 @@ jobs:
                 generate_release_notes: true
                 draft: false
                 prerelease: false
-
-    
