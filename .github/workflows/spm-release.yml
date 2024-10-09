@@ -59,6 +59,15 @@ jobs:
             run: |
                 rm -rf *.zip
 
+          - name: Verify Files Exist
+            run: |
+                if [[ -f "Package.swift" && -d "axeDevToolsXCUI.doccarchive" && -d "axeDevToolsXCUI.xcframework" ]]; then
+                  echo "All required files and directories are present."
+                else
+                  echo "One or more required files/directories are missing."
+                exit 1
+                fi
+
           - name: Commit changes
             run: |
                 git config user.name "deque-mobileteam"
@@ -66,3 +75,17 @@ jobs:
                 git add axeDevToolsXCUI.*
                 git commit -m "chore: release ${{ github.event.inputs.releaseVersion }}"
                 git status
+
+          # - name: Create and push tag
+          #   run: |
+          #       git tag -a ${{ github.event.inputs.releaseVersion }} -m "Release ${{ github.event.inputs.releaseVersion }}"
+          #       git push origin tag ${{ github.event.inputs.releaseVersion }}
+
+          # - name: Create GitHub release
+          #   uses: softprops/action-gh-release@v2
+          #   with:
+          #       tag_name: ${{ github.event.inputs.releaseVersion }}
+          #       release_name: ${{ github.event.inputs.releaseVersion }}
+          #       generate_release_notes: true
+          #       draft: false
+          #       prerelease: false
