@@ -12,7 +12,5 @@ jobs:
         steps:
 
           - name: Notify Analyzer
-            env:
-                CI_WORKFLOW_PAT: ${{ secrets.CI_WORKFLOW_PAT }}
             run: |
-                curl -X POST 'https://api.github.com/repos/dequelabs/axe-devtools-mobile-analyzer/actions/workflows/publish_latest.yml/dispatches' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${CI_WORKFLOW_PAT}' -d '{"ref": "main"}'
+                curl -X POST 'https://api.github.com/repos/dequelabs/axe-devtools-mobile-analyzer/actions/workflows/publish_latest.yml/dispatches' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.CI_WORKFLOW_PAT }}' -d '{"ref": "main"}'
