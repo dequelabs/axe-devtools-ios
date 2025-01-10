@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name axeDevToolsXCUI
+// swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-bare-slash-regex -module-name axeDevToolsXCUI
 import CoreGraphics
 import CoreImage
 import Foundation
@@ -51,7 +51,7 @@ extension axeDevToolsXCUI.AxeDevTools {
   @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead")
+  @available(*, deprecated, message: "This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead")
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
 }
 @objc public enum AxeRole : Swift.Int {
@@ -120,6 +120,9 @@ extension axeDevToolsXCUI.AxeDevTools {
     get
   }
   @objc weak public var parent: axeDevToolsXCUI.AxeView?
+  @objc public var detectedText: Swift.String? {
+    get
+  }
   @objc public var axeViewId: Swift.String {
     @objc get
   }
@@ -575,7 +578,7 @@ extension Swift.String {
   }
 }
 @objc public class AccessToken : ObjectiveC.NSObject {
-  @available(*, deprecated, message: "This will be removed in our July/August release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead")
+  @available(*, deprecated, message: "This will be removed in a future release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead")
   @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
   @objc deinit
 }

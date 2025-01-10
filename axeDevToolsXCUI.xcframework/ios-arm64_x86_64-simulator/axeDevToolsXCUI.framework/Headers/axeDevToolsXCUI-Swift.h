@@ -318,7 +318,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 ///
 /// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in our July/August release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
+- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in a future release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -560,7 +560,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
-+ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead");
++ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead");
 @end
 
 
@@ -958,6 +958,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @property (nonatomic, readonly, copy) NSArray<AxeView *> * _Nonnull children;
 /// The view’s parent, as an AxeView.
 @property (nonatomic, weak) AxeView * _Nullable parent;
+/// Detected text from the VisionAPI
+@property (nonatomic, readonly, copy) NSString * _Nullable detectedText;
 /// a unique identifier for the view.  The axeViewId will change between scans of the same view.
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeViewId;
 /// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar) or if it is partially off-screen.
@@ -1006,6 +1008,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 /// Attempts to identify the type of app that we are testing against
@@ -1377,7 +1380,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 ///
 /// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
 ///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in our July/August release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
+- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in a future release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1619,7 +1622,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
-+ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in our July/August release; please use login(withUsername, andPassword, toServer) instead");
++ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead");
 @end
 
 
@@ -2017,6 +2020,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 @property (nonatomic, readonly, copy) NSArray<AxeView *> * _Nonnull children;
 /// The view’s parent, as an AxeView.
 @property (nonatomic, weak) AxeView * _Nullable parent;
+/// Detected text from the VisionAPI
+@property (nonatomic, readonly, copy) NSString * _Nullable detectedText;
 /// a unique identifier for the view.  The axeViewId will change between scans of the same view.
 @property (nonatomic, readonly, copy) NSString * _Nonnull axeViewId;
 /// whether a view can be seen on-screen at the time of the scan.  Will return false if the view is off-screen or behind a modal or other views (such as a tab bar or a navigation bar) or if it is partially off-screen.
@@ -2065,6 +2070,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 /// Attempts to identify the type of app that we are testing against
