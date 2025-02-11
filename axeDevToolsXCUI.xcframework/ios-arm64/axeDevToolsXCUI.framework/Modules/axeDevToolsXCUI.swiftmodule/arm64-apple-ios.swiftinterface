@@ -45,11 +45,7 @@ import zlib
   }
 }
 extension axeDevToolsXCUI.AxeDevTools {
-  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
-  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "The organization parameter of this method will be removed in a future release; please refer to our docs for more information.")
-  @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "", organization: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
   @available(*, deprecated, message: "This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead")
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
@@ -195,6 +191,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   final public func encode(to encoder: any Swift.Encoder) throws
   @objc final public func ignore(rule: Swift.String, _ shouldIgnore: Swift.Bool = true)
   @objc final public func ignore(rules: [Swift.String], _ shouldIgnore: Swift.Bool = true)
+  @objc final public func ignoreExperimental()
   @objc final public func ignore(rulesFor: [Swift.String : Swift.Set<Swift.String>])
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit

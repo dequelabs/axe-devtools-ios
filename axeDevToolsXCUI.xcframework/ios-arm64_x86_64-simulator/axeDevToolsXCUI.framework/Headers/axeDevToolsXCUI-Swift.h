@@ -373,6 +373,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeConf")
 /// \param shouldIgnore a <code>Bool</code> indicating whether the set of rules should have their results ignored. Set to <code>true</code> if they should be ignored or <code>false</code> if they should be included.  Default value is <code>true</code>.
 ///
 - (void)ignoreWithRules:(NSArray<NSString *> * _Nonnull)rules :(BOOL)shouldIgnore;
+/// This method allows you to ignore all experimental rules.  By default, no rules (including custom rules) are ignored. The <code>optInToSupportsDynamicType</code> property is not affected by this method
+- (void)ignoreExperimental;
 /// Ignore specific rules for specific views, as defined in the provided dictionary, by Class or Accessibility Identifier.
 /// Classes that inherit from a classname specified here will not be ignored.  For example, if you specify that the rule <code>InScrollView</code> should not run on any <code>UILabel</code>, <code>InScrollView</code> will still run on the class <code>DQLabel</code> (which inherits from <code>UILabel</code>).
 /// *
@@ -521,7 +523,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
 /// <ul>
@@ -542,7 +543,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
 + (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.  Use this version of login if you have a special instance of the server to log into.
 /// <ul>
@@ -1435,6 +1435,8 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeConf")
 /// \param shouldIgnore a <code>Bool</code> indicating whether the set of rules should have their results ignored. Set to <code>true</code> if they should be ignored or <code>false</code> if they should be included.  Default value is <code>true</code>.
 ///
 - (void)ignoreWithRules:(NSArray<NSString *> * _Nonnull)rules :(BOOL)shouldIgnore;
+/// This method allows you to ignore all experimental rules.  By default, no rules (including custom rules) are ignored. The <code>optInToSupportsDynamicType</code> property is not affected by this method
+- (void)ignoreExperimental;
 /// Ignore specific rules for specific views, as defined in the provided dictionary, by Class or Accessibility Identifier.
 /// Classes that inherit from a classname specified here will not be ignored.  For example, if you specify that the rule <code>InScrollView</code> should not run on any <code>UILabel</code>, <code>InScrollView</code> will still run on the class <code>DQLabel</code> (which inherits from <code>UILabel</code>).
 /// *
@@ -1583,7 +1585,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
 + (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
 /// <ul>
@@ -1604,7 +1605,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url organization:(NSString * _Nullable)organization error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("The organization parameter of this method will be removed in a future release; please refer to our docs for more information.");
 + (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.  Use this version of login if you have a special instance of the server to log into.
 /// <ul>

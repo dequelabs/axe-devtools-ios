@@ -5600,6 +5600,29 @@
           },
           {
             "kind": "Function",
+            "name": "ignoreExperimental",
+            "printedName": "ignoreExperimental()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeConf(im)ignoreExperimental",
+            "mangledName": "$s15axeDevToolsXCUI7AxeConfC18ignoreExperimentalyyF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "ignore",
             "printedName": "ignore(rulesFor:)",
             "children": [
@@ -15766,70 +15789,6 @@
           {
             "kind": "Function",
             "name": "login",
-            "printedName": "login(withUsername:andPassword:toServer:organization:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AxeDevTools",
-                "printedName": "axeDevToolsXCUI.AxeDevTools",
-                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@axeDevToolsXCUI@objc(cs)AxeDevTools(cm)loginWithUsername:andPassword:toServer:organization:error:",
-            "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login12withUsername11andPassword8toServer12organizationACSS_S3SSgtKFZ",
-            "moduleName": "axeDevToolsXCUI",
-            "static": true,
-            "deprecated": true,
-            "objc_name": "loginWithUsername:andPassword:toServer:organization:error:",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "Available",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "login",
             "printedName": "login(withUsername:andPassword:toServer:)",
             "children": [
               {
@@ -15868,64 +15827,6 @@
               "Final",
               "AccessControl",
               "ObjC",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "login",
-            "printedName": "login(withAPIKey:toServer:organization:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AxeDevTools",
-                "printedName": "axeDevToolsXCUI.AxeDevTools",
-                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeDevTools"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@axeDevToolsXCUI@objc(cs)AxeDevTools(cm)loginWithAPIKey:toServer:organization:error:",
-            "mangledName": "$s15axeDevToolsXCUI03AxebC0C5login10withAPIKey8toServer12organizationACSS_S2SSgtKFZ",
-            "moduleName": "axeDevToolsXCUI",
-            "static": true,
-            "deprecated": true,
-            "objc_name": "loginWithAPIKey:toServer:organization:error:",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "Available",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -20687,14 +20588,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 6749,
+      "offset": 6814,
       "length": 24,
       "value": "\"Control's Visible Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 6826,
+      "offset": 6891,
       "length": 21,
       "value": "\"isOrContainsControl\""
     },
@@ -20764,35 +20665,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 1671,
+      "offset": 1503,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 2395,
+      "offset": 2862,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 3923,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
-      "kind": "StringLiteral",
-      "offset": 4642,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
-      "kind": "StringLiteral",
-      "offset": 6263,
+      "offset": 4483,
       "length": 2,
       "value": "\"\""
     },
@@ -20812,10 +20699,10 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
-      "kind": "StringLiteral",
-      "offset": 162,
-      "length": 17,
-      "value": "\"axeDevToolsXCUI.RuleColorContrast\""
+      "kind": "FloatLiteral",
+      "offset": 328,
+      "length": 3,
+      "value": "1.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
@@ -20827,35 +20714,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 10474,
+      "offset": 162,
+      "length": 17,
+      "value": "\"axeDevToolsXCUI.RuleColorContrast\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
+      "kind": "StringLiteral",
+      "offset": 10793,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 10532,
+      "offset": 10851,
       "length": 21,
       "value": "\"All Color Contrasts\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 10603,
+      "offset": 10922,
       "length": 23,
       "value": "\"Is Large or Bold Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 10683,
+      "offset": 11002,
       "length": 27,
       "value": "\"Minimum Required Contrast\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 10756,
+      "offset": 11075,
       "length": 23,
       "value": "\"Cursor May Be Present\""
     },
@@ -20953,14 +20847,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/POSTRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 926,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/POSTRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 980,
+      "offset": 1001,
       "length": 5,
       "value": "false"
     },
@@ -21316,24 +21203,10 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/Request.swift",
-      "kind": "BooleanLiteral",
-      "offset": 533,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/Request.swift",
       "kind": "StringLiteral",
-      "offset": 1410,
+      "offset": 1482,
       "length": 19,
       "value": "\"No data returned.\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/Request.swift",
-      "kind": "StringLiteral",
-      "offset": 1558,
-      "length": 8,
-      "value": "\"200 OK\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools XCUI\/AxeElementType-Ext.swift",
@@ -23368,7 +23241,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools XCUI\/AxeElement.swift",
       "kind": "BooleanLiteral",
-      "offset": 6285,
+      "offset": 6206,
       "length": 5,
       "value": "false"
     },
