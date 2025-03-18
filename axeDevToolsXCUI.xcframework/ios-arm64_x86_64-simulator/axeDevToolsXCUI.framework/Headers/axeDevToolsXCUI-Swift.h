@@ -847,7 +847,7 @@ typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
 typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
 /// The view was not applicable to the rule.
   AxeStatusINAPPLICABLE = 0,
-/// The view ran into an error and needs to be reviewed for accessibility manually.
+/// The view ran into an error and needs to be reviewed for accessibility manually. (Needs Review)
   AxeStatusINCOMPLETE = 1,
 /// The view does not have an accessibility issue.
   AxeStatusPASS = 2,
@@ -1909,7 +1909,7 @@ typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
 typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
 /// The view was not applicable to the rule.
   AxeStatusINAPPLICABLE = 0,
-/// The view ran into an error and needs to be reviewed for accessibility manually.
+/// The view ran into an error and needs to be reviewed for accessibility manually. (Needs Review)
   AxeStatusINCOMPLETE = 1,
 /// The view does not have an accessibility issue.
   AxeStatusPASS = 2,
