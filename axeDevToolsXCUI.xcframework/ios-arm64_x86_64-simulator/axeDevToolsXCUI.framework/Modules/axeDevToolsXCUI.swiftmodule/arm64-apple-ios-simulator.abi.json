@@ -548,12 +548,12 @@
                 "kind": "TypeNominal",
                 "name": "AxeStandard",
                 "printedName": "axeDevToolsXCUI.AxeStandard",
-                "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardOvp",
-            "mangledName": "$s15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardOvp",
+            "usr": "s:15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardVvp",
+            "mangledName": "$s15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardVvp",
             "moduleName": "axeDevToolsXCUI",
             "declAttributes": [
               "AccessControl",
@@ -569,12 +569,12 @@
                     "kind": "TypeNominal",
                     "name": "AxeStandard",
                     "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardOvg",
-                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardOvg",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardVvg",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC8standardAA0E8StandardVvg",
                 "moduleName": "axeDevToolsXCUI",
                 "accessorKind": "get"
               }
@@ -618,6 +618,91 @@
                 "mangledName": "$s15axeDevToolsXCUI7AxeRuleC6impactAA0E6ImpactOvg",
                 "moduleName": "axeDevToolsXCUI",
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "config",
+            "printedName": "config",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RuleConf",
+                "printedName": "axeDevToolsXCUI.RuleConf",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvp",
+            "mangledName": "$s15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RuleConf",
+                    "printedName": "axeDevToolsXCUI.RuleConf",
+                    "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvg",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RuleConf",
+                    "printedName": "axeDevToolsXCUI.RuleConf",
+                    "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvs",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvs",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvM",
+                "mangledName": "$s15axeDevToolsXCUI7AxeRuleC6configAA0F4ConfCvM",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -4191,18 +4276,17 @@
                 "kind": "TypeNominal",
                 "name": "AxeStandard",
                 "printedName": "axeDevToolsXCUI.AxeStandard",
-                "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf(py)standard",
-            "mangledName": "$s15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardOvp",
+            "usr": "s:15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardVvp",
+            "mangledName": "$s15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardVvp",
             "moduleName": "axeDevToolsXCUI",
             "declAttributes": [
               "Final",
               "HasStorage",
               "AccessControl",
-              "ObjC",
               "RawDocComment"
             ],
             "isLet": true,
@@ -4217,17 +4301,16 @@
                     "kind": "TypeNominal",
                     "name": "AxeStandard",
                     "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf(im)standard",
-                "mangledName": "$s15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardOvg",
+                "usr": "s:15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardVvg",
+                "mangledName": "$s15axeDevToolsXCUI8RuleConfC8standardAA11AxeStandardVvg",
                 "moduleName": "axeDevToolsXCUI",
                 "implicit": true,
                 "declAttributes": [
-                  "Final",
-                  "ObjC"
+                  "Final"
                 ],
                 "accessorKind": "get"
               }
@@ -4283,9 +4366,187 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "ruleId",
+            "printedName": "ruleId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf(py)ruleId",
+            "mangledName": "$s15axeDevToolsXCUI8RuleConfC6ruleIdSSSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)RuleConf(im)ruleId",
+                "mangledName": "$s15axeDevToolsXCUI8RuleConfC6ruleIdSSSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "category",
+            "printedName": "category",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeCategory?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI8RuleConfC8categoryAA11AxeCategoryOSgvp",
+            "mangledName": "$s15axeDevToolsXCUI8RuleConfC8categoryAA11AxeCategoryOSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.AxeCategory?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI8RuleConfC8categoryAA11AxeCategoryOSgvg",
+                "mangledName": "$s15axeDevToolsXCUI8RuleConfC8categoryAA11AxeCategoryOSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "successCriteria",
+            "printedName": "successCriteria",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeSuccessCriteria?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI8RuleConfC15successCriteriaAA010AxeSuccessH0OSgvp",
+            "mangledName": "$s15axeDevToolsXCUI8RuleConfC15successCriteriaAA010AxeSuccessH0OSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI8RuleConfC15successCriteriaAA010AxeSuccessH0OSgvg",
+                "mangledName": "$s15axeDevToolsXCUI8RuleConfC15successCriteriaAA010AxeSuccessH0OSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(impact:standard:summary:experimental:)",
+            "printedName": "init(impact:standard:summary:experimental:ruleId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4303,7 +4564,8 @@
                 "kind": "TypeNominal",
                 "name": "AxeStandard",
                 "printedName": "axeDevToolsXCUI.AxeStandard",
-                "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
+                "hasDefaultArg": true,
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               },
               {
                 "kind": "TypeNominal",
@@ -4317,14 +4579,30 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15axeDevToolsXCUI8RuleConfC6impact8standard7summary12experimentalAcA9AxeImpactO_AA0K8StandardOSSSbtcfc",
-            "mangledName": "$s15axeDevToolsXCUI8RuleConfC6impact8standard7summary12experimentalAcA9AxeImpactO_AA0K8StandardOSSSbtcfc",
+            "usr": "s:15axeDevToolsXCUI8RuleConfC6impact8standard7summary12experimental6ruleIdAcA9AxeImpactO_AA0M8StandardVSSSbSSSgtcfc",
+            "mangledName": "$s15axeDevToolsXCUI8RuleConfC6impact8standard7summary12experimental6ruleIdAcA9AxeImpactO_AA0M8StandardVSSSbSSSgtcfc",
             "moduleName": "axeDevToolsXCUI",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -4537,6 +4815,414 @@
         "moduleName": "axeDevToolsXCUI",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeCategory",
+        "printedName": "AxeCategory",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO5otheryA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO5otheryA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "nameRoleValue",
+            "printedName": "nameRoleValue",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO13nameRoleValueyA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO13nameRoleValueyA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO5coloryA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO5coloryA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "structure",
+            "printedName": "structure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO9structureyA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO9structureyA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "textAlternatives",
+            "printedName": "textAlternatives",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO16textAlternativesyA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO16textAlternativesyA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "sensoryAndVisualCues",
+            "printedName": "sensoryAndVisualCues",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO20sensoryAndVisualCuesyA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO20sensoryAndVisualCuesyA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Var",
+            "name": "keyboard",
+            "printedName": "keyboard",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeCategory.Type) -> axeDevToolsXCUI.AxeCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO8keyboardyA2CmF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO8keyboardyA2CmF",
+            "moduleName": "axeDevToolsXCUI"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeCategory?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO8rawValueACSgSS_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO8rawValueACSgSS_tcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeCategoryO8rawValueSSvp",
+            "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO8rawValueSSvp",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeCategoryO8rawValueSSvg",
+                "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO8rawValueSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15axeDevToolsXCUI11AxeCategoryO",
+        "mangledName": "$s15axeDevToolsXCUI11AxeCategoryO",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -6894,57 +7580,6 @@
           },
           {
             "kind": "Var",
-            "name": "standard",
-            "printedName": "standard",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AxeStandard",
-                "printedName": "axeDevToolsXCUI.AxeStandard",
-                "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeRuleResult(py)standard",
-            "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardOvp",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeRuleResult(im)standard",
-                "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardOvg",
-                "moduleName": "axeDevToolsXCUI",
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "axeRuleId",
             "printedName": "axeRuleId",
             "children": [
@@ -6996,6 +7631,175 @@
                 "declKind": "Accessor",
                 "usr": "s:15axeDevToolsXCUI13AxeRuleResultC0aF2IdAA0efH0OSgvg",
                 "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC0aF2IdAA0efH0OSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "category",
+            "printedName": "category",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeCategory?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeCategory",
+                    "printedName": "axeDevToolsXCUI.AxeCategory",
+                    "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI13AxeRuleResultC8categoryAA0E8CategoryOSgvp",
+            "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8categoryAA0E8CategoryOSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.AxeCategory?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeCategory",
+                        "printedName": "axeDevToolsXCUI.AxeCategory",
+                        "usr": "s:15axeDevToolsXCUI11AxeCategoryO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI13AxeRuleResultC8categoryAA0E8CategoryOSgvg",
+                "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8categoryAA0E8CategoryOSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "standard",
+            "printedName": "standard",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeStandard?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardVSgvp",
+            "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardVSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.AxeStandard?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeStandard",
+                        "printedName": "axeDevToolsXCUI.AxeStandard",
+                        "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardVSgvg",
+                "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC8standardAA0E8StandardVSgvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "successCriteria",
+            "printedName": "successCriteria",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeSuccessCriteria?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI13AxeRuleResultC15successCriteriaAA0e7SuccessI0OSgvp",
+            "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC15successCriteriaAA0e7SuccessI0OSgvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI13AxeRuleResultC15successCriteriaAA0e7SuccessI0OSgvg",
+                "mangledName": "$s15axeDevToolsXCUI13AxeRuleResultC15successCriteriaAA0e7SuccessI0OSgvg",
                 "moduleName": "axeDevToolsXCUI",
                 "accessorKind": "get"
               }
@@ -8376,6 +9180,16 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -13487,218 +14301,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "WCAG_20",
-            "printedName": "WCAG_20",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(axeDevToolsXCUI.AxeStandard.Type) -> axeDevToolsXCUI.AxeStandard",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "axeDevToolsXCUI.AxeStandard.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard@AxeStandardWCAG_20",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO7WCAG_20yA2CmF",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
-          },
-          {
-            "kind": "Var",
-            "name": "WCAG_21",
-            "printedName": "WCAG_21",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(axeDevToolsXCUI.AxeStandard.Type) -> axeDevToolsXCUI.AxeStandard",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "axeDevToolsXCUI.AxeStandard.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard@AxeStandardWCAG_21",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO7WCAG_21yA2CmF",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "WCAG_22",
-            "printedName": "WCAG_22",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(axeDevToolsXCUI.AxeStandard.Type) -> axeDevToolsXCUI.AxeStandard",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "axeDevToolsXCUI.AxeStandard.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard@AxeStandardWCAG_22",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO7WCAG_22yA2CmF",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "PLATFORM",
-            "printedName": "PLATFORM",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(axeDevToolsXCUI.AxeStandard.Type) -> axeDevToolsXCUI.AxeStandard",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "axeDevToolsXCUI.AxeStandard.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard@AxeStandardPLATFORM",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8PLATFORMyA2CmF",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
-          },
-          {
-            "kind": "Var",
-            "name": "BEST_PRACTICE",
-            "printedName": "BEST_PRACTICE",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(axeDevToolsXCUI.AxeStandard.Type) -> axeDevToolsXCUI.AxeStandard",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "axeDevToolsXCUI.AxeStandard.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard@AxeStandardBEST_PRACTICE",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO13BEST_PRACTICEyA2CmF",
-            "moduleName": "axeDevToolsXCUI",
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "fixedbinaryorder": 4
-          },
-          {
-            "kind": "Function",
-            "name": "toString",
-            "printedName": "toString()",
+            "name": "rawValue",
+            "printedName": "rawValue",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13707,14 +14311,37 @@
                 "usr": "s:SS"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:15axeDevToolsXCUI11AxeStandardO8toStringSSyF",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8toStringSSyF",
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV8rawValueSSvp",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8rawValueSSvp",
             "moduleName": "axeDevToolsXCUI",
             "declAttributes": [
+              "HasStorage",
               "AccessControl"
             ],
-            "funcSelfKind": "NonMutating"
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV8rawValueSSvg",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8rawValueSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Constructor",
@@ -13723,49 +14350,137 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "axeDevToolsXCUI.AxeStandard?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15axeDevToolsXCUI11AxeStandardO8rawValueACSgSi_tcfc",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8rawValueACSgSi_tcfc",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV8rawValueACSS_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8rawValueACSS_tcfc",
             "moduleName": "axeDevToolsXCUI",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "init_kind": "Designated"
           },
           {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV6encode2toys7Encoder_p_tKF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV2eeoiySbAC_ACtFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "bestPractice",
+            "printedName": "bestPractice",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:15axeDevToolsXCUI11AxeStandardO8rawValueSivp",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8rawValueSivp",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV12bestPracticeACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV12bestPracticeACvpZ",
             "moduleName": "axeDevToolsXCUI",
-            "implicit": true,
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -13774,46 +14489,46 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15axeDevToolsXCUI11AxeStandardO8rawValueSivg",
-                "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8rawValueSivg",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV12bestPracticeACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV12bestPracticeACvgZ",
                 "moduleName": "axeDevToolsXCUI",
+                "static": true,
                 "implicit": true,
+                "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
           },
           {
             "kind": "Var",
-            "name": "allCases",
-            "printedName": "allCases",
+            "name": "wcag2a",
+            "printedName": "wcag2a",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[axeDevToolsXCUI.AxeStandard]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AxeStandard",
-                    "printedName": "axeDevToolsXCUI.AxeStandard",
-                    "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                  }
-                ],
-                "usr": "s:Sa"
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:15axeDevToolsXCUI11AxeStandardO8allCasesSayACGvpZ",
-            "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8allCasesSayACGvpZ",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV6wcag2aACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV6wcag2aACvpZ",
             "moduleName": "axeDevToolsXCUI",
             "static": true,
-            "implicit": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -13822,40 +14537,369 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[axeDevToolsXCUI.AxeStandard]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ],
-                    "usr": "s:Sa"
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15axeDevToolsXCUI11AxeStandardO8allCasesSayACGvgZ",
-                "mangledName": "$s15axeDevToolsXCUI11AxeStandardO8allCasesSayACGvgZ",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV6wcag2aACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV6wcag2aACvgZ",
                 "moduleName": "axeDevToolsXCUI",
                 "static": true,
                 "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wcag2aa",
+            "printedName": "wcag2aa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV7wcag2aaACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7wcag2aaACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV7wcag2aaACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7wcag2aaACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wcag21a",
+            "printedName": "wcag21a",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV7wcag21aACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7wcag21aACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV7wcag21aACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7wcag21aACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wcag21aa",
+            "printedName": "wcag21aa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV8wcag21aaACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8wcag21aaACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV8wcag21aaACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8wcag21aaACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wcag21aaa",
+            "printedName": "wcag21aaa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV9wcag21aaaACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV9wcag21aaaACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV9wcag21aaaACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV9wcag21aaaACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "wcag22aa",
+            "printedName": "wcag22aa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV8wcag22aaACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8wcag22aaACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV8wcag22aaACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV8wcag22aaACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV7unknownACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7unknownACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV7unknownACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV7unknownACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "BEST_PRACTICE",
+            "printedName": "BEST_PRACTICE",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeStandard",
+                "printedName": "axeDevToolsXCUI.AxeStandard",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI11AxeStandardV13BEST_PRACTICEACvpZ",
+            "mangledName": "$s15axeDevToolsXCUI11AxeStandardV13BEST_PRACTICEACvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "deprecated": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Available"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeStandard",
+                    "printedName": "axeDevToolsXCUI.AxeStandard",
+                    "usr": "s:15axeDevToolsXCUI11AxeStandardV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI11AxeStandardV13BEST_PRACTICEACvgZ",
+                "mangledName": "$s15axeDevToolsXCUI11AxeStandardV13BEST_PRACTICEACvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
           }
         ],
-        "declKind": "Enum",
-        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard",
-        "mangledName": "$s15axeDevToolsXCUI11AxeStandardO",
+        "declKind": "Struct",
+        "usr": "s:15axeDevToolsXCUI11AxeStandardV",
+        "mangledName": "$s15axeDevToolsXCUI11AxeStandardV",
         "moduleName": "axeDevToolsXCUI",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
           "RawDocComment"
         ],
-        "enumRawTypeName": "Int",
         "conformances": [
           {
             "kind": "Conformance",
@@ -13866,62 +14910,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
           },
           {
             "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CaseIterable",
-            "printedName": "CaseIterable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AllCases",
-                "printedName": "AllCases",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[axeDevToolsXCUI.AxeStandard]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AxeStandard",
-                        "printedName": "axeDevToolsXCUI.AxeStandard",
-                        "usr": "c:@M@axeDevToolsXCUI@E@AxeStandard"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s12CaseIterableP",
-            "mangledName": "$ss12CaseIterableP"
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           }
         ]
       },
@@ -16163,6 +17162,770 @@
         "moduleName": "axeDevToolsXCUI",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeSuccessCriteria",
+        "printedName": "AxeSuccessCriteria",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wcag412",
+            "printedName": "wcag412",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag412",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag412yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "wcag143",
+            "printedName": "wcag143",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag143",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag143yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "wcag132",
+            "printedName": "wcag132",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag132",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag132yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "wcag111",
+            "printedName": "wcag111",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag111",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag111yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "wcag144",
+            "printedName": "wcag144",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag144",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag144yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "wcag211",
+            "printedName": "wcag211",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag211",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag211yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "wcag253",
+            "printedName": "wcag253",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag253",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag253yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "wcag134",
+            "printedName": "wcag134",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag134",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag134yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "wcag242",
+            "printedName": "wcag242",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag242",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag242yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "wcag255",
+            "printedName": "wcag255",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag255",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag255yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "wcag258",
+            "printedName": "wcag258",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaWcag258",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7wcag258yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeSuccessCriteria.Type) -> axeDevToolsXCUI.AxeSuccessCriteria",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeSuccessCriteria",
+                        "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria@AxeSuccessCriteriaUnknown",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO7unknownyA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueSSvp",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueSSvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueSSvg",
+                "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeSuccessCriteria",
+                "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueACSS_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO11stringValueACSS_tcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeSuccessCriteria",
+                "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO6encode2toys7Encoder_p_tKF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeSuccessCriteria?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeSuccessCriteria",
+                    "printedName": "axeDevToolsXCUI.AxeSuccessCriteria",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueACSgSi_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueACSgSi_tcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueSivp",
+            "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueSivp",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueSivg",
+                "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO8rawValueSivg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@axeDevToolsXCUI@E@AxeSuccessCriteria",
+        "mangledName": "$s15axeDevToolsXCUI18AxeSuccessCriteriaO",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -20597,14 +22360,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
       "kind": "BooleanLiteral",
-      "offset": 1537,
+      "offset": 1545,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 731,
+      "offset": 677,
       "length": 5,
       "value": "false"
     },
@@ -20618,14 +22381,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 7020,
+      "offset": 8451,
       "length": 24,
       "value": "\"Control's Visible Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 7097,
+      "offset": 8528,
       "length": 21,
       "value": "\"isOrContainsControl\""
     },
@@ -20714,6 +22477,13 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/HTTP\/URLSessionDataTask.swift",
+      "kind": "StringLiteral",
+      "offset": 2034,
+      "length": 22,
+      "value": "\"Unexpected response.\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "FloatLiteral",
       "offset": 238,
@@ -20751,35 +22521,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11577,
+      "offset": 11545,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11635,
+      "offset": 11603,
       "length": 21,
       "value": "\"All Color Contrasts\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11706,
+      "offset": 11674,
       "length": 23,
       "value": "\"Is Large or Bold Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11786,
+      "offset": 11754,
       "length": 27,
       "value": "\"Minimum Required Contrast\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11859,
+      "offset": 11827,
       "length": 23,
       "value": "\"Cursor May Be Present\""
     },
@@ -20807,7 +22577,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "StringLiteral",
-      "offset": 5249,
+      "offset": 5217,
       "length": 18,
       "value": "\"isChildOfStepper\""
     },
@@ -21073,63 +22843,63 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35947,
+      "offset": 35946,
       "length": 11,
       "value": "\"className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36016,
+      "offset": 36015,
       "length": 11,
       "value": "\"axeViewId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36087,
+      "offset": 36086,
       "length": 13,
       "value": "\"elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36163,
+      "offset": 36162,
       "length": 16,
       "value": "\"boundsInScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36252,
+      "offset": 36251,
       "length": 26,
       "value": "\"isAccessibilityFocusable\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36350,
+      "offset": 36349,
       "length": 25,
       "value": "\"accessibilityIdentifier\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36436,
+      "offset": 36435,
       "length": 14,
       "value": "\"detectedText\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36507,
+      "offset": 36506,
       "length": 10,
       "value": "\"children\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36581,
+      "offset": 36580,
       "length": 17,
       "value": "\"calculatedProps\""
     },
@@ -21192,14 +22962,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/RuleConf.swift",
       "kind": "BooleanLiteral",
-      "offset": 994,
+      "offset": 1263,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/RuleConf.swift",
       "kind": "BooleanLiteral",
-      "offset": 1097,
+      "offset": 1723,
       "length": 5,
       "value": "false"
     },
@@ -21216,6 +22986,48 @@
       "offset": 438,
       "length": 5,
       "value": "0.001"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 17,
+      "value": "\"name-role-value\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 315,
+      "length": 19,
+      "value": "\"text-alternatives\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 367,
+      "length": 25,
+      "value": "\"sensory-and-visual-cues\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 17,
+      "value": "\"name-role-value\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 315,
+      "length": 19,
+      "value": "\"text-alternatives\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeCategory.swift",
+      "kind": "StringLiteral",
+      "offset": 367,
+      "length": 25,
+      "value": "\"sensory-and-visual-cues\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/Double.swift",
@@ -21304,14 +23116,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeConf.swift",
       "kind": "BooleanLiteral",
-      "offset": 4207,
+      "offset": 4045,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeConf.swift",
       "kind": "BooleanLiteral",
-      "offset": 5075,
+      "offset": 4913,
       "length": 4,
       "value": "true"
     },
@@ -22655,14 +24467,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10739,
+      "offset": 10712,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10918,
+      "offset": 10891,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
@@ -22683,42 +24495,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11152,
+      "offset": 11125,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11213,
+      "offset": 11186,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11275,
+      "offset": 11248,
       "length": 15,
       "value": "\"isBehindModal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11341,
+      "offset": 11314,
       "length": 18,
       "value": "\"allNearbyTargets\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11411,
+      "offset": 11384,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11482,
+      "offset": 11455,
       "length": 19,
       "value": "\"overlappingBounds\""
     },
@@ -23089,7 +24901,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleConflictingTraits.swift",
       "kind": "StringLiteral",
-      "offset": 1764,
+      "offset": 1731,
       "length": 20,
       "value": "\"Conflicting Traits\""
     },
@@ -23229,7 +25041,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5320,
+      "offset": 5288,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
@@ -23250,28 +25062,28 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5573,
+      "offset": 5541,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5634,
+      "offset": 5602,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5696,
+      "offset": 5664,
       "length": 19,
       "value": "\"Is Behind a Modal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5778,
+      "offset": 5746,
       "length": 36,
       "value": "\"Is TextField or Child of TextField\""
     },
@@ -23284,59 +25096,59 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 429,
-      "length": 7,
-      "value": "1"
+      "kind": "StringLiteral",
+      "offset": 812,
+      "length": 15,
+      "value": "\"best-practice\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 513,
-      "length": 7,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 597,
+      "kind": "StringLiteral",
+      "offset": 882,
       "length": 8,
-      "value": "3"
+      "value": "\"wcag2a\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 753,
-      "length": 13,
-      "value": "4"
+      "kind": "StringLiteral",
+      "offset": 946,
+      "length": 9,
+      "value": "\"wcag2aa\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 429,
-      "length": 7,
-      "value": "1"
+      "kind": "StringLiteral",
+      "offset": 1011,
+      "length": 9,
+      "value": "\"wcag21a\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 513,
-      "length": 7,
-      "value": "2"
+      "kind": "StringLiteral",
+      "offset": 1077,
+      "length": 10,
+      "value": "\"wcag21aa\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 597,
-      "length": 8,
-      "value": "3"
+      "kind": "StringLiteral",
+      "offset": 1145,
+      "length": 11,
+      "value": "\"wcag21aaa\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
-      "kind": "IntegerLiteral",
-      "offset": 753,
-      "length": 13,
-      "value": "4"
+      "kind": "StringLiteral",
+      "offset": 1213,
+      "length": 10,
+      "value": "\"wcag22aa\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeStandard.swift",
+      "kind": "StringLiteral",
+      "offset": 1279,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
@@ -23397,14 +25209,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5613,
+      "offset": 5582,
       "length": 13,
       "value": "\"screenTitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5672,
+      "offset": 5641,
       "length": 14,
       "value": "\"notFirstView\""
     },
@@ -23432,21 +25244,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5003,
+      "offset": 4964,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5072,
+      "offset": 5033,
       "length": 30,
       "value": "\"supportsDynamicTypeBoundsMap\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5157,
+      "offset": 5118,
       "length": 23,
       "value": "\"originalTextBoundsMap\""
     },
@@ -23572,35 +25384,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 8901,
+      "offset": 9464,
       "length": 27,
       "value": "\"Encapsulating View's Name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 8990,
+      "offset": 9553,
       "length": 34,
       "value": "\"Encapsulating View's elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9084,
+      "offset": 9647,
       "length": 32,
       "value": "\"Encapsulating View's className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9176,
+      "offset": 9739,
       "length": 32,
       "value": "\"Associated Control's className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9270,
+      "offset": 9833,
       "length": 34,
       "value": "\"Associated Control's elementType\""
     },
@@ -23663,21 +25475,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6440,
+      "offset": 6408,
       "length": 15,
       "value": "\"isInTextField\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6503,
+      "offset": 6471,
       "length": 16,
       "value": "\"isInScrollView\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6571,
+      "offset": 6539,
       "length": 20,
       "value": "\"isInScrollableView\""
     },
@@ -23936,14 +25748,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5316,
+      "offset": 5278,
       "length": 24,
       "value": "\"calculatedVisibleFrame\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5385,
+      "offset": 5347,
       "length": 13,
       "value": "\"isOffScreen\""
     },
@@ -24116,6 +25928,174 @@
       "value": "3"
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 238,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 255,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 289,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 306,
+      "length": 7,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 323,
+      "length": 7,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 340,
+      "length": 7,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 357,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 374,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 391,
+      "length": 7,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 418,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "StringLiteral",
+      "offset": 2235,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "StringLiteral",
+      "offset": 2235,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 238,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 255,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 289,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 306,
+      "length": 7,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 323,
+      "length": 7,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 340,
+      "length": 7,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 357,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 374,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 391,
+      "length": 7,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeSuccessCriteria.swift",
+      "kind": "IntegerLiteral",
+      "offset": 418,
+      "length": 1,
+      "value": "-1"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeConstants.swift",
       "kind": "StringLiteral",
       "offset": 146,
@@ -24146,14 +26126,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4630,
+      "offset": 4597,
       "length": 19,
       "value": "\"Overlapping Views\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4695,
+      "offset": 4662,
       "length": 15,
       "value": "\"Assigned Text\""
     },
@@ -24307,7 +26287,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 3898,
+      "offset": 3867,
       "length": 30,
       "value": "\"Class Name of Focusable View\""
     },
@@ -24391,21 +26371,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14230,
+      "offset": 14192,
       "length": 33,
       "value": "\"Focusable Parent View className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14319,
+      "offset": 14281,
       "length": 24,
       "value": "\"hasAdjustableA11yTrait\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14404,
+      "offset": 14366,
       "length": 29,
       "value": "\"numberOfChildActiveControls\""
     },

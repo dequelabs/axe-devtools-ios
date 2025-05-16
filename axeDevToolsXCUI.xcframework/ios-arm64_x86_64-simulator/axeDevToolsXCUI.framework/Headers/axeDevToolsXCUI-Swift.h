@@ -797,7 +797,6 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
 };
 
 enum AxeStatus : NSInteger;
-enum AxeStandard : NSInteger;
 
 /// A summary of one rule being run on one view.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI13AxeRuleResult")
@@ -821,27 +820,11 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI13AxeRuleResult")
 @property (nonatomic, readonly) BOOL isVisibleToUser;
 /// Whether a rule is currently experimental or not.
 @property (nonatomic, readonly) BOOL experimental;
-/// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
-@property (nonatomic, readonly) enum AxeStandard standard;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// A list of standards that the rule may fall under.
-typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
-/// The rule detects a failure of a WCAG 2.0 Success Criteria
-  AxeStandardWCAG_20 = 0,
-/// The rule detects a failure of a WCAG 2.1 Success Criteria
-  AxeStandardWCAG_21 = 1,
-/// The rule detects a failure of a WCAG 2.2 Success Criteria
-  AxeStandardWCAG_22 = 2,
-/// The rule is a recommendation from Apple Design Guidelines
-  AxeStandardPLATFORM = 3,
-/// The rule is a recommendation from Deque on how to best make your app accessible.  The rule may also follow a WCAG Best Practice.
-  AxeStandardBEST_PRACTICE = 4,
-};
 
 /// A set of options for when a rule is run on a view.
 typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
@@ -855,6 +838,21 @@ typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
   AxeStatusFAIL = 3,
 /// The view was not checked for accessibility issues.
   AxeStatusIGNORED = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, AxeSuccessCriteria, open) {
+  AxeSuccessCriteriaWcag412 = 0,
+  AxeSuccessCriteriaWcag143 = 1,
+  AxeSuccessCriteriaWcag132 = 2,
+  AxeSuccessCriteriaWcag111 = 3,
+  AxeSuccessCriteriaWcag144 = 4,
+  AxeSuccessCriteriaWcag211 = 5,
+  AxeSuccessCriteriaWcag253 = 6,
+  AxeSuccessCriteriaWcag134 = 7,
+  AxeSuccessCriteriaWcag242 = 8,
+  AxeSuccessCriteriaWcag255 = 9,
+  AxeSuccessCriteriaWcag258 = 10,
+  AxeSuccessCriteriaUnknown = -1,
 };
 
 
@@ -1028,10 +1026,9 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI8RuleConf")
 @property (nonatomic, readonly) BOOL experimental;
 /// A brief description of the rule.
 @property (nonatomic, readonly, copy) NSString * _Nonnull summary;
-/// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
-@property (nonatomic, readonly) enum AxeStandard standard;
 /// The severity of a failure of the rule. See <code>AxeImpact</code> for more information.
 @property (nonatomic, readonly) enum AxeImpact impact;
+@property (nonatomic, readonly, copy) NSString * _Nullable ruleId;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1859,7 +1856,6 @@ typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
 };
 
 enum AxeStatus : NSInteger;
-enum AxeStandard : NSInteger;
 
 /// A summary of one rule being run on one view.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI13AxeRuleResult")
@@ -1883,27 +1879,11 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI13AxeRuleResult")
 @property (nonatomic, readonly) BOOL isVisibleToUser;
 /// Whether a rule is currently experimental or not.
 @property (nonatomic, readonly) BOOL experimental;
-/// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
-@property (nonatomic, readonly) enum AxeStandard standard;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-/// A list of standards that the rule may fall under.
-typedef SWIFT_ENUM(NSInteger, AxeStandard, open) {
-/// The rule detects a failure of a WCAG 2.0 Success Criteria
-  AxeStandardWCAG_20 = 0,
-/// The rule detects a failure of a WCAG 2.1 Success Criteria
-  AxeStandardWCAG_21 = 1,
-/// The rule detects a failure of a WCAG 2.2 Success Criteria
-  AxeStandardWCAG_22 = 2,
-/// The rule is a recommendation from Apple Design Guidelines
-  AxeStandardPLATFORM = 3,
-/// The rule is a recommendation from Deque on how to best make your app accessible.  The rule may also follow a WCAG Best Practice.
-  AxeStandardBEST_PRACTICE = 4,
-};
 
 /// A set of options for when a rule is run on a view.
 typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
@@ -1917,6 +1897,21 @@ typedef SWIFT_ENUM(NSInteger, AxeStatus, open) {
   AxeStatusFAIL = 3,
 /// The view was not checked for accessibility issues.
   AxeStatusIGNORED = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, AxeSuccessCriteria, open) {
+  AxeSuccessCriteriaWcag412 = 0,
+  AxeSuccessCriteriaWcag143 = 1,
+  AxeSuccessCriteriaWcag132 = 2,
+  AxeSuccessCriteriaWcag111 = 3,
+  AxeSuccessCriteriaWcag144 = 4,
+  AxeSuccessCriteriaWcag211 = 5,
+  AxeSuccessCriteriaWcag253 = 6,
+  AxeSuccessCriteriaWcag134 = 7,
+  AxeSuccessCriteriaWcag242 = 8,
+  AxeSuccessCriteriaWcag255 = 9,
+  AxeSuccessCriteriaWcag258 = 10,
+  AxeSuccessCriteriaUnknown = -1,
 };
 
 
@@ -2090,10 +2085,9 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI8RuleConf")
 @property (nonatomic, readonly) BOOL experimental;
 /// A brief description of the rule.
 @property (nonatomic, readonly, copy) NSString * _Nonnull summary;
-/// The standard that the rule falls under (WCAG, Best practice, etc). See <code>AxeStandard</code> for more information.
-@property (nonatomic, readonly) enum AxeStandard standard;
 /// The severity of a failure of the rule. See <code>AxeImpact</code> for more information.
 @property (nonatomic, readonly) enum AxeImpact impact;
+@property (nonatomic, readonly, copy) NSString * _Nullable ruleId;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

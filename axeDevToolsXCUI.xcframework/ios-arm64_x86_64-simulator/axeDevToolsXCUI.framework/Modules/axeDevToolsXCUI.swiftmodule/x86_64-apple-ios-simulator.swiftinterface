@@ -33,6 +33,7 @@ import zlib
   public var impact: axeDevToolsXCUI.AxeImpact {
     get
   }
+  public var config: axeDevToolsXCUI.RuleConf
   public init(ruleConf: axeDevToolsXCUI.RuleConf)
   open func setUp(_ context: axeDevToolsXCUI.AxeContext)
   open func collectProps(for node: axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.AxeProps
@@ -146,15 +147,36 @@ extension axeDevToolsXCUI.AxeDevTools {
 @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let experimental: Swift.Bool
   @objc final public let summary: Swift.String
-  @objc final public let standard: axeDevToolsXCUI.AxeStandard
+  final public let standard: axeDevToolsXCUI.AxeStandard
   @objc public var impact: axeDevToolsXCUI.AxeImpact {
     get
   }
-  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard, summary: Swift.String, experimental: Swift.Bool = false)
+  @objc final public let ruleId: Swift.String?
+  public var category: axeDevToolsXCUI.AxeCategory? {
+    get
+  }
+  public var successCriteria: axeDevToolsXCUI.AxeSuccessCriteria? {
+    get
+  }
+  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard = .bestPractice, summary: Swift.String, experimental: Swift.Bool = false, ruleId: Swift.String? = nil)
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
+}
+public enum AxeCategory : Swift.String, Swift.Codable {
+  case other
+  case nameRoleValue
+  case color
+  case structure
+  case textAlternatives
+  case sensoryAndVisualCues
+  case keyboard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
 }
@@ -230,8 +252,16 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc final public let axeViewId: Swift.String
   @objc final public let isVisibleToUser: Swift.Bool
   @objc final public let experimental: Swift.Bool
-  @objc final public let standard: axeDevToolsXCUI.AxeStandard
   @nonobjc public var axeRuleId: axeDevToolsXCUI.AxeRuleId? {
+    get
+  }
+  public var category: axeDevToolsXCUI.AxeCategory? {
+    get
+  }
+  public var standard: axeDevToolsXCUI.AxeStandard? {
+    get
+  }
+  public var successCriteria: axeDevToolsXCUI.AxeSuccessCriteria? {
     get
   }
   @objc override dynamic public var description: Swift.String {
@@ -421,22 +451,24 @@ extension Swift.String {
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
-@objc public enum AxeStandard : Swift.Int {
-  case WCAG_20
-  case WCAG_21
-  case WCAG_22
-  case PLATFORM
-  case BEST_PRACTICE
-  public func toString() -> Swift.String
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [axeDevToolsXCUI.AxeStandard]
-  public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeStandard] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
+public struct AxeStandard : Swift.Equatable, Swift.Codable {
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: axeDevToolsXCUI.AxeStandard, b: axeDevToolsXCUI.AxeStandard) -> Swift.Bool
+}
+extension axeDevToolsXCUI.AxeStandard {
+  public static let bestPractice: axeDevToolsXCUI.AxeStandard
+  public static let wcag2a: axeDevToolsXCUI.AxeStandard
+  public static let wcag2aa: axeDevToolsXCUI.AxeStandard
+  public static let wcag21a: axeDevToolsXCUI.AxeStandard
+  public static let wcag21aa: axeDevToolsXCUI.AxeStandard
+  public static let wcag21aaa: axeDevToolsXCUI.AxeStandard
+  public static let wcag22aa: axeDevToolsXCUI.AxeStandard
+  public static let unknown: axeDevToolsXCUI.AxeStandard
+  @available(*, deprecated, message: "This will be removed in a future release; please use AxeStandard.bestPractice instead")
+  public static let BEST_PRACTICE: axeDevToolsXCUI.AxeStandard
 }
 @_hasMissingDesignatedInitializers @objc public class AxeDevice : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let name: Swift.String
@@ -518,6 +550,31 @@ extension Swift.String {
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc deinit
 }
+@objc public enum AxeSuccessCriteria : Swift.Int, Swift.Codable {
+  case wcag412
+  case wcag143
+  case wcag132
+  case wcag111
+  case wcag144
+  case wcag211
+  case wcag253
+  case wcag134
+  case wcag242
+  case wcag255
+  case wcag258
+  case unknown = -1
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue: Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeTraits : ObjectiveC.NSObject, Swift.Codable, Swift.OptionSet {
   @objc public var rawValue: Swift.UInt64
   @objc override dynamic public var hash: Swift.Int {
@@ -587,6 +644,9 @@ extension axeDevToolsXCUI.AxeStatus : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeStatus : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeStatus : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeStatus : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeCategory : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeCategory : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeCategory : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeElementType : Swift.Hashable {}
@@ -605,10 +665,9 @@ extension axeDevToolsXCUI.AxeRuleId : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeRuleId : Swift.Equatable {}
-extension axeDevToolsXCUI.AxeStandard : Swift.CaseIterable {}
-extension axeDevToolsXCUI.AxeStandard : Swift.RawRepresentable {}
-extension axeDevToolsXCUI.AxeStandard : Swift.Hashable {}
-extension axeDevToolsXCUI.AxeStandard : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeSuccessCriteria : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeSuccessCriteria : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeSuccessCriteria : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.Hashable {}
