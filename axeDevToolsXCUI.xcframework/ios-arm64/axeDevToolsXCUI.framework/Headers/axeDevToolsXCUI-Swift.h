@@ -432,6 +432,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeDevTools")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 + (BOOL)debugStatements SWIFT_WARN_UNUSED_RESULT;
 + (void)setDebugStatements:(BOOL)value;
+@property (nonatomic, readonly, copy) NSString * _Nullable sessionId;
 /// Retrieves the scan from the server.  This can be used within UITests to assert things about a scan that was pushed to the server, such as the number of accessibility issues within a scan.  Will throw an error if there was an issue retrieving the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to retrieve from the server.
 ///
@@ -466,21 +467,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// \param scanName The name you would like to give the scan.
 ///
 - (BOOL)updateScanName:(AxeDevToolsResultKey * _Nonnull)resultKey to:(NSString * _Nonnull)scanName error:(NSError * _Nullable * _Nullable)error;
-/// Use this after calling <code>run</code> in your unit test to save the scan to your machine, as JSON.
-/// note:
-/// This function does not allow you to change the extension of the file; at this point in time it can only be saved as JSON.
-/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
-/// \param result The result that should be saved to your machine.
+/// Utilize this API with your result from calling <code>run</code> and save your accessibility results locally to your machine as JSON.
+/// \param result The AxeResult object returned from the <code>run</code> API.
 ///
-/// \param path Where you want the scan to be saved to, as a String.  The path will automatically be appended to your home directory.  If not specified, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+/// \param toAbsolutePath Specify the absolute path to save the JSON file
 ///
-/// \param fileName What you want the file to be called, as a String. If not specified, the file’s name will be  “<appIdentifier>-<screenTitle>” or if scanName if specified, “<appIdentifier>-<scanName>”.
+/// \param withFileName Specify the filename to be used. Default value will be  “<appIdentifier>-<screenTitle>” or if scanName if provided, “<appIdentifier>-<scanName>”.
 ///
-/// \param scanName What you want the scan to be called. If not specified, the scanName will be “<screenTitle>”
+/// \param withScanName Provide a custom scan name, or if none provided, the default will be the screen’s title.
 ///
 ///
 /// returns:
-/// String, the path to the saved file.
+/// The absolute path of the saved file.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
+- (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toAbsolutePath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Utilize this API with your result from calling <code>run</code> and save your accessibility results locally to your machine as JSON.
+/// \param result The AxeResult object returned from the <code>run</code> API.
+///
+/// \param toPath Specify which folder within your home directory you’d like you JSON saved to. If none is provided, the scan will save into a folder called “AxeDevToolsResults” in your home directory (/Users/yourname/).
+///
+/// \param withFileName Specify the filename to be used. Default value will be  “<appIdentifier>-<screenTitle>” or if scanName if provided, “<appIdentifier>-<scanName>”.
+///
+/// \param withScanName Provide a custom scan name, or if none provided, the default will be the screen’s title.
+///
+///
+/// returns:
+/// The absolute path of the saved file.
+/// This function will not overwrite a file if the file already exists.  Instead, it will attach a number to the end of the file name (for example, “<appIdentifier>-<screenTitle>-1.json”).
 - (NSString * _Nullable)saveResult:(AxeResult * _Nonnull)result toPath:(NSString * _Nonnull)path withFileName:(NSString * _Nonnull)fileName withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Use this in a UITest to analyze the accessibility of an application.  Useful in testing views built in SwiftUI, Native iOS or React Native.
 /// \param onBundleIdentifier The bundle identifier of the application to test. Application must be loaded at the time of the test.
@@ -544,6 +557,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
 /// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.  Use this version of login if you have a special instance of the server to log into.
 /// <ul>
 ///   <li>
@@ -574,13 +589,17 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI20AxeDevToolsResultKey")
 @property (nonatomic, readonly, copy) NSString * _Nonnull userId;
 /// A unique String associated with the specific scan.
 @property (nonatomic, readonly, copy) NSString * _Nonnull resultId;
+/// A unique String provided by the backend. If uuid was not provided by
+/// the backend, the uuid will be the same as <code>resultId</code>. They may also
+/// be the same in general.
+@property (nonatomic, readonly, copy) NSString * _Nonnull uuid;
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 /// Use this in UI Testing to convert the Floating Action Button title into a valid AxeDevToolsResultKey.  This can then be used to retrieve the scan from the server, tag it, change its name, and delete it.
 /// This initializer will return <code>nil</code> if the given String is not in the expected format.  If supplying the FAB’s title directly and this method is returning <code>nil</code>, it may mean that there was an error sending the scan to the server.
 /// \param fabTitle The FloatingActionButton’s <code>title</code> or <code>label</code> property after it is tapped.
 ///
-- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in a future release; please use AxeDevToolsResultKey(userId:, packageName:, resultId:, uuid:) instead");
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -737,6 +756,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeProps")
 /// This class contains all the information from one accessibility scan of a screen.  This is a Swift representation of the JSON sent to the axe DevTools Mobile server (if using UI automated tests or manual tests). This can be used to assert number of accessibility failures and passes on one screen.  It also contains the view hierarchy of what was scanned and which rules were run.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @interface AxeResult : NSObject
+@property (nonatomic, copy) NSString * _Nullable sessionId;
 @property (nonatomic, copy) NSString * _Nullable scanName;
 @property (nonatomic, copy) NSArray<NSString *> * _Nullable tags;
 /// The configuration of the scan

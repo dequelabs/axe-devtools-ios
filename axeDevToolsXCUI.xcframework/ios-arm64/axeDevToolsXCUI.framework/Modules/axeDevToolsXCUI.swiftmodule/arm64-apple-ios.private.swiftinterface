@@ -48,6 +48,8 @@ import zlib
 extension axeDevToolsXCUI.AxeDevTools {
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func startSession(apiKey: Swift.String, url: Swift.String = "", projectId: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func startSession(withApiKey apiKey: Swift.String, toServer url: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
   @available(*, deprecated, message: "This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead")
   @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
 }
@@ -184,17 +186,19 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc final public let packageName: Swift.String
   @objc final public let userId: Swift.String
   @objc final public let resultId: Swift.String
+  @objc final public let uuid: Swift.String
   @objc override dynamic public var hash: Swift.Int {
     @objc get
   }
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
+  @available(*, deprecated, message: "This will be removed in a future release; please use AxeDevToolsResultKey(userId:, packageName:, resultId:, uuid:) instead")
   @objc public init?(fabTitle: Swift.String)
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc final public class AxeConf : ObjectiveC.NSObject, Swift.Codable {
   final public var customRules: Swift.Set<axeDevToolsXCUI.AxeRule> {
@@ -395,6 +399,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   }
 }
 @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var sessionId: Swift.String?
   @objc public var scanName: Swift.String?
   @objc public var tags: [Swift.String]?
   @objc final public let axeConf: axeDevToolsXCUI.AxeConf
@@ -539,12 +544,16 @@ extension Swift.String {
     @objc get
     @objc set
   }
+  @objc final public var sessionId: Swift.String? {
+    @objc get
+  }
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
+  @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toAbsolutePath path: Swift.String, withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
   @objc final public func run(onBundleIdentifier bundleId: Swift.String) throws -> axeDevToolsXCUI.AxeResult
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
