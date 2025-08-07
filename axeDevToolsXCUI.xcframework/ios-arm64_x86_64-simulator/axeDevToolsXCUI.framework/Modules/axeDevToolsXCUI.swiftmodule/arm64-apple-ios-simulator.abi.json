@@ -1046,16 +1046,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "CoreGraphics",
         "printedName": "CoreGraphics",
         "declKind": "Import",
@@ -1531,13 +1521,10 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -5247,6 +5234,13 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5294,6 +5288,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -5896,6 +5897,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -8129,6 +8137,13 @@
         "moduleName": "axeDevToolsXCUI"
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AxeRect",
         "printedName": "AxeRect",
@@ -9165,6 +9180,13 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -9182,6 +9204,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -10312,16 +10341,6 @@
             "usr": "s:s12CaseIterableP",
             "mangledName": "$ss12CaseIterableP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -13566,16 +13585,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "AxePoint",
         "printedName": "AxePoint",
@@ -14445,16 +14454,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "XCTest",
         "printedName": "XCTest",
         "declKind": "Import",
@@ -15136,12 +15135,29 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
         "name": "XCTest",
         "printedName": "XCTest",
         "declKind": "Import",
         "moduleName": "axeDevToolsXCUI",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -15156,6 +15172,13 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -15163,6 +15186,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -15800,6 +15830,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AxeProps",
         "printedName": "AxeProps",
@@ -16376,13 +16413,10 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -16403,6 +16437,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -16542,6 +16583,7 @@
               "HasStorage",
               "AccessControl",
               "ObjC",
+              "Available",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -16617,7 +16659,8 @@
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "Available"
                 ],
                 "accessorKind": "_modify"
               }
@@ -17582,16 +17625,6 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "axeDevToolsXCUI"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "axeDevToolsXCUI",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -20559,6 +20592,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AccessToken",
         "printedName": "AccessToken",
@@ -20724,6 +20764,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -22820,14 +22867,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 9144,
+      "offset": 9270,
       "length": 24,
       "value": "\"Control's Visible Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 9221,
+      "offset": 9347,
       "length": 21,
       "value": "\"isOrContainsControl\""
     },
@@ -22876,23 +22923,9 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/String.swift",
       "kind": "BooleanLiteral",
-      "offset": 1458,
+      "offset": 1872,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Logging\/Messages\/Severity.swift",
-      "kind": "StringLiteral",
-      "offset": 214,
-      "length": 5,
-      "value": "\"LOG\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Logging\/Messages\/Severity.swift",
-      "kind": "StringLiteral",
-      "offset": 214,
-      "length": 5,
-      "value": "\"LOG\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
@@ -22939,7 +22972,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/HTTP\/URLSessionDataTask.swift",
       "kind": "StringLiteral",
-      "offset": 2034,
+      "offset": 2019,
       "length": 22,
       "value": "\"Unexpected response.\""
     },
@@ -23082,20 +23115,6 @@
       "offset": 813,
       "length": 14,
       "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Logging\/DQLog.swift",
-      "kind": "BooleanLiteral",
-      "offset": 235,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Logging\/DQLog.swift",
-      "kind": "StringLiteral",
-      "offset": 274,
-      "length": 7,
-      "value": "\"DEQUE\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeMetaData.swift",
@@ -23303,63 +23322,63 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35621,
+      "offset": 35606,
       "length": 11,
       "value": "\"className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35690,
+      "offset": 35675,
       "length": 11,
       "value": "\"axeViewId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35761,
+      "offset": 35746,
       "length": 13,
       "value": "\"elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35837,
+      "offset": 35822,
       "length": 16,
       "value": "\"boundsInScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 35926,
+      "offset": 35911,
       "length": 26,
       "value": "\"isAccessibilityFocusable\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36024,
+      "offset": 36009,
       "length": 25,
       "value": "\"accessibilityIdentifier\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36110,
+      "offset": 36095,
       "length": 14,
       "value": "\"detectedText\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36181,
+      "offset": 36166,
       "length": 10,
       "value": "\"children\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 36255,
+      "offset": 36240,
       "length": 17,
       "value": "\"calculatedProps\""
     },
@@ -23513,7 +23532,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Request\/Request.swift",
       "kind": "StringLiteral",
-      "offset": 1482,
+      "offset": 1724,
       "length": 19,
       "value": "\"No data returned.\""
     },
@@ -23548,7 +23567,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeAuth.swift",
       "kind": "StringLiteral",
-      "offset": 301,
+      "offset": 314,
       "length": 2,
       "value": "\"\""
     },
@@ -23653,7 +23672,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeFrame\/AxeRect.swift",
       "kind": "StringLiteral",
-      "offset": 289,
+      "offset": 302,
       "length": 7,
       "value": "\"axeDevToolsXCUI.AxeRect\""
     },
@@ -23702,14 +23721,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeColor.swift",
       "kind": "FloatLiteral",
-      "offset": 7921,
+      "offset": 7934,
       "length": 4,
       "value": "0.75"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeColor.swift",
       "kind": "StringLiteral",
-      "offset": 371,
+      "offset": 384,
       "length": 8,
       "value": "\"axeDevToolsXCUI.AxeColor\""
     },
@@ -24017,35 +24036,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeBitmap.swift",
       "kind": "IntegerLiteral",
-      "offset": 876,
+      "offset": 889,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeBitmap.swift",
       "kind": "IntegerLiteral",
-      "offset": 882,
+      "offset": 895,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeBitmap.swift",
       "kind": "IntegerLiteral",
-      "offset": 1011,
+      "offset": 1024,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeBitmap.swift",
       "kind": "IntegerLiteral",
-      "offset": 1017,
+      "offset": 1030,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/AxeBitmap.swift",
       "kind": "BooleanLiteral",
-      "offset": 4359,
+      "offset": 4414,
       "length": 5,
       "value": "false"
     },
@@ -25018,14 +25037,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10712,
+      "offset": 10545,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10891,
+      "offset": 10709,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
@@ -25046,42 +25065,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11125,
+      "offset": 10943,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11186,
+      "offset": 11004,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11248,
+      "offset": 11066,
       "length": 15,
       "value": "\"isBehindModal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11314,
+      "offset": 11132,
       "length": 18,
       "value": "\"allNearbyTargets\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11384,
+      "offset": 11202,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11455,
+      "offset": 11273,
       "length": 19,
       "value": "\"overlappingBounds\""
     },
@@ -25529,7 +25548,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeContext.swift",
       "kind": "StringLiteral",
-      "offset": 4431,
+      "offset": 4416,
       "length": 32,
       "value": "\"Could not compress screenshot.\""
     },
@@ -25591,8 +25610,15 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
+      "kind": "BooleanLiteral",
+      "offset": 700,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5288,
+      "offset": 5402,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
@@ -25613,28 +25639,28 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5541,
+      "offset": 5655,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5602,
+      "offset": 5716,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5664,
+      "offset": 5778,
       "length": 19,
       "value": "\"Is Behind a Modal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5746,
+      "offset": 5860,
       "length": 36,
       "value": "\"Is TextField or Child of TextField\""
     },
@@ -25760,56 +25786,56 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5582,
+      "offset": 5567,
       "length": 13,
       "value": "\"screenTitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5641,
+      "offset": 5626,
       "length": 14,
       "value": "\"notFirstView\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "FloatLiteral",
-      "offset": 508,
+      "offset": 521,
       "length": 4,
       "value": "0.50"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 218,
+      "offset": 231,
       "length": 27,
       "value": "\"axeDevToolsXCUI.RuleSupportsDynamicTypeXCUI\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 218,
+      "offset": 231,
       "length": 27,
       "value": "\"axeDevToolsXCUI.RuleSupportsDynamicTypeXCUI\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 4964,
+      "offset": 4977,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5033,
+      "offset": 5046,
       "length": 30,
       "value": "\"supportsDynamicTypeBoundsMap\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleSupportsDynamicTypeXCUI.swift",
       "kind": "StringLiteral",
-      "offset": 5118,
+      "offset": 5131,
       "length": 23,
       "value": "\"originalTextBoundsMap\""
     },
@@ -25856,9 +25882,16 @@
       "value": "\"axe_core_settings\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Logging\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 1084,
+      "length": 17,
+      "value": "\"axeDevTools iOS\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceClient.swift",
       "kind": "StringLiteral",
-      "offset": 584,
+      "offset": 596,
       "length": 34,
       "value": "\"https:\/\/usage.deque.com\/v2\/event\""
     },
@@ -26068,21 +26101,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6408,
+      "offset": 6393,
       "length": 15,
       "value": "\"isInTextField\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6471,
+      "offset": 6456,
       "length": 16,
       "value": "\"isInScrollView\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6539,
+      "offset": 6524,
       "length": 20,
       "value": "\"isInScrollableView\""
     },
@@ -26096,231 +26129,231 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7221,
+      "offset": 7252,
       "length": 11,
       "value": "\"className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7284,
+      "offset": 7315,
       "length": 13,
       "value": "\"elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7347,
+      "offset": 7378,
       "length": 11,
       "value": "\"axeViewId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7405,
+      "offset": 7436,
       "length": 8,
       "value": "\"parent\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7462,
+      "offset": 7493,
       "length": 10,
       "value": "\"children\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7527,
+      "offset": 7558,
       "length": 16,
       "value": "\"boundsInScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7608,
+      "offset": 7639,
       "length": 26,
       "value": "\"isAccessibilityFocusable\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7698,
+      "offset": 7729,
       "length": 25,
       "value": "\"accessibilityIdentifier\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7768,
+      "offset": 7799,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7819,
+      "offset": 7850,
       "length": 6,
       "value": "\"role\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7871,
+      "offset": 7902,
       "length": 7,
       "value": "\"state\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7924,
+      "offset": 7955,
       "length": 7,
       "value": "\"value\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 7987,
+      "offset": 8018,
       "length": 17,
       "value": "\"isVisibleToUser\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8061,
+      "offset": 8092,
       "length": 18,
       "value": "\"isHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8130,
+      "offset": 8161,
       "length": 11,
       "value": "\"isEnabled\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8186,
+      "offset": 8217,
       "length": 6,
       "value": "\"text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8238,
+      "offset": 8269,
       "length": 7,
       "value": "\"frame\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8301,
+      "offset": 8332,
       "length": 17,
       "value": "\"isActiveControl\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8381,
+      "offset": 8412,
       "length": 24,
       "value": "\"isAccessibilityElement\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8462,
+      "offset": 8493,
       "length": 18,
       "value": "\"elementOffScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8538,
+      "offset": 8569,
       "length": 19,
       "value": "\"accessibilityPath\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8617,
+      "offset": 8648,
       "length": 21,
       "value": "\"accessibilityTraits\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8700,
+      "offset": 8731,
       "length": 23,
       "value": "\"supportedOrientations\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8781,
+      "offset": 8812,
       "length": 18,
       "value": "\"keyboardOnScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8857,
+      "offset": 8888,
       "length": 19,
       "value": "\"viewHierarchyType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 8966,
+      "offset": 8997,
       "length": 26,
       "value": "\"textOfSelfAndDescendants\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9039,
+      "offset": 9070,
       "length": 15,
       "value": "\"expectedValue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9104,
+      "offset": 9135,
       "length": 18,
       "value": "\"ignoredRulesList\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9176,
+      "offset": 9207,
       "length": 24,
       "value": "\"Detected Visible Label\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9246,
+      "offset": 9277,
       "length": 15,
       "value": "\"Detected Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9373,
+      "offset": 9404,
       "length": 20,
       "value": "\"visibleFrameXCTest\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9459,
+      "offset": 9490,
       "length": 34,
       "value": "\"hierarchyMayContainDrawerElement\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeProps.swift",
       "kind": "StringLiteral",
-      "offset": 9547,
+      "offset": 9578,
       "length": 22,
       "value": "\"hasCustomA11yActions\""
     },
@@ -26341,14 +26374,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5278,
+      "offset": 5263,
       "length": 24,
       "value": "\"calculatedVisibleFrame\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5347,
+      "offset": 5332,
       "length": 13,
       "value": "\"isOffScreen\""
     },
@@ -26361,57 +26394,64 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
+      "kind": "StringLiteral",
+      "offset": 1523,
+      "length": 86,
+      "value": "\"This property will be removed and debug logs are turned off until a new API is made.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "BooleanLiteral",
-      "offset": 1346,
+      "offset": 1480,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "Array",
-      "offset": 3273,
+      "offset": 3463,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 7167,
+      "offset": 7357,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 9652,
+      "offset": 9893,
       "length": 20,
       "value": "\"AxeDevToolsResults\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 9733,
+      "offset": 9974,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 627,
+      "offset": 640,
       "length": 11,
       "value": "\"axeDevToolsXCUI.AxeDevTools\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools XCUI\/Extensions\/AxeContext-Ext.swift",
       "kind": "StringLiteral",
-      "offset": 5167,
+      "offset": 5152,
       "length": 31,
       "value": "\"Unable to get view hierarchy.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools XCUI\/Extensions\/AxeImage-Ext.swift",
       "kind": "StringLiteral",
-      "offset": 1348,
+      "offset": 1333,
       "length": 64,
       "value": "\"Could not generate screenshot. Unable to convert image to PNG.\""
     },
@@ -26705,7 +26745,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Extensions\/String-Ext.swift",
       "kind": "StringLiteral",
-      "offset": 1855,
+      "offset": 1840,
       "length": 42,
       "value": "\"Could not convert String to Data object.\""
     },
@@ -26726,14 +26766,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4597,
+      "offset": 4582,
       "length": 19,
       "value": "\"Overlapping Views\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4662,
+      "offset": 4647,
       "length": 15,
       "value": "\"Assigned Text\""
     },
@@ -26887,14 +26927,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 7707,
+      "offset": 7692,
       "length": 30,
       "value": "\"Class Name of Focusable View\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 7805,
+      "offset": 7790,
       "length": 36,
       "value": "\"isDisabledTextFieldInTableViewCell\""
     },
@@ -26978,259 +27018,273 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14192,
+      "offset": 14177,
       "length": 33,
       "value": "\"Focusable Parent View className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14281,
+      "offset": 14266,
       "length": 24,
       "value": "\"hasAdjustableA11yTrait\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14366,
+      "offset": 14351,
       "length": 29,
       "value": "\"numberOfChildActiveControls\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 540,
+      "offset": 553,
       "length": 5,
       "value": "\"axe\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 592,
+      "offset": 605,
       "length": 24,
       "value": "\"https:\/\/auth.deque.com\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 658,
+      "offset": 671,
       "length": 8,
       "value": "\"mobile\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1097,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 1125,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1172,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1219,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
-      "kind": "StringLiteral",
-      "offset": 1257,
+      "offset": 1138,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "IntegerLiteral",
-      "offset": 1294,
+      "offset": 1185,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1232,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 3241,
+      "offset": 1270,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1307,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
+      "kind": "StringLiteral",
+      "offset": 3254,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 3280,
+      "offset": 3293,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 3324,
+      "offset": 3337,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7293,
+      "offset": 6630,
+      "length": 86,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
+      "kind": "StringLiteral",
+      "offset": 6715,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
+      "kind": "StringLiteral",
+      "offset": 7829,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7340,
+      "offset": 7876,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7392,
+      "offset": 7928,
       "length": 12,
       "value": "\"expires_in\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7442,
+      "offset": 7978,
       "length": 20,
       "value": "\"refresh_expires_in\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7492,
+      "offset": 8028,
       "length": 12,
       "value": "\"token_type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7293,
+      "offset": 7829,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7340,
+      "offset": 7876,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7392,
+      "offset": 7928,
       "length": 12,
       "value": "\"expires_in\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7442,
+      "offset": 7978,
       "length": 20,
       "value": "\"refresh_expires_in\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 7492,
+      "offset": 8028,
       "length": 12,
       "value": "\"token_type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/Authentication\/Access Token\/AccessToken.swift",
       "kind": "StringLiteral",
-      "offset": 462,
+      "offset": 475,
       "length": 11,
       "value": "\"axeDevToolsXCUI.AccessToken\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 809,
+      "offset": 822,
       "length": 38,
       "value": "\"https:\/\/axe-mobile-backend.deque.com\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 882,
+      "offset": 895,
       "length": 14,
       "value": "\"\/attest\/user\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 933,
+      "offset": 946,
       "length": 20,
       "value": "\"\/attest\/result\/axe\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 993,
+      "offset": 1006,
       "length": 20,
       "value": "\"\/attest\/result\/tag\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 1056,
+      "offset": 1069,
       "length": 16,
       "value": "\"\/attest\/result\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 1118,
+      "offset": 1131,
       "length": 27,
       "value": "\"\/attest\/results\/summaries\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 1191,
+      "offset": 1204,
       "length": 7,
       "value": "\"\/name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 1246,
+      "offset": 1259,
       "length": 25,
       "value": "\"\/v1\/sessions\/initialize\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 3008,
+      "offset": 3021,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 3456,
+      "offset": 3469,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 3684,
+      "offset": 3697,
       "length": 2,
       "value": "\"\""
     },

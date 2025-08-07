@@ -4,6 +4,7 @@
 import CoreGraphics
 import CoreImage
 import Foundation
+import OSLog
 import Swift
 import UIKit
 import Vision
@@ -540,6 +541,7 @@ extension Swift.String {
     @objc get
     @objc set
   }
+  @available(iOS, message: "This property will be removed and debug logs are turned off until a new API is made.")
   @objc public static var debugStatements: Swift.Bool {
     @objc get
     @objc set
