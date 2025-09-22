@@ -1,8 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-bare-slash-regex -module-name axeDevToolsXCUI
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name axeDevToolsXCUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import CoreGraphics
 import CoreImage
+import CryptoKit
 import Foundation
 import OSLog
 import Swift
@@ -63,7 +65,7 @@ extension axeDevToolsXCUI.AxeDevTools {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeRole]
   public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeRole] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeRole] {
     get
   }
   public var rawValue: Swift.Int {
@@ -97,7 +99,7 @@ extension axeDevToolsXCUI.AxeDevTools {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeStatus]
   public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeStatus] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeStatus] {
     get
   }
   public var rawValue: Swift.Int {
@@ -231,7 +233,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeViewHierarchy]
   public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeViewHierarchy] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeViewHierarchy] {
     get
   }
   public var rawValue: Swift.Int {
@@ -308,7 +310,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [axeDevToolsXCUI.AxeOrientation]
   public typealias RawValue = Swift.UInt
-  public static var allCases: [axeDevToolsXCUI.AxeOrientation] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeOrientation] {
     get
   }
   public var rawValue: Swift.UInt {
@@ -340,7 +342,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeRuleId]
   public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeRuleId] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeRuleId] {
     get
   }
   public var rawValue: Swift.Int {
@@ -392,7 +394,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   public init?(rawValue: Swift.UInt)
   public typealias AllCases = [axeDevToolsXCUI.AxeElementType]
   public typealias RawValue = Swift.UInt
-  public static var allCases: [axeDevToolsXCUI.AxeElementType] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeElementType] {
     get
   }
   public var rawValue: Swift.UInt {
@@ -541,7 +543,6 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  @available(iOS, message: "This property will be removed and debug logs are turned off until a new API is made.")
   @objc public static var debugStatements: Swift.Bool {
     @objc get
     @objc set
@@ -635,7 +636,7 @@ extension Swift.String {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeImpact]
   public typealias RawValue = Swift.Int
-  public static var allCases: [axeDevToolsXCUI.AxeImpact] {
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeImpact] {
     get
   }
   public var rawValue: Swift.Int {
