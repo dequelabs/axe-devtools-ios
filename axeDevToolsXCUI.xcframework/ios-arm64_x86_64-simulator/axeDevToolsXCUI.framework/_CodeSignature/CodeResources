@@ -4,29 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<data>
-		8QATpzPva7TvAiKqm1M571yfyYA=
-		</data>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<data>
-		N++3jqq4sP8QMc9Lxwu0krGNjwk=
-		</data>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<data>
-		yA8sGhJsk5l0cF2HyAdslMh6GTA=
-		</data>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<data>
-		POUBd68GxQn2xWPTs+ZZDkkdvyw=
-		</data>
 		<key>Headers/axeDevToolsXCUI-Swift.h</key>
 		<data>
-		uAjnUry70kPffW1jLChs8Sy4Vjw=
+		yfFaZm/wBL9nHMCFdTwthY9gxcw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8aj8WHhZMjOvCaDC0SpMYk9ee0s=
+		ygMTKyWmUoIJt255tC6llg2Zo5k=
 		</data>
 		<key>LICENSE.md</key>
 		<data>
@@ -34,43 +18,43 @@
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		kcIMRwK3GCDzibO7lNqTnSa4Mo0=
+		Q3pHLUs34G0a7RZUwmvcadmokD4=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		4bZAxDoRGHFm6pAvyFzX2Au5qI4=
+		uUQJu5K6T6KQ8CBF/N2M3sAyJxU=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YmukqJlc9mhFhuMjdE9vWApf/60=
+		tqSFfyKq46IDnc9BfO6Sjk9Tymk=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		4bZAxDoRGHFm6pAvyFzX2Au5qI4=
+		uUQJu5K6T6KQ8CBF/N2M3sAyJxU=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2Q1tQs/vIHoHq83tXbXy0nkI0q8=
+		HhpUlYQFkxsVDU8xo/thb8woILc=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		kcIMRwK3GCDzibO7lNqTnSa4Mo0=
+		Q3pHLUs34G0a7RZUwmvcadmokD4=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Mw/xBgLhuPEiSuAhTlbBuzf3OV4=
+		Sbh76/adgPlJJMtEOAsM7VzaN7k=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		996DZcoRvyXWkyqYBXkdZauuWCQ=
+		ve133l9BaBKP9LUY0a77nj6oJAs=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Mw/xBgLhuPEiSuAhTlbBuzf3OV4=
+		Sbh76/adgPlJJMtEOAsM7VzaN7k=
 		</data>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jrHanTaEsiQrRoxR+ayS+GqVhiA=
+		q90fRGTeDCKcOhbqLvXoL2q5v2M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,39 +63,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hQ+5YKSJWSK1vrfvo08RrqLjnRcFc/2hz0DVBGkS2/w=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DSedL6cYsgAjiofbEyF+pWqy/m8Iza6delFpjH8CFx4=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tCUdJrhbq/jUZgeg8ZRpRFRClGk6ZmqC/kLER9ETOu4=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vz848y5OcUvkf99o0VQUTvY+xNC9UGd+YRurawJKYNs=
-			</data>
-		</dict>
 		<key>Headers/axeDevToolsXCUI-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7AjkuQWFIz+afA59UeZpP5l0BDG+ayFuoz/+dQEWuyw=
+			9vfHHqQNK2iX0BQuISEJmuljF18BT46vM3Yhl41lWdw=
 			</data>
 		</dict>
 		<key>LICENSE.md</key>
@@ -125,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A6xk1s3EMYmLAr+RohaJeeeTbq28Zi5O3M4mLKIj6XU=
+			pZ2oFphFdVRboWzkRlsEsh4y6LcYdYaT/PV53YV6PsM=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MkrwhrIBglWkZRfpJcBPJOUQNNDoY6uYPi3d62wfSK0=
+			Db4HB9rDLEv27vpWgU6bNgfyV84iO4QEuigxvXy5gwc=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			32sOWWuNMqhkBMBvCwhSoZVKDwib3X6U/Ky09Z7Wvfs=
+			/ggQGzRbLjuZMIK0bKl6fBqEQ8G36aDTMunfJGoSWWc=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MkrwhrIBglWkZRfpJcBPJOUQNNDoY6uYPi3d62wfSK0=
+			Db4HB9rDLEv27vpWgU6bNgfyV84iO4QEuigxvXy5gwc=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4i2Lx8/4vzAPBiHT6o2Q9yeJ9PYdr9dAUFdArRWvjo=
+			qupNJPWLrKuFR0aiTX8qal3nXIyjjvcqrzWm6H4ksnc=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A6xk1s3EMYmLAr+RohaJeeeTbq28Zi5O3M4mLKIj6XU=
+			pZ2oFphFdVRboWzkRlsEsh4y6LcYdYaT/PV53YV6PsM=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UPn2eLMpozTULz/HPzGZwaUaBcT0JaAGG0EJi8ML+Yg=
+			a5+NpZnKtCsVvgYJXGwYKN5MzqpzXVcNqH9vuBIYUJI=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tNkZ6fZ4p8lJruxs3ANT9VCi8ha7n9wEN0/uVFieozo=
+			1tzjWQOuQtmbQ/uISLV07QKgfvHMSHRIl3PbzC5gg2o=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UPn2eLMpozTULz/HPzGZwaUaBcT0JaAGG0EJi8ML+Yg=
+			a5+NpZnKtCsVvgYJXGwYKN5MzqpzXVcNqH9vuBIYUJI=
 			</data>
 		</dict>
 		<key>Modules/axeDevToolsXCUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IPgeu/iknUMD4foEFb3cUZYqCFWb0ry/rU0fMXPTqJA=
+			9rT1S9mu0xNh3/2iZEwRPMwyI3ZeqovJulE/cI7MGkA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
