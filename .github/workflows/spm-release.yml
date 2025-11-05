@@ -25,7 +25,7 @@ jobs:
 
           - name: Download latest XCUI framework & DocC archive
             env:
-                DQ_AGORA_KEY: ${{ secrets.DQ_AGORA_KEY }}
+                DQ_AGORA_IDENTITY_TOKEN: ${{ secrets.DQ_AGORA_IDENTITY_TOKEN }}
             run: |
                 VERSION_NUM=${{ github.event.inputs.releaseVersion }}
                 COMMIT_HASH=${{ github.event.inputs.commitHash }}
@@ -45,8 +45,8 @@ jobs:
                 LOCAL_ZIPPED_FRAMEWORK_URL="${FRAMEWORK_FILENAME}.zip"
                 LOCAL_ZIPPED_DOCS_URL="${DOCS_FILENAME}.zip"
 
-                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
-                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_KEY}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_IDENTITY_TOKEN}" -o $LOCAL_ZIPPED_FRAMEWORK_URL $FRAMEWORK_URL
+                curl -f -H "X-JFrog-Art-Api:${DQ_AGORA_IDENTITY_TOKEN}" -o $LOCAL_ZIPPED_DOCS_URL $DOCS_URL
                 
                 unzip -o ${LOCAL_ZIPPED_FRAMEWORK_URL} -d .
                 unzip -o $LOCAL_ZIPPED_DOCS_URL -d .
