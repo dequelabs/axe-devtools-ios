@@ -305,29 +305,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-@class NSString;
 /// The AccessToken handles logging into the axeDevTools server and keeping the session alive.  Users who have their own instance of the axeDevTools server may need to use this class.  If you are using the default server, you should not need to use this class.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AccessToken")
 @interface AccessToken : NSObject
-/// Creates a new AccessToken with the given parameters.
-/// This will throw an error if the parameters provided are not correct.
-/// note:
-/// Google authentication information will not work.
-/// \param username Your username used to log into mobile docs and the axeDevTools Dashboard.  Usually an email address.
-///
-/// \param password The password used to log into mobile docs and the axeDevTools Dashboard.
-///
-/// \param realm Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-/// \param clientId Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-/// \param authServerURL Optional. Provide this if you have your own instance of the axeDevTools server.
-///
-- (nullable instancetype)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password realm:(NSString * _Nonnull)realm clientId:(NSString * _Nonnull)clientId authServerURL:(NSString * _Nonnull)authServerURL error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in a future release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSString;
 /// A class that contains the location and dimensions of a rectangle, in iOS points.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeRect")
 @interface AxeRect : NSObject
@@ -512,13 +497,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 @end
 
 @interface AxeDevTools (SWIFT_EXTENSION(axeDevToolsXCUI))
-/// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
+/// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
 ///   </li>
 ///   <li>
-///     Will throw an error if there were incorrect credentials.
+///     Will throw an error for incorrect credentials.
 ///   </li>
 ///   <li>
 ///     Google authentication information does not work in this method.
@@ -533,14 +518,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-/// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.
++ (AxeDevTools * _Nullable)loginWithUsername:(NSString * _Nonnull)username andPassword:(NSString * _Nonnull)password toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead");
+/// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
 ///   </li>
 ///   <li>
-///     Will throw an error if there were incorrect credentials.
+///     Will throw an error if the API key is not valid.
 ///   </li>
 ///   <li>
 ///     Google authentication information does not work in this method.
@@ -553,26 +538,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead");
 + (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 + (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
-/// This function logs you into the cloud instance of axeDevTools. You must have a valid session before utilizing the framework’s features. This function can be called in App or Scene Delegate to set up manual tests (to show the Floating Action Button) and also can be used to set up automated tests.  Use this version of login if you have a special instance of the server to log into.
-/// <ul>
-///   <li>
-///     Google authentication information does not work in this method.
-///   </li>
-///   <li>
-///     Will throw an error if there were incorrect credentials.
-///   </li>
-/// </ul>
-/// \param accessToken If you require this method, a Deque representative will give you the information needed to create a valid AccessToken.
-///
-/// \param url URL of the server receiving the scans.  A Deque representative will give you the information needed to fill out this parameter.
-///
-///
-/// returns:
-/// initialized AxeDevTools object. Will throw an error if there was an issue logging in.
-+ (AxeDevTools * _Nullable)loginWithAccessToken:(AccessToken * _Nonnull)accessToken toServer:(NSString * _Nonnull)url orgId:(NSString * _Nullable)orgId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead");
 @end
 
 /// A scan’s unique identifier on the axeDevTools Mobile server. You can use the AxeDevToolsResultKey to retrieve, tag, and

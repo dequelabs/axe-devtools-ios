@@ -51,15 +51,13 @@ import zlib
   }
 }
 extension axeDevToolsXCUI.AxeDevTools {
+  @available(*, deprecated, message: "This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead")
   @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead")
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func startSession(apiKey: Swift.String, url: Swift.String = "", projectId: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func startSession(withApiKey apiKey: Swift.String, toServer url: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, deprecated, message: "This method will be removed in a future release; please use login(withUsername, andPassword, toServer) instead")
-  @objc public static func login(withAccessToken accessToken: axeDevToolsXCUI.AccessToken, toServer url: Swift.String = "", orgId: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevTools
   #endif
 }
 @objc public enum AxeRole : Swift.Int {
@@ -737,9 +735,7 @@ extension Swift.String {
     get
   }
 }
-@objc public class AccessToken : ObjectiveC.NSObject {
-  @available(*, deprecated, message: "This will be removed in a future release; please use AxeDevTools.login(withUsername, andPassword, toServer) instead")
-  @objc public init(username: Swift.String, password: Swift.String, realm: Swift.String = "", clientId: Swift.String = "", authServerURL: Swift.String = "") throws
+@_hasMissingDesignatedInitializers @objc public class AccessToken : ObjectiveC.NSObject {
   @objc deinit
 }
 extension axeDevToolsXCUI.AxeRole : Swift.CaseIterable {}
