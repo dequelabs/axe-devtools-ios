@@ -151,6 +151,8 @@ extension axeDevToolsXCUI.AxeDevTools {
   #endif
   @discardableResult
   @objc public func runOnSelfAndDescendants(_ function: (axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.RunStatus) -> axeDevToolsXCUI.RunStatus
+  @discardableResult
+  @objc public func runOnDescendants(_ function: (axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.RunStatus) -> axeDevToolsXCUI.RunStatus
   #if compiler(>=5.3) && $NonescapableTypes
   public func getOrError(prop: axeDevToolsXCUI.AxeProps.Name) throws -> (any Swift.Decodable & Swift.Encodable)?
   #endif
@@ -263,6 +265,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case UIKit
   case SwiftUI
   case ReactNative
+  case Flutter
   public func toString() -> Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
