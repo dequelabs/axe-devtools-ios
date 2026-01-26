@@ -18,6 +18,8 @@ jobs:
 
           - name: Create and push tag
             run: |
+                git config --global user.email "mobileteam@deque.com"
+                git config --global user.name "deque-mobileteam"
                 git tag -a ${{ github.event.inputs.releaseVersion }} -m "Release ${{ github.event.inputs.releaseVersion }}"
                 git push origin tag ${{ github.event.inputs.releaseVersion }}
 
