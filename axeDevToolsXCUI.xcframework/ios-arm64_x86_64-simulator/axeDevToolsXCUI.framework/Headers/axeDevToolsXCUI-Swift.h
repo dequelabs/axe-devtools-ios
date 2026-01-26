@@ -539,7 +539,50 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead");
+/// Starts a session with the axeDevTools cloud instance using an API key and optional project ID.
+/// This is the recommended method to initialize axeDevTools for accessibility testing. A valid session is required before utilizing the framework’s features.
+/// <ul>
+///   <li>
+///     If no <code>projectId</code> is provided, results can only be saved locally or posted to the Axe DevTools Mobile Dashboard. Provide a <code>projectId</code> to upload results to Axe Developer Hub.
+///   </li>
+///   <li>
+///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
+///   </li>
+///   <li>
+///     Will throw an error if the API key is not valid.
+///   </li>
+/// </ul>
+/// \param apiKey API Key for axeDevTools provided by Deque Systems.
+///
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
+///
+/// \param projectId The project ID for uploading results to Axe Developer Hub. Defaults to empty string (no project).
+///
+///
+/// throws:
+/// An error if the API key is invalid or authentication fails.
+///
+/// returns:
+/// An instantiated AxeDevTools object ready for accessibility testing.
 + (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Starts a session asynchronously with the axeDevTools cloud instance using an API key and project ID.
+/// This is the asynchronous version of <code>startSession(apiKey:url:projectId:)</code> that uses a completion handler to return results. A valid session is required before utilizing the framework’s features.
+/// <ul>
+///   <li>
+///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
+///   </li>
+///   <li>
+///     The completion handler is called with an error if the API key is not valid.
+///   </li>
+/// </ul>
+/// \param apiKey API Key for axeDevTools provided by Deque Systems.
+///
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
+///
+/// \param projectId The project ID for uploading results to Axe Developer Hub.
+///
+/// \param completion A closure called when the session initialization completes. On success, provides an initialized <code>AxeDevTools</code> instance and a <code>nil</code> error. On failure, provides a <code>nil</code> instance and the error that occurred.
+///
 + (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
 @end
 
@@ -943,6 +986,13 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 /// returns:
 /// Whether to continue running through the view hierarchy.  See <code>RunStatus</code> for more information.
 - (enum RunStatus)runOnSelfAndDescendants:(SWIFT_NOESCAPE enum RunStatus (^ _Nonnull)(AxeView * _Nonnull))function;
+/// Runs through the view hierarchy in a depth-first search, with the view that this method was called on as the “root” view.
+/// \param function The function that should be run on the view hierarchy.
+///
+///
+/// returns:
+/// Always returns <code>Stop</code> as the children have finished parsing;  See <code>RunStatus</code> for more information.
+- (enum RunStatus)runOnDescendants:(SWIFT_NOESCAPE enum RunStatus (^ _Nonnull)(AxeView * _Nonnull))function;
 /// Finds whether the view’s provided property is true or has an ancestor whose provided property is true.
 /// important:
 /// <code>propName</code> must be the name of a property that is a <code>Bool</code>. If it is not, this method will log an error into the console and automatically return false.
@@ -984,6 +1034,7 @@ typedef SWIFT_ENUM(NSInteger, AxeViewHierarchy, open) {
   AxeViewHierarchyUIKit = 0,
   AxeViewHierarchySwiftUI = 1,
   AxeViewHierarchyReactNative = 2,
+  AxeViewHierarchyFlutter = 3,
 };
 
 /// An object that holds information about the rule, including a brief description, the severity of a failure of the rule, and whether the rule is classified as a WCAG Success Criteria.
@@ -1560,7 +1611,50 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
 + (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead");
+/// Starts a session with the axeDevTools cloud instance using an API key and optional project ID.
+/// This is the recommended method to initialize axeDevTools for accessibility testing. A valid session is required before utilizing the framework’s features.
+/// <ul>
+///   <li>
+///     If no <code>projectId</code> is provided, results can only be saved locally or posted to the Axe DevTools Mobile Dashboard. Provide a <code>projectId</code> to upload results to Axe Developer Hub.
+///   </li>
+///   <li>
+///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
+///   </li>
+///   <li>
+///     Will throw an error if the API key is not valid.
+///   </li>
+/// </ul>
+/// \param apiKey API Key for axeDevTools provided by Deque Systems.
+///
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
+///
+/// \param projectId The project ID for uploading results to Axe Developer Hub. Defaults to empty string (no project).
+///
+///
+/// throws:
+/// An error if the API key is invalid or authentication fails.
+///
+/// returns:
+/// An instantiated AxeDevTools object ready for accessibility testing.
 + (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Starts a session asynchronously with the axeDevTools cloud instance using an API key and project ID.
+/// This is the asynchronous version of <code>startSession(apiKey:url:projectId:)</code> that uses a completion handler to return results. A valid session is required before utilizing the framework’s features.
+/// <ul>
+///   <li>
+///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
+///   </li>
+///   <li>
+///     The completion handler is called with an error if the API key is not valid.
+///   </li>
+/// </ul>
+/// \param apiKey API Key for axeDevTools provided by Deque Systems.
+///
+/// \param url URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
+///
+/// \param projectId The project ID for uploading results to Axe Developer Hub.
+///
+/// \param completion A closure called when the session initialization completes. On success, provides an initialized <code>AxeDevTools</code> instance and a <code>nil</code> error. On failure, provides a <code>nil</code> instance and the error that occurred.
+///
 + (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
 @end
 
@@ -1964,6 +2058,13 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeView")
 /// returns:
 /// Whether to continue running through the view hierarchy.  See <code>RunStatus</code> for more information.
 - (enum RunStatus)runOnSelfAndDescendants:(SWIFT_NOESCAPE enum RunStatus (^ _Nonnull)(AxeView * _Nonnull))function;
+/// Runs through the view hierarchy in a depth-first search, with the view that this method was called on as the “root” view.
+/// \param function The function that should be run on the view hierarchy.
+///
+///
+/// returns:
+/// Always returns <code>Stop</code> as the children have finished parsing;  See <code>RunStatus</code> for more information.
+- (enum RunStatus)runOnDescendants:(SWIFT_NOESCAPE enum RunStatus (^ _Nonnull)(AxeView * _Nonnull))function;
 /// Finds whether the view’s provided property is true or has an ancestor whose provided property is true.
 /// important:
 /// <code>propName</code> must be the name of a property that is a <code>Bool</code>. If it is not, this method will log an error into the console and automatically return false.
@@ -2005,6 +2106,7 @@ typedef SWIFT_ENUM(NSInteger, AxeViewHierarchy, open) {
   AxeViewHierarchyUIKit = 0,
   AxeViewHierarchySwiftUI = 1,
   AxeViewHierarchyReactNative = 2,
+  AxeViewHierarchyFlutter = 3,
 };
 
 /// An object that holds information about the rule, including a brief description, the severity of a failure of the rule, and whether the rule is classified as a WCAG Success Criteria.
