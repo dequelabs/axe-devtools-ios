@@ -1064,6 +1064,13 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3795,6 +3802,52 @@
             "declKind": "Func",
             "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeView(im)runOnSelfAndDescendants:",
             "mangledName": "$s15axeDevToolsXCUI7AxeViewC23runOnSelfAndDescendantsyAA9RunStatusOAfCXEF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "runOnDescendants",
+            "printedName": "runOnDescendants(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RunStatus",
+                "printedName": "axeDevToolsXCUI.RunStatus",
+                "usr": "c:@M@axeDevToolsXCUI@E@RunStatus"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.RunStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RunStatus",
+                    "printedName": "axeDevToolsXCUI.RunStatus",
+                    "usr": "c:@M@axeDevToolsXCUI@E@RunStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeView",
+                    "printedName": "axeDevToolsXCUI.AxeView",
+                    "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeView"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeView(im)runOnDescendants:",
+            "mangledName": "$s15axeDevToolsXCUI7AxeViewC16runOnDescendantsyAA9RunStatusOAfCXEF",
             "moduleName": "axeDevToolsXCUI",
             "declAttributes": [
               "AccessControl",
@@ -6868,6 +6921,47 @@
               "ObjC"
             ],
             "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "Flutter",
+            "printedName": "Flutter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeViewHierarchy.Type) -> axeDevToolsXCUI.AxeViewHierarchy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeViewHierarchy",
+                    "printedName": "axeDevToolsXCUI.AxeViewHierarchy",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeViewHierarchy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeViewHierarchy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeViewHierarchy",
+                        "printedName": "axeDevToolsXCUI.AxeViewHierarchy",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeViewHierarchy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeViewHierarchy@AxeViewHierarchyFlutter",
+            "mangledName": "$s15axeDevToolsXCUI16AxeViewHierarchyO7FlutteryA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Function",
@@ -17675,7 +17769,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "throwing": true,
@@ -17767,7 +17862,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -23145,23 +23241,37 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeRule.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4216,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "BooleanLiteral",
-      "offset": 677,
+      "offset": 251,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
+      "kind": "BooleanLiteral",
+      "offset": 727,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 9270,
+      "offset": 9514,
       "length": 24,
       "value": "\"Control's Visible Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleLabelInName.swift",
       "kind": "StringLiteral",
-      "offset": 9347,
+      "offset": 9591,
       "length": 21,
       "value": "\"isOrContainsControl\""
     },
@@ -23217,35 +23327,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 2157,
+      "offset": 2170,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 3520,
+      "offset": 3533,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 4019,
+      "offset": 5225,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 4051,
+      "offset": 5257,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 4790,
+      "offset": 7478,
       "length": 2,
       "value": "\"\""
     },
@@ -23280,35 +23390,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11885,
+      "offset": 10229,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 11943,
+      "offset": 10287,
       "length": 21,
       "value": "\"All Color Contrasts\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 12014,
+      "offset": 10358,
       "length": 23,
       "value": "\"Is Large or Bold Text\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 12094,
+      "offset": 10438,
       "length": 27,
       "value": "\"Minimum Required Contrast\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleColorContrast.swift",
       "kind": "StringLiteral",
-      "offset": 12167,
+      "offset": 10511,
       "length": 23,
       "value": "\"Cursor May Be Present\""
     },
@@ -23322,7 +23432,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleActiveControlName.swift",
       "kind": "StringLiteral",
-      "offset": 5223,
+      "offset": 5702,
       "length": 18,
       "value": "\"isChildOfStepper\""
     },
@@ -23609,63 +23719,63 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 37712,
+      "offset": 38446,
       "length": 11,
       "value": "\"className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 37781,
+      "offset": 38515,
       "length": 11,
       "value": "\"axeViewId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 37852,
+      "offset": 38586,
       "length": 13,
       "value": "\"elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 37928,
+      "offset": 38662,
       "length": 16,
       "value": "\"boundsInScreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 38017,
+      "offset": 38751,
       "length": 26,
       "value": "\"isAccessibilityFocusable\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 38115,
+      "offset": 38849,
       "length": 25,
       "value": "\"accessibilityIdentifier\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 38201,
+      "offset": 38935,
       "length": 14,
       "value": "\"detectedText\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 38272,
+      "offset": 39006,
       "length": 10,
       "value": "\"children\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeView.swift",
       "kind": "StringLiteral",
-      "offset": 38346,
+      "offset": 39080,
       "length": 17,
       "value": "\"calculatedProps\""
     },
@@ -23920,6 +24030,13 @@
       "offset": 296,
       "length": 11,
       "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeViewHierarchy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 317,
+      "length": 7,
+      "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/RunStatus.swift",
@@ -24812,78 +24929,85 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4165,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "Array",
-      "offset": 4523,
+      "offset": 4717,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 5600,
+      "offset": 5794,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "IntegerLiteral",
-      "offset": 9106,
+      "offset": 9300,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10545,
+      "offset": 10739,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10709,
+      "offset": 10903,
       "length": 44,
       "value": "\"Control is not fully visible in this scan.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 10943,
+      "offset": 11137,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11004,
+      "offset": 11198,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11066,
+      "offset": 11260,
       "length": 15,
       "value": "\"isBehindModal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11132,
+      "offset": 11326,
       "length": 18,
       "value": "\"allNearbyTargets\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11202,
+      "offset": 11396,
       "length": 20,
       "value": "\"isInHeaderOrFooter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/GhostRules\/RuleTouchTargetSpacing.swift",
       "kind": "StringLiteral",
-      "offset": 11273,
+      "offset": 11467,
       "length": 19,
       "value": "\"overlappingBounds\""
     },
@@ -25296,7 +25420,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleConflictingTraits.swift",
       "kind": "StringLiteral",
-      "offset": 1731,
+      "offset": 2128,
       "length": 20,
       "value": "\"Conflicting Traits\""
     },
@@ -25359,7 +25483,7 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeContext.swift",
       "kind": "StringLiteral",
-      "offset": 4416,
+      "offset": 4776,
       "length": 32,
       "value": "\"Could not compress screenshot.\""
     },
@@ -25429,49 +25553,49 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5676,
+      "offset": 5810,
       "length": 63,
       "value": "\"Control is behind a modal, which may have decreased its size.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 5850,
+      "offset": 5984,
       "length": 97,
       "value": "\"SwiftUI toolbar buttons within navigation bars cannot have their height adjusted by developers.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 7061,
+      "offset": 7195,
       "length": 79,
       "value": "\"Grabber views on bottom sheets cannot have their size adjusted by developers.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 7330,
+      "offset": 7464,
       "length": 14,
       "value": "\"controlWidth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 7391,
+      "offset": 7525,
       "length": 15,
       "value": "\"controlHeight\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 7453,
+      "offset": 7587,
       "length": 19,
       "value": "\"Is Behind a Modal\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleTouchTargetSize.swift",
       "kind": "StringLiteral",
-      "offset": 7535,
+      "offset": 7669,
       "length": 36,
       "value": "\"Is TextField or Child of TextField\""
     },
@@ -25583,14 +25707,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5567,
+      "offset": 5897,
       "length": 13,
       "value": "\"screenTitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleScreenTitle.swift",
       "kind": "StringLiteral",
-      "offset": 5626,
+      "offset": 5956,
       "length": 14,
       "value": "\"notFirstView\""
     },
@@ -25716,35 +25840,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9464,
+      "offset": 9318,
       "length": 27,
       "value": "\"Encapsulating View's Name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9553,
+      "offset": 9407,
       "length": 34,
       "value": "\"Encapsulating View's elementType\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9647,
+      "offset": 9501,
       "length": 32,
       "value": "\"Encapsulating View's className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9739,
+      "offset": 9593,
       "length": 32,
       "value": "\"Associated Control's className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleFocusableText.swift",
       "kind": "StringLiteral",
-      "offset": 9833,
+      "offset": 9687,
       "length": 34,
       "value": "\"Associated Control's elementType\""
     },
@@ -25785,29 +25909,22 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2718,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6393,
+      "offset": 7283,
       "length": 15,
       "value": "\"isInTextField\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6456,
+      "offset": 7346,
       "length": 16,
       "value": "\"isInScrollView\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInScrollView.swift",
       "kind": "StringLiteral",
-      "offset": 6524,
+      "offset": 7414,
       "length": 20,
       "value": "\"isInScrollableView\""
     },
@@ -26094,14 +26211,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5263,
+      "offset": 5510,
       "length": 24,
       "value": "\"calculatedVisibleFrame\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleA11yElementFocusBox.swift",
       "kind": "StringLiteral",
-      "offset": 5332,
+      "offset": 5579,
       "length": 13,
       "value": "\"isOffScreen\""
     },
@@ -26200,48 +26317,48 @@
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "StringLiteral",
       "offset": 265,
-      "length": 44,
-      "value": "\"ABCDEFGHIJKLMNOPRSTUVWXYZbdfhklt0123456789\""
+      "length": 45,
+      "value": "\"ABCDEFGHIJKLMNOPRSTUVWXYZbdfhiklt0123456789\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "StringLiteral",
-      "offset": 367,
+      "offset": 368,
       "length": 6,
       "value": "\"gpqy\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "StringLiteral",
-      "offset": 435,
+      "offset": 436,
       "length": 4,
       "value": "\"Qj\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "IntegerLiteral",
-      "offset": 539,
+      "offset": 540,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "IntegerLiteral",
-      "offset": 632,
+      "offset": 633,
       "length": 13,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "IntegerLiteral",
-      "offset": 713,
+      "offset": 714,
       "length": 14,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/VisionRelated\/TextHeightCategory.swift",
       "kind": "IntegerLiteral",
-      "offset": 816,
+      "offset": 817,
       "length": 22,
       "value": "3"
     },
@@ -26346,14 +26463,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4582,
+      "offset": 4910,
       "length": 19,
       "value": "\"Overlapping Views\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/VisionRules\/RuleCollidingViews.swift",
       "kind": "StringLiteral",
-      "offset": 4647,
+      "offset": 4975,
       "length": 15,
       "value": "\"Assigned Text\""
     },
@@ -26493,14 +26610,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 7693,
+      "offset": 7445,
       "length": 30,
       "value": "\"Class Name of Focusable View\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleAssociatedText.swift",
       "kind": "StringLiteral",
-      "offset": 7791,
+      "offset": 7543,
       "length": 36,
       "value": "\"isDisabledTextFieldInTableViewCell\""
     },
@@ -26535,21 +26652,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14177,
+      "offset": 14436,
       "length": 33,
       "value": "\"Focusable Parent View className\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14266,
+      "offset": 14525,
       "length": 24,
       "value": "\"hasAdjustableA11yTrait\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AxeRules\/RuleInaccessibleAction.swift",
       "kind": "StringLiteral",
-      "offset": 14351,
+      "offset": 14610,
       "length": 29,
       "value": "\"numberOfChildActiveControls\""
     },
