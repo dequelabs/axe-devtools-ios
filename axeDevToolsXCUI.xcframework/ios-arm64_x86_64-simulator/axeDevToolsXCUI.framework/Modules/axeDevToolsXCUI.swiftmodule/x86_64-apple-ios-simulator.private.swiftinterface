@@ -1,19 +1,24 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name axeDevToolsXCUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import CoreGraphics
 import CoreImage
 import CryptoKit
 import Foundation
 import OSLog
+import ObjectiveC
 import Swift
 import UIKit
 import Vision
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_exported import axeDevToolsXCUI
 import zlib
+@_hasMissingDesignatedInitializers public class HTMLReportGenerator {
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AxeImage : ObjectiveC.NSObject {
   @objc final public let base64png: Swift.String
   @objc final public let frame: axeDevToolsXCUI.AxeBounds
@@ -167,6 +172,16 @@ extension axeDevToolsXCUI.AxeDevTools {
   @objc public func isChild(ofProp propName: axeDevToolsXCUI.AxeProps.Name) -> Swift.Bool
   @objc public func isChild(ofElementType elementType: axeDevToolsXCUI.AxeElementType) -> Swift.Bool
   @objc public func isElementOrChild(ofElementType elementType: axeDevToolsXCUI.AxeElementType) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AutoScanManager : ObjectiveC.NSObject {
+  @objc public static let shared: axeDevToolsXCUI.AutoScanManager
+  @objc public func enable(bundleId: Swift.String, apiKey: Swift.String, axeServiceUrl: Swift.String, projectId: Swift.String, uploadToDashboard: Swift.Bool) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func start(with testBundle: Foundation.Bundle?)
+  #endif
+  @discardableResult
+  @objc public func runScansAndReport() -> Foundation.NSDictionary
   @objc deinit
 }
 @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
