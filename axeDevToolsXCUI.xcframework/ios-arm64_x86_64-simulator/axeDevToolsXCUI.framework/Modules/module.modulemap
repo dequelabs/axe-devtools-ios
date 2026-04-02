@@ -1,4 +1,11 @@
 framework module axeDevToolsXCUI {
+  umbrella header "axeDevToolsXCUI.h"
+  export *
+
+  module * { export * }
+}
+
+module axeDevToolsXCUI.Swift {
   header "axeDevToolsXCUI-Swift.h"
   requires objc
 }
