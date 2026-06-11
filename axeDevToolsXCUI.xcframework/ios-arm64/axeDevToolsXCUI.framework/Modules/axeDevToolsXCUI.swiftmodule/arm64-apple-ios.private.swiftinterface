@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name axeDevToolsXCUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name axeDevToolsXCUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import CoreGraphics
 import CoreImage
 import CryptoKit
@@ -25,9 +25,7 @@ import zlib
   @objc override dynamic public var hash: Swift.Int {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class AxeRule : Swift.Hashable {
@@ -56,14 +54,14 @@ import zlib
   }
 }
 extension axeDevToolsXCUI.AxeDevTools {
-  @available(*, deprecated, message: "This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead")
-  @objc public static func login(withUsername username: Swift.String, andPassword password: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This method will be removed in a future release; please use AxeDevTools.startSession(withApiKey, toServer, usingProjectId) instead")
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub")
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub")
   @objc public static func startSession(apiKey: Swift.String, url: Swift.String = "", projectId: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(withApiKey:withAxeAccountUrl:usingProjectId:_:) instead; it targets the Axe Developer Hub")
   @objc public static func startSession(withApiKey apiKey: Swift.String, toServer url: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
-  #endif
+  @objc public static func startScanSession(apiKey: Swift.String, axeAccountUrl: Swift.String = "", projectId: Swift.String) throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func startScanSession(withApiKey apiKey: Swift.String, withAxeAccountUrl axeAccountUrl: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
 }
 @objc public enum AxeRole : Swift.Int {
   case textElement
@@ -71,9 +69,7 @@ extension axeDevToolsXCUI.AxeDevTools {
   case image
   case genericElement
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeRole]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeRole] {
@@ -96,9 +92,7 @@ extension axeDevToolsXCUI.AxeDevTools {
     @objc get
   }
   required public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
@@ -109,9 +103,7 @@ extension axeDevToolsXCUI.AxeDevTools {
   case FAIL = 3
   case IGNORED = 4
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeStatus]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeStatus] {
@@ -151,23 +143,15 @@ extension axeDevToolsXCUI.AxeDevTools {
   }
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @discardableResult
   @objc public func runOnSelfAndDescendants(_ function: (axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.RunStatus) -> axeDevToolsXCUI.RunStatus
   @discardableResult
   @objc public func runOnDescendants(_ function: (axeDevToolsXCUI.AxeView) -> axeDevToolsXCUI.RunStatus) -> axeDevToolsXCUI.RunStatus
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getOrError(prop: axeDevToolsXCUI.AxeProps.Name) throws -> (any Swift.Decodable & Swift.Encodable)?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func get(prop: axeDevToolsXCUI.AxeProps.Name) -> (any Swift.Decodable & Swift.Encodable)?
-  #endif
   public func getOrError<T>(prop name: axeDevToolsXCUI.AxeProps.Name, withType t: T.Type) throws -> T where T : Swift.Decodable, T : Swift.Encodable
-  #if compiler(>=5.3) && $NonescapableTypes
   public func get<T>(prop name: axeDevToolsXCUI.AxeProps.Name, withType t: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
-  #endif
   @objc public func isPropTypeOrChild(ofProp propName: axeDevToolsXCUI.AxeProps.Name) -> Swift.Bool
   @objc public func isChild(ofProp propName: axeDevToolsXCUI.AxeProps.Name) -> Swift.Bool
   @objc public func isChild(ofElementType elementType: axeDevToolsXCUI.AxeElementType) -> Swift.Bool
@@ -176,10 +160,9 @@ extension axeDevToolsXCUI.AxeDevTools {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class AutoScanManager : ObjectiveC.NSObject {
   @objc public static let shared: axeDevToolsXCUI.AutoScanManager
-  @objc public func enable(bundleId: Swift.String, apiKey: Swift.String, axeServiceUrl: Swift.String, projectId: Swift.String, uploadToDashboard: Swift.Bool) throws
-  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func enable(bundleId: Swift.String, apiKey: Swift.String, axeServiceUrl: Swift.String = "", axeAccountUrl: Swift.String = "", projectId: Swift.String, uploadToDashboard: Swift.Bool, htmlReportPath: Swift.String? = nil) throws
+  @objc public func captureInitialContext()
   @objc public func start(with testBundle: Foundation.Bundle?)
-  #endif
   @discardableResult
   @objc public func runScansAndReport() -> Foundation.NSDictionary
   @objc deinit
@@ -192,24 +175,16 @@ extension axeDevToolsXCUI.AxeDevTools {
     get
   }
   @objc final public let ruleId: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var category: axeDevToolsXCUI.AxeCategory? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var successCriteria: axeDevToolsXCUI.AxeSuccessCriteria? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard = .bestPractice, summary: Swift.String, experimental: Swift.Bool = false, ruleId: Swift.String? = nil)
-  #endif
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
 }
 public enum AxeCategory : Swift.String, Swift.Codable {
@@ -220,9 +195,7 @@ public enum AxeCategory : Swift.String, Swift.Codable {
   case textAlternatives
   case sensoryAndVisualCues
   case keyboard
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -241,14 +214,10 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "This will be removed in a future release; please use AxeDevToolsResultKey(userId:, packageName:, resultId:, uuid:) instead")
   @objc public init?(fabTitle: Swift.String)
-  #endif
   required public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -271,9 +240,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc final public func ignore(rules: [Swift.String], _ shouldIgnore: Swift.Bool = true)
   @objc final public func ignoreExperimental()
   @objc final public func ignore(rulesFor: [Swift.String : Swift.Set<Swift.String>])
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
 }
 @objc public enum AxeViewHierarchy : Swift.Int {
@@ -282,9 +249,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case ReactNative
   case Flutter
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeViewHierarchy]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeViewHierarchy] {
@@ -298,9 +263,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case Continue
   case Stop
   case SkipDescendants
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -315,34 +278,24 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc final public let axeViewId: Swift.String
   @objc final public let isVisibleToUser: Swift.Bool
   @objc final public let experimental: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   @nonobjc public var axeRuleId: axeDevToolsXCUI.AxeRuleId? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var category: axeDevToolsXCUI.AxeCategory? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var standard: axeDevToolsXCUI.AxeStandard? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var successCriteria: axeDevToolsXCUI.AxeSuccessCriteria? {
     get
   }
-  #endif
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeRect : ObjectiveC.NSObject, Swift.Codable {
@@ -363,9 +316,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
     @objc get
   }
   required public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
@@ -375,9 +326,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case landscape = 2
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeOrientation]
   public typealias RawValue = Swift.UInt
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeOrientation] {
@@ -391,6 +340,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case A11yElementFocusBox
   case ActiveControlName
   case AssociatedText
+  case ClippedText
   case CollidingViews
   case ColorContrast
   case ConflictingTraits
@@ -407,13 +357,9 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case SupportsDynamicType
   case TouchTargetSize
   case TouchTargetSpacing
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(_ str: Swift.String)
-  #endif
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeRuleId]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeRuleId] {
@@ -427,10 +373,22 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case any = 0
   case other = 1
   case application = 2
+  case group = 3
   case window = 4
   case sheet = 5
+  case drawer = 6
   case alert = 7
+  case dialog = 8
   case button = 9
+  case radioButton = 10
+  case radioGroup = 11
+  case checkBox = 12
+  case disclosureTriangle = 13
+  case popUpButton = 14
+  case comboBox = 15
+  case menuButton = 16
+  case toolbarButton = 17
+  case popover = 18
   case keyboard = 19
   case key = 20
   case navigationBar = 21
@@ -439,6 +397,11 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case toolbar = 24
   case statusBar = 25
   case table = 26
+  case tableRow = 27
+  case tableColumn = 28
+  case outline = 29
+  case outlineRow = 30
+  case browser = 31
   case collectionView = 32
   case slider = 33
   case pageIndicator = 34
@@ -451,6 +414,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case toggle = 41
   case link = 42
   case image = 43
+  case icon = 44
   case searchField = 45
   case scrollView = 46
   case scrollBar = 47
@@ -459,15 +423,38 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   case secureTextField = 50
   case datePicker = 51
   case textView = 52
+  case menu = 53
+  case menuItem = 54
+  case menuBar = 55
+  case menuBarItem = 56
   case map = 57
   case webView = 58
+  case incrementArrow = 59
+  case decrementArrow = 60
+  case timeline = 61
+  case ratingIndicator = 62
+  case valueIndicator = 63
+  case splitGroup = 64
+  case splitter = 65
+  case relevanceIndicator = 66
+  case colorWell = 67
+  case helpTag = 68
+  case matte = 69
+  case dockItem = 70
+  case ruler = 71
+  case rulerMarker = 72
+  case grid = 73
+  case levelIndicator = 74
   case cell = 75
+  case layoutArea = 76
+  case layoutItem = 77
+  case handle = 78
   case stepper = 79
   case tab = 80
+  case touchBar = 81
+  case statusItem = 82
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeElementType]
   public typealias RawValue = Swift.UInt
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeElementType] {
@@ -499,9 +486,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc public var shortDescription: Swift.String {
     @objc get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -524,9 +509,7 @@ extension Swift.String {
   }
   convenience required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AxeContext : ObjectiveC.NSObject, Swift.Codable {
@@ -535,9 +518,7 @@ extension Swift.String {
   @objc final public let screenshot: axeDevToolsXCUI.AxeImage
   @objc public var axeMetaData: axeDevToolsXCUI.AxeMetaData
   required public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
@@ -571,9 +552,7 @@ extension axeDevToolsXCUI.AxeStandard {
     @objc get
   }
   required public init(from decoder: any Swift.Decoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
@@ -585,25 +564,13 @@ extension axeDevToolsXCUI.AxeStandard {
   @objc override dynamic public init()
   required public init(from decoder: any Swift.Decoder) throws
   final public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func get(_ name: axeDevToolsXCUI.AxeProps.Name) -> (any Swift.Decodable & Swift.Encodable)?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getOrError(_ name: axeDevToolsXCUI.AxeProps.Name) throws -> (any Swift.Decodable & Swift.Encodable)?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func get<T>(_ name: axeDevToolsXCUI.AxeProps.Name, withType objType: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
-  #endif
   final public func getOrError<T>(_ name: axeDevToolsXCUI.AxeProps.Name, withType objType: T.Type) throws -> T where T : Swift.Decodable, T : Swift.Encodable
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func add(_ props: [axeDevToolsXCUI.AxeProps.Name : (any Swift.Decodable & Swift.Encodable)?])
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func add(_ propName: axeDevToolsXCUI.AxeProps.Name, _ prop: (any Swift.Decodable & Swift.Encodable)?)
-  #endif
   final public func remove(_ propName: axeDevToolsXCUI.AxeProps.Name)
   @objc deinit
 }
@@ -643,25 +610,17 @@ extension Swift.String {
     @objc get
     @objc set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public var sessionId: Swift.String? {
     @objc get
   }
-  #endif
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
-  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
-  #endif
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toAbsolutePath path: Swift.String, withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
-  #endif
   @objc final public func run(onBundleIdentifier bundleId: Swift.String) throws -> axeDevToolsXCUI.AxeResult
   @objc final public func run(onElement element: Any) throws -> axeDevToolsXCUI.AxeResult
   @objc deinit
@@ -685,9 +644,7 @@ extension Swift.String {
   public init(stringValue: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -703,9 +660,7 @@ extension Swift.String {
   }
   @objc required override dynamic public init()
   @objc required public init(rawValue raw: Swift.UInt64)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-  #endif
   @objc public func formUnion(_ other: axeDevToolsXCUI.AxeTraits)
   @objc public func formIntersection(_ other: axeDevToolsXCUI.AxeTraits)
   @objc public func formSymmetricDifference(_ other: axeDevToolsXCUI.AxeTraits)
@@ -741,9 +696,7 @@ extension Swift.String {
   case SERIOUS = 2
   case CRITICAL = 3
   public func toString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias AllCases = [axeDevToolsXCUI.AxeImpact]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [axeDevToolsXCUI.AxeImpact] {
@@ -753,8 +706,14 @@ extension Swift.String {
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class AccessToken : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class AxeReportResult : ObjectiveC.NSObject {
+  @objc final public let htmlReportPath: Swift.String
+  @objc final public let summary: Swift.String
   @objc deinit
+}
+extension axeDevToolsXCUI.AxeDevTools {
+  @discardableResult
+  @objc final public func generateHtmlReportAndSummary(outputPath: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeReportResult
 }
 extension axeDevToolsXCUI.AxeRole : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRole : Swift.RawRepresentable {}
