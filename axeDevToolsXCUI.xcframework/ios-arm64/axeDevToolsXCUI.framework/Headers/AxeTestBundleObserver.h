@@ -46,6 +46,10 @@ API_AVAILABLE(ios(16.0))
 /// Checks if XCTest framework is available at runtime
 + (BOOL)isXCTestAvailable;
 
+/// Extracts a BOOL from an axe_config.json value, handling both NSNumber (JSON boolean) and NSString.
+/// Returns NO for nil or unexpected types.
++ (BOOL)boolValueFromConfigValue:(nullable id)value;
+
 @end
 
 NS_ASSUME_NONNULL_END
