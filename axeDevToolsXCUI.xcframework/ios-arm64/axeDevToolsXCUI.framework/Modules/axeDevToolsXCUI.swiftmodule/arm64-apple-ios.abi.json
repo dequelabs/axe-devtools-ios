@@ -29512,6 +29512,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Rules\/AppleA11yAuditorRules\/RuleSupportsDynamicType.swift",
+      "kind": "StringLiteral",
+      "offset": 6052,
+      "length": 204,
+      "value": "\"Dynamic Type could not be checked on this screen. This element's text contains a percent sign, which crashes Apple's Dynamic Type accessibility audit on iOS 26 and later.\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AutoScan\/AggregatedResultsSummaryReporter.swift",
       "kind": "StringLiteral",
       "offset": 310,
