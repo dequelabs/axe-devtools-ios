@@ -443,32 +443,43 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeBounds")
 @end
 
 /// The configuration for an axeDevTools object.
-/// By default, all <code>AxeRule</code>s will run. You can use this object to ignore rules, or add custom rules that you define.
+/// By default, all <code>AxeRule</code>s will run, with the exception of <code>InaccessibleAction</code>, which is disabled by default (see <code>AxeRuleId.InaccessibleAction</code>, deprecated ahead of removal in the October 2026 release). You can use this object to ignore rules, or add custom rules that you define.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeConf")
 @interface AxeConf : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 /// Creates a new <code>AxeConf</code> object.  All rules are added by default.  See <code>AxeRuleId</code> for a full list of available rules.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// This method allows you to ignore (or re-introduce) results from any rule, including custom rules.  By default, no rules (including custom rules) are ignored.
+/// This method allows you to ignore (or re-introduce) results from any rule, including custom rules.  By default, no rules (including custom rules) are ignored, with the exception of <code>InaccessibleAction</code>, which is ignored by default.
+/// Deprecated. This API changes shape in the October 2026 release (#3074); see the release
+/// migration note. Behavior is unchanged until then.
 /// \param rule the rule’s <code>AxeRuleId</code> (or a custom rule’s class name) whose results should be ignored (or included), as a String.
 ///
 /// \param shouldIgnore a <code>Bool</code> indicating whether the rule’s results should be ignored. Set to <code>true</code> if the rule’s results should be ignored, or <code>false</code> if the rule’s results should be included.  Default value is <code>true</code>.
 ///
-- (void)ignoreWithRule:(NSString * _Nonnull)rule :(BOOL)shouldIgnore;
-/// This method allows you to ignore (or re-introduce) results from any rule, including custom rules.  By default, no rules (including custom rules) are ignored.
+- (void)ignoreWithRule:(NSString * _Nonnull)rule :(BOOL)shouldIgnore SWIFT_DEPRECATED_MSG("Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.");
+/// This method allows you to ignore (or re-introduce) results from any rule, including custom rules.  By default, no rules (including custom rules) are ignored, with the exception of <code>InaccessibleAction</code>, which is ignored by default.
+/// Deprecated. This API changes shape in the October 2026 release (#3074); see the release
+/// migration note. Behavior is unchanged until then.
 /// \param rules the <code>AxeRuleId</code>s (or classNames, for custom rules) of the rules you wish to ignore, as a <code>String</code>.
 ///
 /// \param shouldIgnore a <code>Bool</code> indicating whether the set of rules should have their results ignored. Set to <code>true</code> if they should be ignored or <code>false</code> if they should be included.  Default value is <code>true</code>.
 ///
-- (void)ignoreWithRules:(NSArray<NSString *> * _Nonnull)rules :(BOOL)shouldIgnore;
-/// This method allows you to ignore all experimental rules.  By default, no rules (including custom rules) are ignored.
-- (void)ignoreExperimental;
+- (void)ignoreWithRules:(NSArray<NSString *> * _Nonnull)rules :(BOOL)shouldIgnore SWIFT_DEPRECATED_MSG("Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.");
+/// This method allows you to ignore all experimental rules. <code>InaccessibleAction</code>, the only
+/// experimental rule, is already ignored by default (#2975), so this call is a no-op unless a
+/// caller previously opted it back in.
+/// Deprecated. Experimental rules are being retired and this method will be removed in the
+/// October 2026 release (#3002). To keep a specific rule off, use <code>ignore(rule:)</code>, which is
+/// itself deprecated ahead of a shape change in that same release (#3074).
+- (void)ignoreExperimental SWIFT_DEPRECATED_MSG("Experimental rules are being retired and this method will be removed in the October 2026 release. To keep a rule off, use ignore(rule:); it is itself deprecated ahead of a shape change in that same release.");
 /// Ignore specific rules for specific views, as defined in the provided dictionary, by Class or Accessibility Identifier.
 /// Classes that inherit from a classname specified here will not be ignored.  For example, if you specify that the rule <code>InScrollView</code> should not run on any <code>UILabel</code>, <code>InScrollView</code> will still run on the class <code>DQLabel</code> (which inherits from <code>UILabel</code>).
+/// Deprecated. This API changes shape in the October 2026 release (#3074); see the release
+/// migration note. Behavior is unchanged until then.
 /// *
 /// \param rulesFor A dictionary where each key, the Class name or Accessibility Identifier of a view, has a <code>Set</code> of <code>Strings</code> containing Rule Id’s to ignore.
 ///
-- (void)ignoreWithRulesFor:(NSDictionary<NSString *, NSSet<NSString *> *> * _Nonnull)rulesFor;
+- (void)ignoreWithRulesFor:(NSDictionary<NSString *, NSSet<NSString *> *> * _Nonnull)rulesFor SWIFT_DEPRECATED_MSG("Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.");
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -510,7 +521,10 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI10AxeContext")
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeDevTools")
 @interface AxeDevTools : NSObject
 /// Set this property if you want to change which rules are run or if you want to add custom rules.
-@property (nonatomic, strong) AxeConf * _Nonnull configuration;
+/// Deprecated. Ignoring rules and adding custom rules are moving directly onto <code>AxeDevTools</code>.
+/// This property will be removed after the October 2026 release, once the replacement ships —
+/// there is nothing to migrate to yet, so it continues to work exactly as it does today until then.
+@property (nonatomic, strong) AxeConf * _Nonnull configuration SWIFT_DEPRECATED_MSG("Rule ignoring and custom rules are moving directly onto AxeDevTools. This property will be removed after the October 2026 release, once the replacement ships. No migration is possible yet; behavior is unchanged until then.");
 /// Set this property to <code>true</code> if you want additional debug information for unexpected behavior.
 /// We may request this to be turned on if an obscure bug is found.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
@@ -523,7 +537,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// The scan from the server.
-- (AxeResult * _Nullable)getResult:(AxeDevToolsResultKey * _Nonnull)resultKey error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (AxeResult * _Nullable)getResult:(AxeDevToolsResultKey * _Nonnull)resultKey error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.");
+/// Use this after calling <code>run</code> to send the scan to the server. Will throw an error if sending the scan was not successful.
+/// \param result The result that should be pushed to the dashboard.
+///
+/// \param scanName A String to change the scan name to in the dashboard.
+///
+///
+/// returns:
+/// AxeDevToolsResultKey. This type is deprecated and will be removed after the October 2026
+/// release when the mobile dashboard is decommissioned. In the legacy mobile-service flow
+/// (<code>login(withAPIKey:)</code>) the key can still be used with <code>getResult</code>, <code>tagResult</code>, <code>deleteResult</code>,
+/// and <code>updateScanName</code> until then. In the Developer Hub flow (<code>startScanSession()</code>) the key is a
+/// local identifier only and cannot be used with those server methods.
+- (AxeDevToolsResultKey * _Nullable)postResult:(AxeResult * _Nonnull)result withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error;
 /// Use this after calling <code>run</code> to send the scan to the server. Will throw an error if sending the scan was not successful.
 /// \param result The result that should be pushed to the dashboard.
 ///
@@ -533,27 +560,28 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 ///
 /// returns:
-/// AxeDevToolsResultKey. When using the legacy mobile-service flow (<code>login(withAPIKey:)</code>), the
-/// key can be used with <code>getResult</code>, <code>tagResult</code>, <code>deleteResult</code>, and <code>updateScanName</code>.
-/// When using the Developer Hub flow (<code>startScanSession()</code>), the key is a local identifier
-/// only and cannot be used with those server methods.
-- (AxeDevToolsResultKey * _Nullable)postResult:(AxeResult * _Nonnull)result withTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error;
+/// AxeDevToolsResultKey. This type is deprecated and will be removed after the October 2026
+/// release when the mobile dashboard is decommissioned. In the legacy mobile-service flow
+/// (<code>login(withAPIKey:)</code>) the key can still be used with <code>getResult</code>, <code>tagResult</code>, <code>deleteResult</code>,
+/// and <code>updateScanName</code> until then. In the Developer Hub flow (<code>startScanSession()</code>) the key is a
+/// local identifier only and cannot be used with those server methods.
+- (AxeDevToolsResultKey * _Nullable)postResult:(AxeResult * _Nonnull)result withTags:(NSArray<NSString *> * _Nonnull)tags withScanName:(NSString * _Nullable)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("The 'withTags' parameter will be removed after the October 2026 release when the mobile dashboard is decommissioned.", "postResult:withScanName:error:");
 /// Tags the scan in the dashboard with the strings provided.  Will throw an error if there was an issue tagging the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to tag.
 ///
 /// \param tags The tags you would like to give the scan, as <code>[String]</code>.
 ///
-- (BOOL)tagResult:(AxeDevToolsResultKey * _Nonnull)resultKey withTags:(NSArray<NSString *> * _Nonnull)tags error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)tagResult:(AxeDevToolsResultKey * _Nonnull)resultKey withTags:(NSArray<NSString *> * _Nonnull)tags error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.");
 /// Deletes the scan from the server.  The scan will no longer be available on the dashboard. Will throw an error if there was an issue deleting the scan.
 /// \param resultKey the AxeDevToolsResultKey of the scan that should be deleted from the server.
 ///
-- (BOOL)deleteResult:(AxeDevToolsResultKey * _Nonnull)resultKey error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)deleteResult:(AxeDevToolsResultKey * _Nonnull)resultKey error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.");
 /// Sets or updates the scan name that is displayed in the dashboard. Will throw an error if there was an issue (re)naming the scan.
 /// \param resultKey The AxeDevToolsResultKey of the scan you would like to update.
 ///
 /// \param scanName The name you would like to give the scan.
 ///
-- (BOOL)updateScanName:(AxeDevToolsResultKey * _Nonnull)resultKey to:(NSString * _Nonnull)scanName error:(NSError * _Nullable * _Nullable)error;
+- (BOOL)updateScanName:(AxeDevToolsResultKey * _Nonnull)resultKey to:(NSString * _Nonnull)scanName error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.");
 /// Utilize this API with your result from calling <code>run</code> and save your accessibility results locally to your machine as JSON.
 /// \param result The AxeResult object returned from the <code>run</code> API.
 ///
@@ -643,7 +671,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object.  You will not be able to scan anything without this object.
-+ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub");
++ (AxeDevTools * _Nullable)loginWithAPIKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:axeUploadResults:) instead; it targets the Axe Developer Hub");
 /// Starts a session with the axeDevTools cloud instance using an API key and optional project ID.
 /// Use this method to initialize axeDevTools for accessibility testing. A valid session is required before utilizing the framework’s features.
 /// <ul>
@@ -669,7 +697,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// returns:
 /// An instantiated AxeDevTools object ready for accessibility testing.
-+ (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub");
++ (AxeDevTools * _Nullable)startSessionWithApiKey:(NSString * _Nonnull)apiKey url:(NSString * _Nonnull)url projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:axeUploadResults:) instead; it targets the Axe Developer Hub");
 /// Starts a session asynchronously with the axeDevTools cloud instance using an API key and project ID.
 /// This is the asynchronous version of <code>startSession(apiKey:url:projectId:)</code> that uses a completion handler to return results. A valid session is required before utilizing the framework’s features.
 /// <ul>
@@ -677,7 +705,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///     For Objective-C, pass in an empty String to the <code>url</code> parameter and the default server will be used.
 ///   </li>
 ///   <li>
-///     The completion handler is called with an error if the API key is not valid.
+///     The completion handler is called with an error if the API key is not valid, or with <code>AxeClient.Errors.projectIdRequiredForUpload</code> if <code>axeUploadResults</code> is true and no <code>projectId</code> was supplied.
 ///   </li>
 /// </ul>
 /// \param apiKey API Key for axeDevTools provided by Deque Systems.
@@ -688,7 +716,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// \param completion A closure called when the session initialization completes. On success, provides an initialized <code>AxeDevTools</code> instance and a <code>nil</code> error. On failure, provides a <code>nil</code> instance and the error that occurred.
 ///
-+ (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(withApiKey:withAxeAccountUrl:usingProjectId:_:) instead; it targets the Axe Developer Hub");
++ (void)startSessionWithApiKey:(NSString * _Nonnull)apiKey toServer:(NSString * _Nonnull)url usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion SWIFT_DEPRECATED_MSG("This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(withApiKey:withAxeAccountUrl:usingProjectId:axeUploadResults:_:) instead; it targets the Axe Developer Hub");
 /// Starts a session with the axeDevTools cloud instance using an API key and project ID.
 /// This is the recommended method to initialize axeDevTools for accessibility testing. A valid session is required before utilizing the framework’s features.
 /// <ul>
@@ -696,24 +724,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///     For Objective-C, pass in an empty String to the <code>axeAccountUrl</code> parameter and the default server will be used.
 ///   </li>
 ///   <li>
-///     Will throw an error if the API key or projectId is not valid.
+///     Will throw an error if the API key or projectId is not valid, or if <code>axeUploadResults</code> is true and no <code>projectId</code> was supplied.
 ///   </li>
 /// </ul>
 /// \param apiKey API Key for axeDevTools provided by Deque Systems.
 ///
 /// \param axeAccountUrl URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
 ///
-/// \param projectId The project ID for uploading results to Axe Developer Hub
+/// \param projectId The project ID for uploading results to Axe Developer Hub. Required when <code>axeUploadResults</code> is true; may be omitted only when <code>axeUploadResults</code> is false.
+///
+/// \param axeUploadResults Whether results from this session should be uploaded to Axe Developer Hub. Defaults to true.
 ///
 ///
 /// throws:
-/// An error if the API key or projectId is invalid or authentication fails.
+/// An error if either <code>axeUploadResults</code> is true and <code>projectId</code> is absent or empty or if the API key or projectId is invalid or authentication fails.
 ///
 /// returns:
 /// An instantiated AxeDevTools object ready for accessibility testing.
-+ (AxeDevTools * _Nullable)startScanSessionWithApiKey:(NSString * _Nonnull)apiKey axeAccountUrl:(NSString * _Nonnull)axeAccountUrl projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (AxeDevTools * _Nullable)startScanSessionWithApiKey:(NSString * _Nonnull)apiKey axeAccountUrl:(NSString * _Nonnull)axeAccountUrl projectId:(NSString * _Nullable)projectId axeUploadResults:(BOOL)axeUploadResults error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Starts a session asynchronously with the axeDevTools cloud instance using an API key and project ID.
-/// This is the asynchronous version of <code>startDevHubSession(apiKey:axeAccountUrl:projectId:)</code> that uses a completion handler to return results. A valid session is required before utilizing the framework’s features.
+/// This is the asynchronous version of <code>startScanSession(apiKey:axeAccountUrl:projectId:axeUploadResults:)</code> that uses a completion handler to return results. A valid session is required before utilizing the framework’s features.
 /// <ul>
 ///   <li>
 ///     For Objective-C, pass in an empty String to the <code>axeAccountUrl</code> parameter and the default server will be used.
@@ -726,11 +756,49 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 ///
 /// \param axeAccountUrl URL of the server receiving the scans if it’s not Deque’s service. This should only be filled out for enterprises with their own instance. Defaults to empty string (uses default server).
 ///
-/// \param projectId The project ID for uploading results to Axe Developer Hub.
+/// \param projectId The project ID for uploading results to Axe Developer Hub. Required when <code>axeUploadResults</code> is true; may be omitted only when <code>axeUploadResults</code> is false.
+///
+/// \param axeUploadResults Whether results from this session should be uploaded to Axe Developer Hub. Defaults to true.
 ///
 /// \param completion A closure called when the session initialization completes. On success, provides an initialized <code>AxeDevTools</code> instance and a <code>nil</code> error. On failure, provides a <code>nil</code> instance and the error that occurred.
 ///
++ (void)startScanSessionWithApiKey:(NSString * _Nonnull)apiKey withAxeAccountUrl:(NSString * _Nonnull)axeAccountUrl usingProjectId:(NSString * _Nullable)projectId axeUploadResults:(BOOL)axeUploadResults :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
+/// Starts a session with the axeDevTools cloud instance using an API key and project ID.
+/// Results from this session are always uploaded to Axe Developer Hub. To authenticate and scan
+/// without uploading, use <code>startScanSessionWithApiKey:axeAccountUrl:projectId:axeUploadResults:error:</code>
+/// with <code>axeUploadResults</code> set to <code>NO</code>.
+/// \param apiKey API Key for axeDevTools provided by Deque Systems.
+///
+/// \param axeAccountUrl URL of the server receiving the scans. Pass an empty string for Deque’s.
+///
+/// \param projectId The project ID for uploading results to Axe Developer Hub.
+///
+///
+/// throws:
+/// An error if the API key or projectId is invalid, or authentication fails.
+///
+/// returns:
+/// An instantiated AxeDevTools object ready for accessibility testing.
++ (AxeDevTools * _Nullable)startScanSessionWithApiKey:(NSString * _Nonnull)apiKey axeAccountUrl:(NSString * _Nonnull)axeAccountUrl projectId:(NSString * _Nonnull)projectId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Starts a session asynchronously. Results are always uploaded to Axe Developer Hub; use the
+/// <code>axeUploadResults:</code> variant with <code>NO</code> to authenticate and scan without uploading.
 + (void)startScanSessionWithApiKey:(NSString * _Nonnull)apiKey withAxeAccountUrl:(NSString * _Nonnull)axeAccountUrl usingProjectId:(NSString * _Nonnull)projectId :(void (^ _Nonnull)(AxeDevTools * _Nullable, NSError * _Nullable))completion;
+/// Authenticates with a pre-obtained OAuth access token.
+/// Use this when your integration already holds a valid Bearer token
+/// (e.g., from an MCP server) and you want to run local scans without
+/// uploading results to the Deque backend.
+/// \param accessToken A valid OAuth access token (Bearer token).
+///
+/// \param axeAccountUrl URL of the axe account instance. Only needed for
+/// enterprises with their own instance. Defaults to empty string (uses default server).
+///
+///
+/// throws:
+/// An error if the access token is invalid or authentication fails.
+///
+/// returns:
+/// An initialized AxeDevTools object ready for local scanning.
++ (AxeDevTools * _Nullable)loginWithAccessToken:(NSString * _Nonnull)accessToken axeAccountUrl:(NSString * _Nonnull)axeAccountUrl error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Authenticates with the Axe Developer Hub using an API key without creating a scan session.
 /// Use this when you only need to validate credentials and run scans locally (no result upload).
 /// <ul>
@@ -753,7 +821,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL debugStatements;)
 
 /// A scan’s unique identifier on the axeDevTools Mobile server. You can use the AxeDevToolsResultKey to retrieve, tag, and
 /// delete scans on the server.
-SWIFT_CLASS("_TtC15axeDevToolsXCUI20AxeDevToolsResultKey")
+SWIFT_CLASS("_TtC15axeDevToolsXCUI20AxeDevToolsResultKey") SWIFT_DEPRECATED_MSG("This will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
 @interface AxeDevToolsResultKey : NSObject
 /// The name of the application that the scan came from. Should be the Bundle Identifier.
 @property (nonatomic, readonly, copy) NSString * _Nonnull packageName;
@@ -771,7 +839,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI20AxeDevToolsResultKey")
 /// This initializer will return <code>nil</code> if the given String is not in the expected format.  If supplying the FAB’s title directly and this method is returning <code>nil</code>, it may mean that there was an error sending the scan to the server.
 /// \param fabTitle The FloatingActionButton’s <code>title</code> or <code>label</code> property after it is tapped.
 ///
-- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("This will be removed in a future release; please use AxeDevToolsResultKey(userId:, packageName:, resultId:, uuid:) instead");
+- (nullable instancetype)initWithFabTitle:(NSString * _Nonnull)fabTitle OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -985,7 +1053,7 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeResult")
 @interface AxeResult : NSObject
 @property (nonatomic, copy) NSString * _Nullable sessionId;
 @property (nonatomic, copy) NSString * _Nullable scanName;
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable tags;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable tags SWIFT_DEPRECATED_MSG("This will be removed after the October 2026 release when the mobile dashboard is decommissioned.");
 /// The configuration of the scan
 @property (nonatomic, readonly, strong) AxeConf * _Nonnull axeConf;
 /// Information about the screen that was scanned
@@ -1020,27 +1088,48 @@ typedef SWIFT_ENUM(NSInteger, AxeRole, open) {
   AxeRoleGenericElement = 3,
 };
 
-/// A unique name for each of the rules run by default.
+/// A unique name for each of the rules the SDK registers. Most run by default; <code>InaccessibleAction</code>
+/// is the current exception (disabled by default, see <code>AxeConf</code>).
 typedef SWIFT_ENUM(NSInteger, AxeRuleId, open) {
+/// Deprecated. Renamed to <code>a11yElementFocusBox</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdA11yElementFocusBox = 0,
+/// Deprecated. Renamed to <code>activeControlName</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdActiveControlName = 1,
+/// Deprecated. Renamed to <code>associatedText</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdAssociatedText = 2,
+/// Deprecated. Renamed to <code>clippedText</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdClippedText = 3,
+/// Deprecated. Renamed to <code>collidingViews</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdCollidingViews = 4,
+/// Deprecated. Renamed to <code>colorContrast</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdColorContrast = 5,
+/// Deprecated. Renamed to <code>conflictingTraits</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdConflictingTraits = 6,
+/// Deprecated. Renamed to <code>focusableText</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdFocusableText = 7,
+/// Deprecated. Renamed to <code>imageViewName</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdImageViewName = 8,
+/// Deprecated. Renamed to <code>inScrollView</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdInScrollView = 9,
+/// Deprecated. The InaccessibleAction rule is removed entirely in October 2026 (#2995).
   AxeRuleIdInaccessibleAction = 10,
+/// Deprecated. Renamed to <code>labelAtFront</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdLabelAtFront = 11,
+/// Deprecated. Renamed to <code>labelInName</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdLabelInName = 12,
+/// Deprecated. Renamed to <code>meaningfulAccessibleName</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdMeaningfulAccessibleName = 13,
+/// Deprecated. Renamed to <code>nestedElementsName</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdNestedElementsName = 14,
+/// Deprecated. Renamed to <code>screenOrientation</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdScreenOrientation = 15,
+/// Deprecated. Renamed to <code>screenTitle</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdScreenTitle = 16,
+/// Deprecated. Renamed to <code>supportsDynamicType</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdSupportsDynamicType = 17,
+/// Deprecated. Renamed to <code>touchTargetSize</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdTouchTargetSize = 18,
+/// Deprecated. Renamed to <code>touchTargetSpacing</code>; this spelling is removed in the October 2026 release (#3081).
   AxeRuleIdTouchTargetSpacing = 19,
 };
 
@@ -1066,7 +1155,11 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI13AxeRuleResult")
 /// whether the view is in the current screenshot.  Will be false if the view is off-screen or behind a modal.
 @property (nonatomic, readonly) BOOL isVisibleToUser;
 /// Whether a rule is currently experimental or not.
-@property (nonatomic, readonly) BOOL experimental;
+/// Deprecated. This flag does not determine whether a rule runs by default — that is decided by
+/// each rule’s own <code>ignored</code> default (see <code>AxeConf</code>). <code>InaccessibleAction</code>, the only experimental
+/// rule, is disabled by default (#2975) independently of this flag. A check on this property
+/// changes which results you filter, not which rules run. It will be removed in the October 2026 release.
+@property (nonatomic, readonly) BOOL experimental SWIFT_DEPRECATED_MSG("This flag does not determine whether a rule runs by default; it will be removed in the October 2026 release.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1099,6 +1192,7 @@ typedef SWIFT_ENUM(NSInteger, AxeSuccessCriteria, open) {
   AxeSuccessCriteriaWcag242 = 8,
   AxeSuccessCriteriaWcag255 = 9,
   AxeSuccessCriteriaWcag258 = 10,
+  AxeSuccessCriteriaWcag131 = 11,
   AxeSuccessCriteriaUnknown = -1,
 };
 
@@ -1271,7 +1365,11 @@ typedef SWIFT_ENUM(NSInteger, AxeViewHierarchy, open) {
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8RuleConf")
 @interface RuleConf : NSObject
 /// Whether a rule is currently experimental or not.
-@property (nonatomic, readonly) BOOL experimental;
+/// Deprecated. This flag does not determine whether a rule runs by default — that is decided by
+/// each rule’s own <code>ignored</code> default (see <code>AxeConf</code>). <code>InaccessibleAction</code>, the only experimental
+/// rule, is disabled by default (#2975) independently of this flag. A check on this property
+/// changes which results you filter, not which rules run. It will be removed in the October 2026 release.
+@property (nonatomic, readonly) BOOL experimental SWIFT_DEPRECATED_MSG("This flag does not determine whether a rule runs by default; it will be removed in the October 2026 release.");
 /// A brief description of the rule.
 @property (nonatomic, readonly, copy) NSString * _Nonnull summary;
 /// The severity of a failure of the rule. See <code>AxeImpact</code> for more information.
