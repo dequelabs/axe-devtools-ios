@@ -54,14 +54,19 @@ import zlib
   }
 }
 extension axeDevToolsXCUI.AxeDevTools {
-  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub")
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:axeUploadResults:) instead; it targets the Axe Developer Hub")
   @objc public static func login(withAPIKey apiKey: Swift.String, toServer url: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:) instead; it targets the Axe Developer Hub")
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(apiKey:axeAccountUrl:projectId:axeUploadResults:) instead; it targets the Axe Developer Hub")
   @objc public static func startSession(apiKey: Swift.String, url: Swift.String = "", projectId: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
-  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(withApiKey:withAxeAccountUrl:usingProjectId:_:) instead; it targets the Axe Developer Hub")
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned. Use AxeDevTools.startScanSession(withApiKey:withAxeAccountUrl:usingProjectId:axeUploadResults:_:) instead; it targets the Axe Developer Hub")
   @objc public static func startSession(withApiKey apiKey: Swift.String, toServer url: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
-  @objc public static func startScanSession(apiKey: Swift.String, axeAccountUrl: Swift.String = "", projectId: Swift.String) throws -> axeDevToolsXCUI.AxeDevTools
-  @objc public static func startScanSession(withApiKey apiKey: Swift.String, withAxeAccountUrl axeAccountUrl: Swift.String = "", usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
+  @objc public static func startScanSession(apiKey: Swift.String, axeAccountUrl: Swift.String = "", projectId: Swift.String? = nil, axeUploadResults: Swift.Bool = true) throws -> axeDevToolsXCUI.AxeDevTools
+  @objc public static func startScanSession(withApiKey apiKey: Swift.String, withAxeAccountUrl axeAccountUrl: Swift.String = "", usingProjectId projectId: Swift.String? = nil, axeUploadResults: Swift.Bool = true, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
+  @available(swift, obsoleted: 1.0)
+  @objc(startScanSessionWithApiKey:axeAccountUrl:projectId:error:) public static func objcStartScanSession(apiKey: Swift.String, axeAccountUrl: Swift.String, projectId: Swift.String) throws -> axeDevToolsXCUI.AxeDevTools
+  @available(swift, obsoleted: 1.0)
+  @objc(startScanSessionWithApiKey:withAxeAccountUrl:usingProjectId::) public static func objcStartScanSession(withApiKey apiKey: Swift.String, withAxeAccountUrl axeAccountUrl: Swift.String, usingProjectId projectId: Swift.String, _ completion: @escaping (axeDevToolsXCUI.AxeDevTools?, (any Swift.Error)?) -> Swift.Void)
+  @objc public static func loginWithAccessToken(_ accessToken: Swift.String, axeAccountUrl: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
   @objc public static func authenticate(apiKey: Swift.String, axeAccountUrl: Swift.String = "") throws -> axeDevToolsXCUI.AxeDevTools
 }
 @objc public enum AxeRole : Swift.Int {
@@ -98,18 +103,17 @@ extension axeDevToolsXCUI.AxeDevTools {
   @objc deinit
 }
 @objc public enum AxeStatus : Swift.Int, Swift.Sendable {
+  public static let allCases: [axeDevToolsXCUI.AxeStatus]
   case INAPPLICABLE = 0
   case INCOMPLETE = 1
   case PASS = 2
   case FAIL = 3
+  @available(*, deprecated, message: "This will be removed after the October 2026 release. Ignored rules will be skipped (no .IGNORED result will be emitted). Filter on rule absence instead.")
   case IGNORED = 4
   public func toString() -> Swift.String
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeStatus]
   public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [axeDevToolsXCUI.AxeStatus] {
-    get
-  }
   public var rawValue: Swift.Int {
     get
   }
@@ -178,8 +182,11 @@ extension axeDevToolsXCUI.AxeDevTools {
   public static func skipScan(_ body: () throws -> Swift.Void) rethrows
   @objc deinit
 }
-@objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
-  @objc final public let experimental: Swift.Bool
+@_hasMissingDesignatedInitializers @objc public class RuleConf : ObjectiveC.NSObject, Swift.Codable {
+  @available(*, deprecated, message: "This flag does not determine whether a rule runs by default; it will be removed in the October 2026 release.")
+  @objc final public var experimental: Swift.Bool {
+    @objc get
+  }
   @objc final public let summary: Swift.String
   final public let standard: axeDevToolsXCUI.AxeStandard
   @objc public var impact: axeDevToolsXCUI.AxeImpact {
@@ -192,7 +199,9 @@ extension axeDevToolsXCUI.AxeDevTools {
   public var successCriteria: axeDevToolsXCUI.AxeSuccessCriteria? {
     get
   }
-  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard = .bestPractice, summary: Swift.String, experimental: Swift.Bool = false, ruleId: Swift.String? = nil)
+  convenience public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard = .bestPractice, summary: Swift.String, ruleId: Swift.String? = nil)
+  @available(*, deprecated, message: "Experimental rules are being retired. Use init(impact:standard:summary:ruleId:) instead; this initializer will be removed in the October 2026 release.")
+  public init(impact: axeDevToolsXCUI.AxeImpact, standard: axeDevToolsXCUI.AxeStandard = .bestPractice, summary: Swift.String, experimental: Swift.Bool, ruleId: Swift.String? = nil)
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
@@ -214,7 +223,8 @@ public enum AxeCategory : Swift.String, Swift.Codable {
 }
 extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
 }
-@_hasMissingDesignatedInitializers @objc public class AxeDevToolsResultKey : ObjectiveC.NSObject, Swift.Codable {
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
+@objc public class AxeDevToolsResultKey : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let packageName: Swift.String
   @objc final public let userId: Swift.String
   @objc final public let resultId: Swift.String
@@ -225,7 +235,6 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
-  @available(*, deprecated, message: "This will be removed in a future release; please use AxeDevToolsResultKey(userId:, packageName:, resultId:, uuid:) instead")
   @objc public init?(fabTitle: Swift.String)
   required public init(from decoder: any Swift.Decoder) throws
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
@@ -233,6 +242,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 @_inheritsConvenienceInitializers @objc final public class AxeConf : ObjectiveC.NSObject, Swift.Codable {
+  @available(*, deprecated, message: "Custom rules are moving onto AxeDevTools directly. This property will be removed after the October 2026 release, once the replacement ships. No migration is possible yet; behavior is unchanged until then.")
   final public var customRules: Swift.Set<axeDevToolsXCUI.AxeRule> {
     get
     set
@@ -248,9 +258,13 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc override dynamic public init()
   required public init(from decoder: any Swift.Decoder) throws
   final public func encode(to encoder: any Swift.Encoder) throws
+  @available(*, deprecated, message: "Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.")
   @objc final public func ignore(rule: Swift.String, _ shouldIgnore: Swift.Bool = true)
+  @available(*, deprecated, message: "Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.")
   @objc final public func ignore(rules: [Swift.String], _ shouldIgnore: Swift.Bool = true)
+  @available(*, deprecated, message: "Experimental rules are being retired and this method will be removed in the October 2026 release. To keep a rule off, use ignore(rule:); it is itself deprecated ahead of a shape change in that same release.")
   @objc final public func ignoreExperimental()
+  @available(*, deprecated, message: "Deprecated ahead of a shape change in the October 2026 release; see the release migration note. Behavior is unchanged until then.")
   @objc final public func ignore(rulesFor: [Swift.String : Swift.Set<Swift.String>])
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
@@ -289,7 +303,10 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
   @objc final public let props: axeDevToolsXCUI.AxeProps
   @objc final public let axeViewId: Swift.String
   @objc final public let isVisibleToUser: Swift.Bool
-  @objc final public let experimental: Swift.Bool
+  @available(*, deprecated, message: "This flag does not determine whether a rule runs by default; it will be removed in the October 2026 release.")
+  @objc final public var experimental: Swift.Bool {
+    @objc get
+  }
   @nonobjc public var axeRuleId: axeDevToolsXCUI.AxeRuleId? {
     get
   }
@@ -348,36 +365,113 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
     get
   }
 }
-@objc public enum AxeRuleId : Swift.Int {
-  case A11yElementFocusBox
-  case ActiveControlName
-  case AssociatedText
-  case ClippedText
-  case CollidingViews
-  case ColorContrast
-  case ConflictingTraits
-  case FocusableText
-  case ImageViewName
-  case InScrollView
-  case InaccessibleAction
-  case LabelAtFront
-  case LabelInName
-  case MeaningfulAccessibleName
-  case NestedElementsName
-  case ScreenOrientation
-  case ScreenTitle
-  case SupportsDynamicType
-  case TouchTargetSize
-  case TouchTargetSpacing
+@objc public enum AxeRuleId : Swift.Int, Swift.Sendable {
+  @available(*, deprecated, renamed: "a11yElementFocusBox", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case A11yElementFocusBox = 0
+  @available(*, deprecated, renamed: "activeControlName", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ActiveControlName = 1
+  @available(*, deprecated, renamed: "associatedText", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case AssociatedText = 2
+  @available(*, deprecated, renamed: "clippedText", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ClippedText = 3
+  @available(*, deprecated, renamed: "collidingViews", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case CollidingViews = 4
+  @available(*, deprecated, renamed: "colorContrast", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ColorContrast = 5
+  @available(*, deprecated, renamed: "conflictingTraits", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ConflictingTraits = 6
+  @available(*, deprecated, renamed: "focusableText", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case FocusableText = 7
+  @available(*, deprecated, renamed: "imageViewName", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ImageViewName = 8
+  @available(*, deprecated, renamed: "inScrollView", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case InScrollView = 9
+  @available(*, deprecated, message: "The InaccessibleAction rule is removed entirely in the October 2026 release (#2995). Stop referencing this rule rather than migrating to a new spelling.")
+  case InaccessibleAction = 10
+  @available(*, deprecated, renamed: "labelAtFront", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case LabelAtFront = 11
+  @available(*, deprecated, renamed: "labelInName", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case LabelInName = 12
+  @available(*, deprecated, renamed: "meaningfulAccessibleName", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case MeaningfulAccessibleName = 13
+  @available(*, deprecated, renamed: "nestedElementsName", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case NestedElementsName = 14
+  @available(*, deprecated, renamed: "screenOrientation", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ScreenOrientation = 15
+  @available(*, deprecated, renamed: "screenTitle", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case ScreenTitle = 16
+  @available(*, deprecated, renamed: "supportsDynamicType", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case SupportsDynamicType = 17
+  @available(*, deprecated, renamed: "touchTargetSize", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case TouchTargetSize = 18
+  @available(*, deprecated, renamed: "touchTargetSpacing", message: "Use the lowerCamelCase spelling in expressions; switch patterns must keep this spelling until the October 2026 rename.")
+  case TouchTargetSpacing = 19
+  public static let allCases: [axeDevToolsXCUI.AxeRuleId]
   public init?(_ str: Swift.String)
   public func toString() -> Swift.String
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [axeDevToolsXCUI.AxeRuleId]
   public typealias RawValue = Swift.Int
-  nonisolated public static var allCases: [axeDevToolsXCUI.AxeRuleId] {
+  public var rawValue: Swift.Int {
     get
   }
-  public var rawValue: Swift.Int {
+}
+extension axeDevToolsXCUI.AxeRuleId {
+  public static var a11yElementFocusBox: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var activeControlName: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var associatedText: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var clippedText: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var collidingViews: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var colorContrast: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var conflictingTraits: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var focusableText: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var imageViewName: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var inScrollView: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var labelAtFront: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var labelInName: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var meaningfulAccessibleName: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var nestedElementsName: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var screenOrientation: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var screenTitle: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var supportsDynamicType: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var touchTargetSize: axeDevToolsXCUI.AxeRuleId {
+    get
+  }
+  public static var touchTargetSpacing: axeDevToolsXCUI.AxeRuleId {
     get
   }
 }
@@ -479,6 +573,7 @@ extension axeDevToolsXCUI.AxeElementType : Swift.Equatable {
 @_hasMissingDesignatedInitializers @objc public class AxeResult : ObjectiveC.NSObject, Swift.Codable {
   @objc public var sessionId: Swift.String?
   @objc public var scanName: Swift.String?
+  @available(*, deprecated, message: "This will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
   @objc public var tags: [Swift.String]?
   @objc final public let axeConf: axeDevToolsXCUI.AxeConf
   @objc final public let axeContext: axeDevToolsXCUI.AxeContext
@@ -603,6 +698,7 @@ extension Swift.String {
   public static let isHeaderOrFooter: Swift.String
   public static let isEnabled: Swift.String
   public static let text: Swift.String
+  public static let placeholderValue: Swift.String
   public static let frame: Swift.String
   public static let isActiveControl: Swift.String
   public static let isAccessibilityElement: Swift.String
@@ -614,6 +710,7 @@ extension Swift.String {
   public static let viewHierarchyType: Swift.String
 }
 @_hasMissingDesignatedInitializers @objc final public class AxeDevTools : ObjectiveC.NSObject {
+  @available(*, deprecated, message: "Rule ignoring and custom rules are moving directly onto AxeDevTools. This property will be removed after the October 2026 release, once the replacement ships. No migration is possible yet; behavior is unchanged until then.")
   @objc final public var configuration: axeDevToolsXCUI.AxeConf {
     @objc get
     @objc set
@@ -625,11 +722,18 @@ extension Swift.String {
   @objc final public var sessionId: Swift.String? {
     @objc get
   }
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
   @objc final public func getResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws -> axeDevToolsXCUI.AxeResult
   @discardableResult
-  @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String] = [], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
+  @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
+  @available(*, deprecated, renamed: "postResult(_:withScanName:)", message: "The 'withTags' parameter will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
+  @discardableResult
+  @objc final public func postResult(_ result: axeDevToolsXCUI.AxeResult, withTags tags: [Swift.String], withScanName scanName: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeDevToolsResultKey
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
   @objc final public func tagResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, withTags tags: [Swift.String]) throws
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
   @objc final public func deleteResult(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey) throws
+  @available(*, deprecated, message: "This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.")
   @objc final public func updateScanName(_ resultKey: axeDevToolsXCUI.AxeDevToolsResultKey, to scanName: Swift.String) throws
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toAbsolutePath path: Swift.String, withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
   @objc final public func saveResult(_ result: axeDevToolsXCUI.AxeResult, toPath path: Swift.String = "AxeDevToolsResults", withFileName fileName: Swift.String = "", withScanName scanName: Swift.String? = nil) throws -> Swift.String
@@ -649,6 +753,7 @@ extension Swift.String {
   case wcag242
   case wcag255
   case wcag258
+  case wcag131
   case unknown = -1
   public var stringValue: Swift.String {
     get
