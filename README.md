@@ -5,7 +5,7 @@ The Axe DevTools Mobile SDK for iOS helps you integrate mobile accessibility tes
 ## Documentation
 
 ### Automation
-This framework is for automated testing in a UI Test environment. Follow our [getting started guide](https://docs.deque.com/devtools-mobile/ios-getting-started) to begin embedding accessibility testing throughout your iOS project.
+This framework is for automated testing in a UI Test environment. Follow our <a href="https://docs.deque.com/devtools-mobile/ios-getting-started" target="_blank">getting started guide</a> to begin embedding accessibility testing throughout your iOS project.
 
 Looking for other solutions? Check out the [full Axe DevTools for Mobile suite](https://www.deque.com/axe/devtools/mobile-accessibility/)
 
