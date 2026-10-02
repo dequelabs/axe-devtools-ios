@@ -832,6 +832,57 @@ extension axeDevToolsXCUI.AxeDevTools {
   @discardableResult
   @objc final public func generateHtmlReportAndSummary(outputPath: Swift.String? = nil) throws -> axeDevToolsXCUI.AxeReportResult
 }
+@objc public enum AxeProductKind : Swift.Int, Swift.CaseIterable {
+  case appium2 = 0
+  case appium3 = 1
+  case desktopAnalyzer = 2
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [axeDevToolsXCUI.AxeProductKind]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeProductKind] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AxeUsageActor : Swift.Int, Swift.CaseIterable {
+  case human = 0
+  case automation = 1
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [axeDevToolsXCUI.AxeUsageActor]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [axeDevToolsXCUI.AxeUsageActor] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class AxeIntegration : ObjectiveC.NSObject {
+  @objc public static func declareProduct(_ product: axeDevToolsXCUI.AxeProductKind, version: Swift.String)
+  @objc public static func setUsage(actor: axeDevToolsXCUI.AxeUsageActor, productComponent: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class AxeTeams : ObjectiveC.NSObject {
+  @objc public static func setTeams(_ teams: [axeDevToolsXCUI.AxeTeam])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class AxeTeam : ObjectiveC.NSObject, Swift.Codable, @unchecked Swift.Sendable {
+  @objc final public let id: Swift.String
+  @objc final public let name: Swift.String
+  @objc public init(id: Swift.String, name: Swift.String)
+  required public init(from decoder: any Swift.Decoder) throws
+  final public func encode(to encoder: any Swift.Encoder) throws
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc override final public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
 extension axeDevToolsXCUI.AxeRole : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeRole : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeRole : Swift.Hashable {}
@@ -868,3 +919,9 @@ extension axeDevToolsXCUI.AxeImpact : Swift.CaseIterable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.RawRepresentable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.Hashable {}
 extension axeDevToolsXCUI.AxeImpact : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeProductKind : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeProductKind : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeProductKind : Swift.RawRepresentable {}
+extension axeDevToolsXCUI.AxeUsageActor : Swift.Equatable {}
+extension axeDevToolsXCUI.AxeUsageActor : Swift.Hashable {}
+extension axeDevToolsXCUI.AxeUsageActor : Swift.RawRepresentable {}
