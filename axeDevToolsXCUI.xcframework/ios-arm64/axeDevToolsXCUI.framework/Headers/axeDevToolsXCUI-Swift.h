@@ -987,6 +987,41 @@ typedef SWIFT_ENUM(NSInteger, AxeImpact, open) {
   AxeImpactCRITICAL = 3,
 };
 
+SWIFT_ENUM_FWD_DECL(NSInteger, AxeProductKind)
+SWIFT_ENUM_FWD_DECL(NSInteger, AxeUsageActor)
+/// Lets a downstream integration (WebDriverAgent, the Desktop Mobile Analyzer) declare
+/// which product is driving the current process, so Amplitude can distinguish an
+/// Appium-driven scan (and its major version) from a customer calling the SDK directly.
+/// Describes the <em>process</em>, not a scan session: set at most once, never cleared.
+/// <code>AutoScanManager.tearDown()</code> must not reset it.
+SWIFT_CLASS("_TtC15axeDevToolsXCUI14AxeIntegration")
+@interface AxeIntegration : NSObject
+/// Called once per process by the integrating product to identify itself. A second
+/// call declaring a different product is logged and ignored, not silently applied.
++ (void)declareProduct:(enum AxeProductKind)product version:(NSString * _Nonnull)version;
+/// Called once per process by the integrating layer (the Appium driver, the Desktop
+/// Analyzer, MCP) to say who triggered this session and which product surface it came
+/// from. Public so those layers can call it; deliberately absent from customer docs and
+/// not part of the supported surface.
+/// <em>Call this before session init.</em> A session captures these values when it starts
+/// (<code>AxeClient.usageAttribution</code>), and its usage-service events and session-init analytics
+/// event are all stamped from that one capture.
+/// A call that lands afterwards therefore applies to the <em>next</em> session started in this
+/// process, never to one already running. There is no warning for a late call, because
+/// the process cannot tell a mistimed call apart from correct setup for the next session.
+/// Unlike <code>declareProduct</code>, which ignores a conflicting second call, this is last write
+/// wins. The SDK appends the platform suffix, so pass <code>appium</code>, not <code>appium-ios</code>. A
+/// <code>productComponent</code> that sanitizes to nothing leaves the previous value in place
+/// rather than clearing it; the <code>actor</code> from the same call still applies.
+/// \param actor Whether a person or an automated run triggered the session.
+///
+/// \param productComponent The upstream product surface, unsuffixed, e.g. <code>mcp</code> or <code>appium</code>.
+///
++ (void)setUsageWithActor:(enum AxeUsageActor)actor productComponent:(NSString * _Nonnull)productComponent;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 /// The meta data of a scan.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI11AxeMetaData")
 @interface AxeMetaData : NSObject
@@ -1024,6 +1059,15 @@ SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxePoint")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+/// Downstream products that can explicitly identify themselves to the framework.
+/// <code>@objc</code>-bridged so a typo in an Objective-C caller is a build failure, not a silently
+/// wrong value. Raw values are a published wire contract: append only, never renumber.
+typedef SWIFT_ENUM(NSInteger, AxeProductKind, open) {
+  AxeProductKindAppium2 = 0,
+  AxeProductKindAppium3 = 1,
+  AxeProductKindDesktopAnalyzer = 2,
+};
 
 /// AxeProps are all properties used to help identify views in an application and to figure out whether a view is accessible
 SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeProps")
@@ -1196,6 +1240,95 @@ typedef SWIFT_ENUM(NSInteger, AxeSuccessCriteria, open) {
   AxeSuccessCriteriaUnknown = -1,
 };
 
+/// One team membership of the actor driving this process.
+/// The same type carries a team from walnut’s API-key validate response, through
+/// <code>AxeClient.analyticsTeams</code>, onto the usage service body and the Amplitude event. Mirroring
+/// walnut’s <code>{ id, name }</code> shape end to end means nothing in the chain translates it,
+/// so a team stamped on an event is what walnut reported, minus anything
+/// <code>AxeTeams.sanitize(_:)</code> refused to send (#3130).
+/// <code>@objc</code>-bridged because the injection entry point (<code>AxeTeams.setTeams(_:)</code>) is, and
+/// Objective-C cannot see a Swift struct.
+/// <code>@unchecked Sendable</code> rather than <code>Sendable</code>: every stored property is an immutable
+/// <code>String</code>, but the compiler cannot infer that through the non-<code>Sendable</code> <code>NSObject</code>
+/// superclass the <code>@objc</code> bridge requires. Instances cross threads, since a host can
+/// inject them from any thread and they are read on whichever thread sends an event.
+SWIFT_CLASS("_TtC15axeDevToolsXCUI7AxeTeam")
+@interface AxeTeam : NSObject
+/// Walnut’s team id. Stable across renames, so this is what attribution keys on.
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+/// Display name at the time the event was sent. Mutable on walnut’s side, which is
+/// why <code>id</code> and not this is the identity.
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name OBJC_DESIGNATED_INITIALIZER;
+/// Suppresses the <code>init()</code> the <code>@objc</code>/<code>NSObject</code> bridge would otherwise publish.
+/// <code>id</code> and <code>name</code> are non-optional with no defaults, so a bridged <code>-init</code> could only
+/// produce an unusable instance; an Objective-C caller must use <code>initWithId:name:</code>.
+/// Carries a body, unlike the empty <code>{}</code> on <code>AxeTeams</code> and <code>AxeIntegration</code>: those are
+/// static namespaces with no stored properties, so an empty body compiles. Here it does
+/// not, because <code>id</code> and <code>name</code> would be left uninitialized.
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Value semantics for a value-shaped type: without this, <code>NSObject</code>’s identity
+/// comparison would report two teams carrying the same id and name as different.
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) NSUInteger hash;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+/// The host-injection channel for the actor’s team memberships, which are stamped onto
+/// every usage service and Amplitude event so MAU reporting can slice by team without a
+/// later join against billing-service (#3130).
+/// Teams reach an event from one of two places, and the split matters:
+/// <ol>
+///   <li>
+///     <em>Login</em>, which is <em>not</em> stored here. <code>AxeClient</code> keeps the teams walnut returned
+///     for its own session on the client itself, beside <code>analyticsUserId</code> and
+///     <code>analyticsOrgName</code>, and hands them to <code>Amplitude</code> and <code>UsageServiceClient</code> when it
+///     constructs them. Keeping them per client is what stops two live <code>AxeDevTools</code>
+///     instances (a host’s own session and <code>AutoScanManager</code>‘s, say) from stamping each
+///     other’s teams onto their events.
+///   </li>
+///   <li>
+///     <em>Injection</em>, which is stored here, because it is genuinely process-wide: a host
+///     app calling <code>setTeams(_:)</code> is asserting who is signed in <em>right now</em>, not speaking
+///     for one client. An injected value therefore overrides the login value on every
+///     client until a login supersedes it.
+///   </li>
+/// </ol>
+/// An injection outlives any one SDK session and is cleared only by the host replacing
+/// it, because only the host knows when its own session changed. A login deliberately
+/// does not clear it: with more than one live client (a host’s own session and
+/// <code>AutoScanManager</code>‘s, say) one client’s login would otherwise wipe an injection that
+/// belongs to another. A host that logs out injects an empty array, which is honoured.
+/// Reads never throw and never block on a lookup: an unknown actor sends <code>teams: []</code>
+/// rather than dropping an MAU-qualifying event over an optional dimension.
+SWIFT_CLASS("_TtC15axeDevToolsXCUI8AxeTeams")
+@interface AxeTeams : NSObject
+/// Replaces the team memberships stamped on subsequent events, for every client in
+/// this process.
+/// Intended for a host app that drives the SDK in-process and owns its own login
+/// session, which outlives any one SDK session. Call it on every session change,
+/// including logout, where the correct value is an empty array. An injected empty
+/// array means “this user has no teams” and is honoured; it does not fall back to
+/// whatever a login found.
+/// Shipped on iOS for API parity with Android, where the Analyzer is the caller. No
+/// in-process iOS host uses it today: everything reaching this SDK arrives through
+/// Appium, and a fresh session there means a fresh fetch. In <code>axeDevToolsXCUI_noauth</code>,
+/// which compiles without analytics, nothing reads this value and no events are sent;
+/// it ships there for API-surface parity only.
+/// Entries are dropped rather than sent, and the rest of the array still applies, when
+/// the id is blank, when either field carries control characters, or when either field
+/// exceeds 256 unicode scalars. Past 100 entries the array is truncated. Every drop is
+/// logged. A blank <em>name</em> is kept: the id is the identity.
+/// \param teams The actor’s current team memberships. Pass an empty array to clear.
+///
++ (void)setTeams:(NSArray<AxeTeam *> * _Nonnull)teams;
+/// Suppresses the <code>init()</code> the <code>@objc</code>/<code>NSObject</code> bridge would otherwise publish on a
+/// type that is a namespace for static members, matching <code>AxeIntegration</code>.
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 /// The accessibility traits on a view.  Similar to UIAccessibilityTraits.
 SWIFT_CLASS("_TtC15axeDevToolsXCUI9AxeTraits")
 @interface AxeTraits : NSObject
@@ -1268,6 +1401,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AxeTraits * 
 /// The name of the AxeTrait. If there are multiple traits within an AxeTraits object, the traits will be in a comma-separated String.  For example, <code>(.button | .adjustable).toString()</code> would return <code>Adjustable, Button</code>.
 - (NSString * _Nonnull)toString SWIFT_WARN_UNUSED_RESULT;
 @end
+
+/// Who triggered a scan session, for MAU reporting.
+/// <code>@objc</code>-bridged so a typo in an Objective-C caller is a build failure, not a silently
+/// wrong value. Both the <code>Int</code> raw values (the Objective-C bridge exposes them by ordinal)
+/// and <code>wireValue</code> are published contracts: append only, never renumber or reword.
+typedef SWIFT_ENUM(NSInteger, AxeUsageActor, open) {
+  AxeUsageActorHuman = 0,
+  AxeUsageActorAutomation = 1,
+};
 
 SWIFT_ENUM_FWD_DECL(NSInteger, RunStatus)
 /// A class representing one view in a view hierarchy.

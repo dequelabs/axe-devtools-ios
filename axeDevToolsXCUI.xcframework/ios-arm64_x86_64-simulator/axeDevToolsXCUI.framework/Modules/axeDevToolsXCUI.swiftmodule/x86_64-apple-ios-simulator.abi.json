@@ -1716,6 +1716,23 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "AxeMetaData",
         "printedName": "AxeMetaData",
@@ -16421,6 +16438,23 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "AxeResult",
         "printedName": "AxeResult",
@@ -20761,13 +20795,27 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "axeDevToolsXCUI",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
       },
       {
         "kind": "Import",
@@ -25639,6 +25687,1456 @@
         "moduleName": "axeDevToolsXCUI"
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeProductKind",
+        "printedName": "AxeProductKind",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appium2",
+            "printedName": "appium2",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeProductKind.Type) -> axeDevToolsXCUI.AxeProductKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeProductKind",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeProductKind",
+                        "printedName": "axeDevToolsXCUI.AxeProductKind",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind@AxeProductKindAppium2",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO7appium2yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "appium3",
+            "printedName": "appium3",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeProductKind.Type) -> axeDevToolsXCUI.AxeProductKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeProductKind",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeProductKind",
+                        "printedName": "axeDevToolsXCUI.AxeProductKind",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind@AxeProductKindAppium3",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO7appium3yA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "desktopAnalyzer",
+            "printedName": "desktopAnalyzer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeProductKind.Type) -> axeDevToolsXCUI.AxeProductKind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeProductKind",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeProductKind",
+                        "printedName": "axeDevToolsXCUI.AxeProductKind",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind@AxeProductKindDesktopAnalyzer",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO15desktopAnalyzeryA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeProductKind?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeProductKind",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI14AxeProductKindO8rawValueACSgSi_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO8rawValueACSgSi_tcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI14AxeProductKindO8rawValueSivp",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO8rawValueSivp",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI14AxeProductKindO8rawValueSivg",
+                "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO8rawValueSivg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[axeDevToolsXCUI.AxeProductKind]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeProductKind",
+                    "printedName": "axeDevToolsXCUI.AxeProductKind",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI14AxeProductKindO8allCasesSayACGvpZ",
+            "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO8allCasesSayACGvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[axeDevToolsXCUI.AxeProductKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeProductKind",
+                        "printedName": "axeDevToolsXCUI.AxeProductKind",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI14AxeProductKindO8allCasesSayACGvgZ",
+                "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO8allCasesSayACGvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind",
+        "mangledName": "$s15axeDevToolsXCUI14AxeProductKindO",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[axeDevToolsXCUI.AxeProductKind]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeProductKind",
+                        "printedName": "axeDevToolsXCUI.AxeProductKind",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeUsageActor",
+        "printedName": "AxeUsageActor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "human",
+            "printedName": "human",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeUsageActor.Type) -> axeDevToolsXCUI.AxeUsageActor",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeUsageActor",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeUsageActor",
+                        "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor@AxeUsageActorHuman",
+            "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO5humanyA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "automation",
+            "printedName": "automation",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(axeDevToolsXCUI.AxeUsageActor.Type) -> axeDevToolsXCUI.AxeUsageActor",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeUsageActor",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeUsageActor",
+                        "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor@AxeUsageActorAutomation",
+            "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO10automationyA2CmF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "axeDevToolsXCUI.AxeUsageActor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeUsageActor",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI13AxeUsageActorO8rawValueACSgSi_tcfc",
+            "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO8rawValueACSgSi_tcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI13AxeUsageActorO8rawValueSivp",
+            "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO8rawValueSivp",
+            "moduleName": "axeDevToolsXCUI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI13AxeUsageActorO8rawValueSivg",
+                "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO8rawValueSivg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[axeDevToolsXCUI.AxeUsageActor]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeUsageActor",
+                    "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                    "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15axeDevToolsXCUI13AxeUsageActorO8allCasesSayACGvpZ",
+            "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO8allCasesSayACGvpZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[axeDevToolsXCUI.AxeUsageActor]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeUsageActor",
+                        "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15axeDevToolsXCUI13AxeUsageActorO8allCasesSayACGvgZ",
+                "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO8allCasesSayACGvgZ",
+                "moduleName": "axeDevToolsXCUI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor",
+        "mangledName": "$s15axeDevToolsXCUI13AxeUsageActorO",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[axeDevToolsXCUI.AxeUsageActor]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AxeUsageActor",
+                        "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                        "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeIntegration",
+        "printedName": "AxeIntegration",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "declareProduct",
+            "printedName": "declareProduct(_:version:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AxeProductKind",
+                "printedName": "axeDevToolsXCUI.AxeProductKind",
+                "usr": "c:@M@axeDevToolsXCUI@E@AxeProductKind"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeIntegration(cm)declareProduct:version:",
+            "mangledName": "$s15axeDevToolsXCUI14AxeIntegrationC14declareProduct_7versionyAA0eH4KindO_SStFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUsage",
+            "printedName": "setUsage(actor:productComponent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AxeUsageActor",
+                "printedName": "axeDevToolsXCUI.AxeUsageActor",
+                "usr": "c:@M@axeDevToolsXCUI@E@AxeUsageActor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeIntegration(cm)setUsageWithActor:productComponent:",
+            "mangledName": "$s15axeDevToolsXCUI14AxeIntegrationC8setUsage5actor16productComponentyAA0eH5ActorO_SStFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "objc_name": "setUsageWithActor:productComponent:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeIntegration",
+        "mangledName": "$s15axeDevToolsXCUI14AxeIntegrationC",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeTeams",
+        "printedName": "AxeTeams",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setTeams",
+            "printedName": "setTeams(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[axeDevToolsXCUI.AxeTeam]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AxeTeam",
+                    "printedName": "axeDevToolsXCUI.AxeTeam",
+                    "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeams(cm)setTeams:",
+            "mangledName": "$s15axeDevToolsXCUI8AxeTeamsC03setF0yySayAA0E4TeamCGFZ",
+            "moduleName": "axeDevToolsXCUI",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeams",
+        "mangledName": "$s15axeDevToolsXCUI8AxeTeamsC",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AxeTeam",
+        "printedName": "AxeTeam",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(py)id",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC2idSSvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)id",
+                "mangledName": "$s15axeDevToolsXCUI7AxeTeamC2idSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(py)name",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC4nameSSvp",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)name",
+                "mangledName": "$s15axeDevToolsXCUI7AxeTeamC4nameSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeTeam",
+                "printedName": "axeDevToolsXCUI.AxeTeam",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)initWithId:name:",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC2id4nameACSS_SStcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "objc_name": "initWithId:name:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AxeTeam",
+                "printedName": "axeDevToolsXCUI.AxeTeam",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15axeDevToolsXCUI7AxeTeamC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15axeDevToolsXCUI7AxeTeamC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC6encode2toys7Encoder_p_tKF",
+            "moduleName": "axeDevToolsXCUI",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isEqual",
+            "printedName": "isEqual(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)isEqual:",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC7isEqualySbypSgF",
+            "moduleName": "axeDevToolsXCUI",
+            "overriding": true,
+            "objc_name": "isEqual:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hash",
+            "printedName": "hash",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(py)hash",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC4hashSivp",
+            "moduleName": "axeDevToolsXCUI",
+            "overriding": true,
+            "objc_name": "hash",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)hash",
+                "mangledName": "$s15axeDevToolsXCUI7AxeTeamC4hashSivg",
+                "moduleName": "axeDevToolsXCUI",
+                "overriding": true,
+                "objc_name": "hash",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(py)description",
+            "mangledName": "$s15axeDevToolsXCUI7AxeTeamC11descriptionSSvp",
+            "moduleName": "axeDevToolsXCUI",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam(im)description",
+                "mangledName": "$s15axeDevToolsXCUI7AxeTeamC11descriptionSSvg",
+                "moduleName": "axeDevToolsXCUI",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@axeDevToolsXCUI@objc(cs)AxeTeam",
+        "mangledName": "$s15axeDevToolsXCUI7AxeTeamC",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "String",
         "printedName": "String",
@@ -27759,16 +29257,23 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceBody.swift",
       "kind": "StringLiteral",
-      "offset": 453,
-      "length": 9,
-      "value": "\"sdk-ios\""
+      "offset": 1338,
+      "length": 6,
+      "value": "\"paid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceBody.swift",
       "kind": "IntegerLiteral",
-      "offset": 742,
+      "offset": 1421,
       "length": 4,
       "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceBody.swift",
+      "kind": "Array",
+      "offset": 1878,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Extensions\/String.swift",
@@ -27969,30 +29474,37 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 12984,
+      "offset": 13133,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "BooleanLiteral",
-      "offset": 13070,
+      "offset": 13219,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 16885,
+      "offset": 17034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
       "kind": "StringLiteral",
-      "offset": 17937,
+      "offset": 18086,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools+Login.swift",
+      "kind": "Dictionary",
+      "offset": 19372,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/HTTP\/URLSessionDataTask.swift",
@@ -28101,31 +29613,59 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/WalnutAPIKeyValidateResponse.swift",
+      "kind": "Array",
+      "offset": 1437,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/WalnutAPIKeyValidateResponse.swift",
       "kind": "StringLiteral",
-      "offset": 772,
+      "offset": 2813,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/WalnutAPIKeyValidateResponse.swift",
       "kind": "StringLiteral",
-      "offset": 807,
+      "offset": 2848,
       "length": 12,
       "value": "\"user_email\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/WalnutAPIKeyValidateResponse.swift",
       "kind": "StringLiteral",
-      "offset": 848,
+      "offset": 2889,
       "length": 15,
       "value": "\"enterprise_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/WalnutAPIKeyValidateResponse.swift",
       "kind": "StringLiteral",
-      "offset": 894,
+      "offset": 2935,
       "length": 17,
       "value": "\"enterprise_name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/EnterpriseSettingsResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 611,
+      "length": 21,
+      "value": "\"axe-devtools-mobile\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient+EnterpriseSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 402,
+      "length": 32,
+      "value": "\"\/api-pub\/settings\/enterprises\/\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient+EnterpriseSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 489,
+      "length": 42,
+      "value": "\"\/user?groups=general,axe-devtools-mobile\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeMetaData.swift",
@@ -28490,6 +30030,13 @@
       "offset": 2983,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AutoScan\/AutoScanManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15380,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AutoScan\/InteractionSwizzler.swift",
@@ -29179,253 +30726,302 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "Array",
+      "offset": 1418,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2330,
+      "offset": 5643,
       "length": 11,
       "value": "\"scan:save\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2366,
+      "offset": 5679,
       "length": 11,
       "value": "\"scan:send\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2406,
+      "offset": 5719,
       "length": 15,
       "value": "\"scan:retrieve\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2448,
+      "offset": 5761,
       "length": 13,
       "value": "\"scan:delete\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2485,
+      "offset": 5798,
       "length": 10,
       "value": "\"scan:tag\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2526,
+      "offset": 5839,
       "length": 18,
       "value": "\"scan:update_name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2571,
+      "offset": 5884,
       "length": 13,
       "value": "\"scan:create\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2612,
+      "offset": 6105,
+      "length": 20,
+      "value": "\"scan:session_start\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6254,
+      "length": 19,
+      "value": "\"autoscan:complete\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6301,
       "length": 15,
       "value": "\"login:api_key\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2661,
+      "offset": 6350,
       "length": 21,
       "value": "\"login:start_session\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2709,
+      "offset": 6398,
       "length": 13,
       "value": "\"rule:ignore\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2749,
+      "offset": 6438,
       "length": 18,
       "value": "\"rule:ignore_view\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 6489,
       "length": 13,
       "value": "\"rule:custom\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2846,
+      "offset": 6535,
       "length": 25,
       "value": "\"scan:debug_logs_enabled\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2950,
+      "offset": 6816,
+      "length": 22,
+      "value": "\"settings-call-failed\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 6917,
       "length": 11,
       "value": "\"scan_name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 2986,
+      "offset": 6953,
       "length": 11,
       "value": "\"scan_time\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3040,
+      "offset": 7007,
       "length": 11,
       "value": "\"scan_type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3075,
+      "offset": 7042,
       "length": 10,
       "value": "\"rule_ids\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3110,
+      "offset": 7077,
       "length": 11,
       "value": "\"class_ids\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3147,
+      "offset": 7114,
       "length": 12,
       "value": "\"project_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3187,
+      "offset": 7154,
       "length": 14,
       "value": "\"log_category\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3228,
+      "offset": 7195,
       "length": 13,
       "value": "\"log_message\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3810,
+      "offset": 7298,
+      "length": 17,
+      "value": "\"product_version\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7607,
+      "length": 19,
+      "value": "\"product_component\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 7866,
+      "length": 14,
+      "value": "\"result_count\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8101,
+      "length": 12,
+      "value": "\"scan_count\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 8644,
       "length": 20,
       "value": "\"scan_time_setup_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3869,
+      "offset": 8703,
       "length": 28,
       "value": "\"scan_time_setup_resolve_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3933,
+      "offset": 8767,
       "length": 25,
       "value": "\"scan_time_setup_view_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3997,
+      "offset": 8831,
       "length": 29,
       "value": "\"scan_time_setup_view_ipc_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4067,
+      "offset": 8901,
       "length": 30,
       "value": "\"scan_time_setup_focusable_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4139,
+      "offset": 8973,
       "length": 31,
       "value": "\"scan_time_setup_screenshot_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4207,
+      "offset": 9041,
       "length": 26,
       "value": "\"scan_time_setup_title_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4270,
+      "offset": 9104,
       "length": 26,
       "value": "\"scan_time_apple_audit_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4329,
+      "offset": 9327,
       "length": 21,
       "value": "\"scan_time_verify_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4382,
-      "length": 20,
-      "value": "\"scan_time_usage_ms\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 4434,
+      "offset": 9380,
       "length": 20,
       "value": "\"scan_time_rules_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4622,
+      "offset": 9568,
       "length": 12,
       "value": "\"node_count\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4659,
+      "offset": 9605,
       "length": 11,
       "value": "\"max_depth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4703,
+      "offset": 9649,
       "length": 20,
       "value": "\"ipc_snapshot_calls\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4757,
+      "offset": 9703,
       "length": 21,
       "value": "\"ipc_attribute_calls\""
     },
@@ -29502,49 +31098,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "IntegerLiteral",
-      "offset": 993,
+      "offset": 1029,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1054,
+      "offset": 1055,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1080,
+      "offset": 1089,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1114,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1149,
+      "offset": 1124,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1196,
+      "offset": 1171,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/ScanTimings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1248,
+      "offset": 1223,
       "length": 1,
       "value": "0"
     },
@@ -31840,9 +33429,16 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/Amplitude.swift",
       "kind": "StringLiteral",
-      "offset": 285,
+      "offset": 751,
       "length": 38,
       "value": "\"https:\/\/api2.amplitude.com\/2\/httpapi\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/Amplitude.swift",
+      "kind": "Array",
+      "offset": 1554,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
@@ -31924,42 +33520,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "Array",
-      "offset": 4395,
+      "offset": 4766,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 5397,
+      "offset": 5768,
       "length": 105,
       "value": "\"This method will be removed after the October 2026 release when the mobile dashboard is decommissioned.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 5560,
+      "offset": 5931,
       "length": 118,
       "value": "\"The 'withTags' parameter will be removed after the October 2026 release when the mobile dashboard is decommissioned.\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 13727,
+      "offset": 14098,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 16480,
+      "offset": 16851,
       "length": 20,
       "value": "\"AxeDevToolsResults\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeDevTools.swift",
       "kind": "StringLiteral",
-      "offset": 16561,
+      "offset": 16932,
       "length": 2,
       "value": "\"\""
     },
@@ -31969,6 +33565,13 @@
       "offset": 5772,
       "length": 31,
       "value": "\"Unable to get view hierarchy.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeUser.swift",
+      "kind": "Array",
+      "offset": 1856,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools XCUI\/Extensions\/AxeImage-Ext.swift",
@@ -32442,42 +34045,35 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 1629,
-      "length": 32,
-      "value": "\"\/api-pub\/settings\/enterprises\/\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1716,
-      "length": 22,
-      "value": "\"\/user?groups=general\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1777,
+      "offset": 1613,
       "length": 16,
       "value": "\"\/api\/logged-in\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
+      "kind": "Array",
+      "offset": 2991,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 4464,
+      "offset": 4852,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 5192,
+      "offset": 5580,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 5829,
+      "offset": 6217,
       "length": 2,
       "value": "\"\""
     },
@@ -32508,6 +34104,174 @@
       "offset": 10252,
       "length": 2,
       "value": "14"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 484,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 505,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 534,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 932,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 956,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 2226,
+      "length": 18,
+      "value": "\"desktop_analyzer\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 2357,
+      "length": 19,
+      "value": "\"appium_undeclared\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 2573,
+      "length": 17,
+      "value": "\"legacy_analyzer\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 4464,
+      "length": 41,
+      "value": "\"com.deque.axe-devtools-mobile-analyzer.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 4553,
+      "length": 33,
+      "value": "\"com.deque.WebDriverAgentRunner3\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 4634,
+      "length": 32,
+      "value": "\"com.deque.WebDriverAgentRunner\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 4721,
+      "length": 27,
+      "value": "\"axeDevToolsMobileAnalyzer\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4791,
+      "length": 2,
+      "value": "64"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 5105,
+      "length": 5,
+      "value": "\"sdk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 5614,
+      "length": 6,
+      "value": "\"-ios\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5813,
+      "length": 2,
+      "value": "64"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10886,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 13409,
+      "length": 31,
+      "value": "\"WDA_PRODUCT_BUNDLE_IDENTIFIER\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeIntegration.swift",
+      "kind": "StringLiteral",
+      "offset": 13501,
+      "length": 13,
+      "value": "\"FBWebServer\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeTeams.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2792,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeTeams.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2837,
+      "length": 3,
+      "value": "256"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeTeam.swift",
+      "kind": "StringLiteral",
+      "offset": 3353,
+      "length": 35,
+      "value": "\"AxeTeam(id: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeTeam.swift",
+      "kind": "StringLiteral",
+      "offset": 3371,
+      "length": 1,
+      "value": "\", name: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AxeTeam.swift",
+      "kind": "StringLiteral",
+      "offset": 3386,
+      "length": 1,
+      "value": "\")\""
     }
   ]
 }
