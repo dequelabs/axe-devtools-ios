@@ -1,4 +1,4 @@
-# Third-Party Licenses for axe-devtools-ios 4.3.0
+# Third-Party Licenses for axe-devtools-ios 4.3.1
 
 | Name | Version | License |
 | --- | --- | --- |

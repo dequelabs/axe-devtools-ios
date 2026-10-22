@@ -3,20 +3,20 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "axe-devtools-ios",
-  "documentNamespace": "https://anchore.com/syft/dir/axe-devtools-ios-38b6f826-89b1-4b64-8cc0-1f9705d3a2db",
+  "documentNamespace": "https://anchore.com/syft/dir/axe-devtools-ios-3c5a74e9-9756-4974-8ef1-75310dea9c4d",
   "creationInfo": {
-    "licenseListVersion": "3.28",
+    "licenseListVersion": "3.29",
     "creators": [
       "Organization: Anchore, Inc",
-      "Tool: syft-1.51.1"
+      "Tool: syft-1.54.1"
     ],
-    "created": "2026-10-02T19:27:20Z"
+    "created": "2026-10-21T21:31:12Z"
   },
   "packages": [
     {
       "name": "axe-devtools-ios",
       "SPDXID": "SPDXRef-DocumentRoot-Directory-axe-devtools-ios",
-      "versionInfo": "4.3.0",
+      "versionInfo": "4.3.1",
       "supplier": "NOASSERTION",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
@@ -28,7 +28,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:swift/github.com/dequelabs/axe-devtools-ios@4.3.0"
+          "referenceLocator": "pkg:swift/github.com/dequelabs/axe-devtools-ios@4.3.1"
         }
       ]
     },

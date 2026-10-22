@@ -9432,6 +9432,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "axeDevToolsXCUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CoreGraphics",
         "printedName": "CoreGraphics",
         "declKind": "Import",
@@ -30034,7 +30044,14 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AutoScan\/AutoScanManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 15380,
+      "offset": 8936,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AutoScan\/AutoScanManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 16603,
       "length": 1,
       "value": "0"
     },
@@ -30986,42 +31003,42 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9327,
+      "offset": 9334,
       "length": 21,
       "value": "\"scan_time_verify_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9380,
+      "offset": 9387,
       "length": 20,
       "value": "\"scan_time_rules_ms\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9568,
+      "offset": 9575,
       "length": 12,
       "value": "\"node_count\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9605,
+      "offset": 9612,
       "length": 11,
       "value": "\"max_depth\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9649,
+      "offset": 9656,
       "length": 20,
       "value": "\"ipc_snapshot_calls\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Analytics\/AmplitudeEvent.swift",
       "kind": "StringLiteral",
-      "offset": 9703,
+      "offset": 9710,
       "length": 21,
       "value": "\"ipc_attribute_calls\""
     },
@@ -31360,6 +31377,13 @@
       "offset": 6992,
       "length": 2,
       "value": "19"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Axe+AppleAuditor.swift",
+      "kind": "StringLiteral",
+      "offset": 3286,
+      "length": 61,
+      "value": "\"performAccessibilityAuditWithAuditTypes:issueHandler:error:\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/AxeElementType.swift",
@@ -32902,6 +32926,13 @@
       "value": "\"\/v2\/event\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 2170,
+      "length": 36,
+      "value": "\"com.deque.axeDevTools.usageService\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/UsageService\/UsageServiceEventType.swift",
       "kind": "StringLiteral",
       "offset": 160,
@@ -34059,21 +34090,21 @@
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 4852,
+      "offset": 5441,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 5580,
+      "offset": 6169,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/AttestIOS\/AttestIOS\/axeDevTools iOS\/axeDevTools Shared\/Server\/AxeDevTools\/AxeClient.swift",
       "kind": "StringLiteral",
-      "offset": 6217,
+      "offset": 6806,
       "length": 2,
       "value": "\"\""
     },
