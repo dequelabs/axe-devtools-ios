@@ -1,0 +1,75 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:f0c0aed8-7a9b-4642-8563-85747108ed0d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-03T17:48:25Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.6.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.6.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.6.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "axe-devtools-ios",
+      "version": "5.0.0",
+      "type": "library",
+      "bom-ref": "pkg:swift/github.com/dequelabs/axe-devtools-ios@5.0.0",
+      "purl": "pkg:swift/github.com/dequelabs/axe-devtools-ios@5.0.0"
+    },
+    "properties": []
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "GzipSwift",
+      "version": "5.2.0",
+      "purl": "pkg:swift/github.com/1024jp/GzipSwift@5.2.0",
+      "bom-ref": "pkg:swift/github.com/1024jp/GzipSwift@5.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:swift/github.com/dequelabs/axe-devtools-ios@5.0.0",
+      "dependsOn": [
+        "pkg:swift/github.com/1024jp/GzipSwift@5.2.0"
+      ]
+    },
+    {
+      "ref": "pkg:swift/github.com/1024jp/GzipSwift@5.2.0",
+      "dependsOn": []
+    }
+  ]
+}
