@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// The observer automatically registers itself when the class is loaded if XCTest is available.
 /// To receive callbacks, set the onBundleStart and onBundleFinish blocks as early as possible,
 /// ideally in a +load method of your test class.
-API_AVAILABLE(ios(16.0))
 @interface AxeTestBundleObserver : NSObject
 
 /// Shared singleton instance
