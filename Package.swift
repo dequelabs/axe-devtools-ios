@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "axeDevTools",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v17)
     ],
     products: [
         .library(

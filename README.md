@@ -12,4 +12,3 @@ Looking for other solutions? Check out the [full Axe DevTools for Mobile suite](
 ## Usage
 
 To use Axe DevTools, you must be a current Deque customer.
-<!-- Prerequisites like Xcode and iOS versions? -->
